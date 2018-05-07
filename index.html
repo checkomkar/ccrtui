@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabs</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- <link rel="stylesheet/less" type="text/css" href="css/master.less" > -->
+	<link rel="stylesheet" href="css/master.css" >
+	<!-- <script type="text/javascript" src="js/plugins/less.js" ></script> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+</head>
+<body>
+	<div class="container create-quote-tabs">
+        <!-- SmartWizard html -->
+        <div class="row header-row">
+        	<div class="col-sm-12 col-md-12">
+        		<h4>CREATE QUOTE</h4>
+        	</div>
+        	
+        </div>
+        <hr class="seperator-quote">
+        <div class="row create-quote-main">
+        	<div class="col-sm-12 col-md-8">
+        		<div id="smartwizard">
+		            <ul>
+		                <li><a href="#step-1">1. Getting Started</a></li>
+		                <li><a href="#step-2">2. Policy Details</a></li>
+		                <li><a href="#step-3">3. Get a Quote</a></li>
+		                
+		            </ul>
+
+		            <div>
+		                <div id="step-1" class="">
+		                    <h5 class="border-bottom border-gray pb-2 tab-headers">A few details to get started</h5>
+		                    <form class="first-step">
+		                    	<div class="row">
+			                    	<div class="col-md-6">
+			                    		<div class="form-group">
+			                    			<label for="select-product">Select Product</label>
+											<select class="form-control select-product required" required="required" id="select-product">
+												<option value=""></option>
+												<option value="2">Equipment Break Down</option>
+												<option value="3">Course of Construction</option>
+											</select>
+										</div>
+			                    	</div>			                    	
+			                    </div>
+								<div class="row on-select-product">
+									<div class="col-md-6">
+										<div class="form-group row">
+								    		<label for="insuredName" class="col-sm-12 col-form-label">Insured Name</label>
+										    <div class="col-sm-12">
+										      	<input type="text" data-msg="Insurer name is required" placeholder="Insured Name" required class="form-control " id="insuredName" >
+										    </div>
+
+								  		</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group row">
+								    		<label for="insuredPostalCode" class="col-sm-12 col-form-label">Insured Postal Code</label>
+										    <div class="col-sm-12">
+										      	<input type="text" required placeholder="Insured Postal Code" class="form-control" id="insuredPostalCode">
+										    </div>
+								  		</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group row">
+								    		<label for="brokerName" class="col-sm-12 col-form-label">Broker's Name</label>
+										    <div class="col-sm-12">
+										      	<input type="text" required placeholder="Broker's Name" class="form-control" id="brokerName" >
+										    </div>
+								  		</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group row">
+								    		<label for="brokerPostalCode" class="col-sm-12 col-form-label">Broker's Postal Code(Optional)</label>
+										    <div class="col-sm-12">
+										      	<input type="text" placeholder="Insured Postal Code" class="form-control" id="brokerPostalCode">
+										    </div>
+								  		</div>
+									</div>
+								</div>	
+		                    </form>
+		                    				
+		                </div>
+		                <div id="step-2" class="">
+		                    <div class="row policy-details-header">
+		                    	<div class="col-md-4">One</div>
+		                    	<div class="col-md-4">Tow</div>
+		                    	<div class="col-md-4">Three</div>
+		                    </div>
+		                    <div>
+		                    	<ol>
+		                    		<li>
+		                    			<p>
+		                    				Has this risk had more than 1 Equipment Breakdown loss in the past 3 years?
+		                    			</p>
+		                    			<div class="form-check form-check-inline">
+										  	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										  	<label class="form-check-label" for="inlineRadio1">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+										  	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										  	<label class="form-check-label" for="inlineRadio2">No</label>
+										</div>
+		                    			
+		                    		</li>
+		                    		<li>
+		                    			<p>
+		                    				Does the risk have a single item of electronic equipment or spoilage values greater than $100,000?
+		                    			</p>
+		                    			<div class="form-check form-check-inline">
+										  	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										  	<label class="form-check-label" for="inlineRadio1">Yes</label>
+										</div>
+										<div class="form-check form-check-inline">
+										  	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										  	<label class="form-check-label" for="inlineRadio2">No</label>
+										</div>
+		                    		</li>
+		                    		<li>
+		                    			<p>
+		                    				Please select the Insured Type
+		                    			</p>
+		                    			<div class="input-group">
+		                    				<select>
+		                    					<option value="l">Owner</option>
+		                    					<option value="2">Owner</option>
+		                    				</select>
+		                    			</div>
+		                    		</li>
+		                    		<li>
+		                    			<p>
+		                    				Select the Occupancy
+		                    			</p>
+		                    			<input type="text" name=""> 
+		                    			<a href="#" data-toggle="modal" data-target="#selectOccupancyModal">
+		                    				Select
+		                    			</a>
+		                    		</li>
+		                    		<li>
+		                    			<div class="row">
+		                    				<div class="col-4">How many locations does this risk have?</div>
+			                    			<div class="col-2">
+			                    				<select>
+			                    					<option value="1">1</option>
+			                    					<option value="1">1</option>
+			                    					<option value="1">1</option>
+			                    					<option value="1">1</option>
+			                    					<option value="1">1</option>
+			                    					<option value="1">>10</option>
+			                    				</select>
+			                    			</div>
+		                    			</div>
+		                    			
+		                    		</li>
+		                    	</ol>
+		                    </div>
+		                </div>
+		                <div id="step-3" class="">
+		                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		                    
+		                </div>
+		                <hr class="no-margin">
+		            </div>
+	        	</div>
+	        	
+    		</div>
+        	<div class="col-sm-12 col-md-4">
+        		<div class="text-right">
+        			<button class="btn btn-primary">
+        				Live Chat
+        			</button>
+        		</div>
+        		<fieldset class="side-field-set">
+        			<legend>Comments</legend>
+					<div class="form-group">
+						<textarea class="input-group" rows="4" cols="50">
+							
+						</textarea>
+						<span class="text-left">(140 characters remaining)</span>
+					</div>
+					<div class="text-right">
+						<button class="btn btn-primary">Add</button>
+					</div>
+					<div class="default-border bg-f2 show-comments-box">
+					
+					</div>
+				</fieldset>
+				
+        	</div>
+        </div>
+
+
+    </div>
+
+    <!-- Modal -->
+	<div class="modal fade" id="selectOccupancyModal" tabindex="-1" role="dialog" aria-labelledby="selectOccupancyModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="selectOccupancyModal">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  		<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+				...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/plugins/jquery.smartWizard.js"></script>
+	<script type="text/javascript" src="js/plugins/mustache.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/plugins/additional-methods.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<script id="comments" type="text/template">
+		{{#comments}}
+		<div class="comment">
+			{{comment}}
+			<span class="name">{{name}}</span>
+			
+		</div>
+		{{/comments}}
+	</script>
+</body>
+</html>

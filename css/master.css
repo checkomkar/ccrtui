@@ -1,0 +1,11 @@
+@import "smart_wizard.min.css";
+@import "smart_wizard_theme_arrows.css";
+@import "tabs.css";
+
+.sw-main .sw-container{
+	padding: 20px 0;
+}
+
+.step-content h5{
+	margin-bottom: 20px;
+}

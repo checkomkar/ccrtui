@@ -1,0 +1,272 @@
+//tabs.less
+
+body, html{
+	font-family: Arial !important;
+}
+
+.form-group label{
+	font-size: 13px;
+	color: #8c9094;
+	&.error{
+		color: red;
+	}
+}
+
+.no-margin{
+	margin: 0;
+}
+
+.default-border{	
+  	border: solid 2px #babcbf;
+}
+
+.bg-f2{
+	background-color: #f2f2f2;
+}
+
+.form-control{
+	border-radius: 0;
+	border: solid 2px #babcbf;
+	color: #272b2e;
+	font-size: 13px;
+	padding-left: 5px;
+}
+
+.btn-light{
+	border: solid 2px #272b2e;
+	font-size: 16px;
+	padding: 5px 30px;
+}
+
+.btn{
+	&.btn-primary{
+		background-color: #272b2e !important;
+		font-size: 16px;
+		padding: 5px 30px;
+		border: solid 2px #272b2e !important;
+		border-radius: 0;
+	}
+}
+
+.sw-btn-prev, .sw-btn-next{
+	background-color: #272b2e !important;
+	font-size: 16px;
+	padding: 5px 30px;
+	border: solid 2px #272b2e !important;
+}
+
+.btn-toolbar .btn{
+	border-radius: 0px;
+	position: relative;
+}
+.btn-toolbar .sw-btn-next, .sw-btn-prev{
+	background: #5cb85c;
+	color: white;
+	border: none;
+	margin-right: 10px;
+}
+
+.tab-headers{
+	font-size: 16px;
+}
+
+.sw-btn-prev:hover, .sw-btn-prev:active{
+	background-color: #5cb85c;
+}
+
+.sw-main{
+	border-radius: 0 !important;
+	border: 0 !important;
+}
+
+.step-anchor{
+	border: 1px solid #ddd !important;
+	border-top-right-radius: 0px !important;
+}
+
+.step-anchor .active a.nav-link{
+	background: #006837 !important;
+
+}
+
+.sw-btn-group{
+	text-align: right;
+	margin-right: 0 !important;
+	padding-right: 0 !important;
+}
+
+.sw-btn-next{
+	margin-right: 0 !important;
+}
+
+.sw-btn-group-extra{
+	padding: 0;
+}
+
+.policy-details-header{
+	margin-right: -10px;
+	margin-left: -10px;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.done > a{
+	background-color: #006837 !important;
+}
+
+.sw-theme-arrows > ul.step-anchor > li.done > a:after{
+	    border-left: 30px solid #006837 !important;
+}
+
+/*.sw-btn-next:after {
+	border-left: 15px solid #5cb85c !important;
+    content: " ";    
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-left: 30px solid #f5f5f5;
+    position: absolute;
+    top: -1px;
+    margin-top: 0;
+    left: 100%;
+    z-index: 2;
+}
+
+.sw-btn-prev:before{
+	content: " ";    
+    width: 0;
+    height: 0;	
+	top: -1px;
+    margin-top: 0;
+    left: -15px;
+    z-index: 2;
+    position: absolute;
+	border-right: 15px solid #5cb85c !important;
+	border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+}*/
+
+.sw-toolbar-bottom{
+	position: relative;
+	margin-right: 0 !important;
+	border: 1px solid #ddd;
+	border-top: 0; 
+
+}
+
+.sw-toolbar-bottom .sw-btn-group-extra{
+	position: absolute;
+	left: 25px;
+
+}
+
+.sw-theme-arrows .sw-toolbar{
+	padding: 10px 25px;
+}
+
+#step-2 ol>li{
+	margin-bottom: 28px;
+}
+
+#step-2 .policy-details-header{
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #ddd;
+}
+
+.side-field-set{
+	border: 1px solid #ddd;
+	padding: 15px;
+	border-radius: 3px;
+	font-size: 13px;
+}
+.side-field-set legend{
+	width: 25%;
+	padding: 0 5px;
+	font-size: 12px;
+}
+
+#smartwizard .tab-content{
+	padding: 30px 15px 0 15px;
+	margin-top: 25px;
+	border: 1px solid #ddd;
+	border-bottom: 0;
+
+}
+
+
+
+.create-quote-tabs{
+	.header-row{
+		margin-top: 20px;
+		h4{
+			font-size: 18px;
+			font-weight: normal;
+		}		
+	}
+
+	hr.seperator-quote{
+		margin-bottom: 30px;
+		margin-top: 10px;
+	}
+
+	.create-quote-main{
+		#smartwizard{
+			ul.step-anchor{
+				border-bottom: 0;
+				border: 0 !important;
+			}
+		}
+		.side-field-set{
+			margin-top: 23px;
+			border-radius: 0;
+			padding: 20px;
+			textarea{
+				border: solid 2px #babcbf;
+				width: 100%;
+				height: 200px;
+			}
+			span{
+				font-size: 12px;
+			}
+		}
+
+		.show-comments-box{
+			padding: 20px;
+			margin-top: 20px;
+			max-height: 380px;
+	    	overflow-y: auto;
+			.comment{
+				font-size: 12px;
+				color: #272b2e;
+				margin-bottom: 15px;
+				span.name{
+					color: #8c9094;
+					font-size: 13px;
+					display: inline-block;
+	    			width: 100%;
+	    			margin-top: 5px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media only screen and (max-width : 767px) {
+	.nav .nav-tabs .step-anchor{
+
+	}
+
+	.nav .nav-tabs .step-anchor li{
+		width: 100%;
+	}
+
+	.nav-item{
+		width: 100%;
+	}
+
+	.sw-theme-arrows > ul.step-anchor > li{
+
+	}
+}
