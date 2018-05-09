@@ -92,29 +92,21 @@ $(document).ready(function(){
 
             var commentJson = {comments:[
                 {
-                    comment: `This is an example of a previous comments added by
-                                a user. This is an example of a previous comments
-                                added by a user.`, 
-                    name: `- Summer Tuller  2/2/2017 23:11`
+                    comment: "This is an example of a previous comments added by a user. This is an example of a previous comments added by a user.", 
+                    name: "- Summer Tuller  2/2/2017 23:11"
                 },
                 {
-                    comment: `This is an example of a previous comments added by
-                                a user. This is an example of a previous comments
-                                added by a user.`, 
-                    name: `- Summer Tuller  2/2/2017 23:11`
+                    comment: "This is an example of a previous comments added by a user. This is an example of a previous comments added by a user.", 
+                    name: "- Summer Tuller  2/2/2017 23:11"
                 },
                 {
-                    comment: `This is an example of a previous comments added by
-                                a user. This is an example of a previous comments
-                                added by a user.`, 
-                    name: `- Summer Tuller  2/2/2017 23:11`
+                    comment: "This is an example of a previous comments added by a user. This is an example of a previous comments added by a user.", 
+                    name: "- Summer Tuller  2/2/2017 23:11"
                 },
                 {
-                    comment: `This is an example of a previous comments added by
-                                a user. This is an example of a previous comments
-                                added by a user.`, 
-                    name: `- Summer Tuller  2/2/2017 23:11`
-                }
+                    comment: "This is an example of a previous comments added by a user. This is an example of a previous comments added by a user.", 
+                    name: "- Summer Tuller  2/2/2017 23:11"
+                },
                 
                 
             ]}

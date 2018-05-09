@@ -86,27 +86,123 @@
 		                </div>
 		                <div id="step-2" class="">
 		                    <div class="row policy-details-header">
-		                    	<div class="col-md-4">One</div>
-		                    	<div class="col-md-4">Tow</div>
-		                    	<div class="col-md-4">Three</div>
+		                    	<div class="col-md-4">
+									<div class="title">Quote</div>
+									<div class="sub-title">EB18-123456 (Draft)</div>
+								</div>
+		                    	<div class="col-md-4">
+									<div class="title">Product Type</div>
+									<div class="sub-title">Equipment Breakdown</div>
+								</div>
+		                    	<div class="col-md-4">
+									<div class="title">Insured Name</div>
+									<div class="sub-title">Murphy Brothers Inc.</div>
+								</div>
 		                    </div>
-		                    <div>
+		                    <div class="questionaire-container">
 		                    	<ol>
 		                    		<li>
-		                    			<p>
-		                    				Has this risk had more than 1 Equipment Breakdown loss in the past 3 years?
-		                    			</p>
-		                    			<div class="form-check form-check-inline">
-										  	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-										  	<label class="form-check-label" for="inlineRadio1">Yes</label>
+										<div class="q-content">
+											<p>
+												Has this risk had more than 1 Equipment Breakdown loss in the past 3 years?
+											</p>
+											<div class="form-check form-check-inline">
+												<label class="check-container">Yes
+													<input type="radio" name="radio">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<label class="check-container">No
+													<input type="radio" name="radio">
+													<span class="checkmark"></span>
+												</label>
+											</div>
 										</div>
-										<div class="form-check form-check-inline">
-										  	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-										  	<label class="form-check-label" for="inlineRadio2">No</label>
+		                    					                    			
+									</li>
+									<li>
+										<div class="q-content">
+											<p>
+												Please select the Insured Type
+											</p>
+											<div class="row">
+												<div class="form-group col-md-5">
+													<select class="form-control select-product required" required="required" id="select-product">
+														<option value=""></option>
+														<option value="2">Owner</option>
+														<option value="3">Course of Construction</option>
+													</select>
+												</div>
+											</div>											
+										</div>										
+									</li>
+									<li>
+										<div class="q-content">
+											<p>
+												What is the Policy Limit?
+											</p>
+											<div class="row">
+												<div class="col-md-5">
+													<div class="form-group row">
+														<div class="col-sm-1">$</div>													
+														<div class="col-sm-10 no-pad">															
+															<input type="text" 
+															class="form-control" 
+															id="policy-limit" >
+														</div>
+			
+													</div>
+												</div>
+												
+											</div>
+											
 										</div>
-		                    			
-		                    		</li>
-		                    		<li>
+									</li>
+									<li>
+										<div class="q-content">
+											<p>
+												Select the Primary Occupancy
+											</p>
+											<div class="row">
+												<div class="col-md-10">
+													<div class="form-group row">													
+														<div class="col-sm-12">
+															<input type="text" 
+															disabled class="form-control" 
+															id="select-occupancy" >
+														</div>
+			
+													</div>
+												</div>
+												<div class="col-md-2">
+													<a href="#" data-toggle="modal" data-target="#selectOccupancyModal">Select</a>
+												</div>
+											</div>
+											
+										</div>
+									</li>
+									<li class="d-none">
+										<div class="q-content">
+											<p>
+												Does the risk have a single item of electronic equipment or spoilage values greater than $100,000?
+											</p>
+											<div class="form-check form-check-inline">
+												<label class="check-container">Yes
+													<input type="radio" name="radio1">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<label class="check-container">No
+													<input type="radio" name="radio1">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+																				
+									</li>
+		                    		<li class="d-none">
 		                    			<p>
 		                    				Does the risk have a single item of electronic equipment or spoilage values greater than $100,000?
 		                    			</p>
@@ -119,7 +215,7 @@
 										  	<label class="form-check-label" for="inlineRadio2">No</label>
 										</div>
 		                    		</li>
-		                    		<li>
+		                    		<li class="d-none">
 		                    			<p>
 		                    				Please select the Insured Type
 		                    			</p>
@@ -130,7 +226,7 @@
 		                    				</select>
 		                    			</div>
 		                    		</li>
-		                    		<li>
+		                    		<li class="d-none">
 		                    			<p>
 		                    				Select the Occupancy
 		                    			</p>
@@ -139,7 +235,7 @@
 		                    				Select
 		                    			</a>
 		                    		</li>
-		                    		<li>
+		                    		<li class="d-none">
 		                    			<div class="row">
 		                    				<div class="col-4">How many locations does this risk have?</div>
 			                    			<div class="col-2">
@@ -197,21 +293,62 @@
 
     <!-- Modal -->
 	<div class="modal fade" id="selectOccupancyModal" tabindex="-1" role="dialog" aria-labelledby="selectOccupancyModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
+		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-				<h5 class="modal-title" id="selectOccupancyModal">Modal title</h5>
+				<h5 class="modal-title" id="selectOccupancyModalTitle">Select Occupancy</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			  		<span aria-hidden="true">&times;</span>
 				</button>
 				</div>
-				<div class="modal-body">
-				...
+				<div class="modal-body occupancy-selection">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="title">
+								Category
+							</div>
+							<div>								
+								<select class="box left-box" name="occupancy" id="" size="5">
+									<option value="0">All</option>
+									<option value="1">Education</option>
+									<option value="2">Education</option>
+									<option value="3">Education</option>
+									<option value="4">Education</option>
+									<option value="5">Education</option>
+								</select>
+							</div>	
+						</div>
+						<div class="col-md-8">
+							<div class="title">
+								Occupancy
+							</div>
+							<div class="input-group mb-3">
+								<div class="input-group search-occupancy">
+									<input type="text" class="form-control" placeholder="Search by Occupancy Code or Name">
+									<span class="input-group-btn">
+										<button class="btn btn-secondary" type="button">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</span>
+								</div>
+							</div>
+							<div class="">								
+								<select class="box right-box" name="occupancy" id="" size="10">
+									<option value="0">8324 - Trade Schools or Vocational Schools</option>
+									<option value="1">8324 - Trade Schools or Vocational Schools</option>
+									<option value="2">8324 - Trade Schools or Vocational Schools</option>
+									<option value="3">8324 - Trade Schools or Vocational Schools</option>
+									<option value="4">8324 - Trade Schools or Vocational Schools</option>
+									<option value="5">8324 - Trade Schools or Vocational Schools</option>
+								</select>
+							</div>
+							<div class="input-group">
+								<button class="btn btn-primary" id="select-occupancy">Select</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
+				
 			</div>
 		</div>
 	</div>
