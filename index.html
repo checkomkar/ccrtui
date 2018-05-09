@@ -85,19 +85,22 @@
 		                    				
 		                </div>
 		                <div id="step-2" class="">
-		                    <div class="row policy-details-header">
-		                    	<div class="col-md-4">
-									<div class="title">Quote</div>
-									<div class="sub-title">EB18-123456 (Draft)</div>
-								</div>
-		                    	<div class="col-md-4">
-									<div class="title">Product Type</div>
-									<div class="sub-title">Equipment Breakdown</div>
-								</div>
-		                    	<div class="col-md-4">
-									<div class="title">Insured Name</div>
-									<div class="sub-title">Murphy Brothers Inc.</div>
-								</div>
+		                    <div class="policy-details-header">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="title">Quote</div>
+                                        <div class="sub-title">EB18-123456 (Draft)</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="title">Product Type</div>
+                                        <div class="sub-title">Equipment Breakdown</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="title">Insured Name</div>
+                                        <div class="sub-title">Murphy Brothers Inc.</div>
+                                    </div>
+                                </div>
+		                    	
 		                    </div>
 		                    <div class="questionaire-container">
 		                    	<ol>
@@ -159,6 +162,50 @@
 											
 										</div>
 									</li>
+                                    <li>
+                                        <div class="q-content">
+                                            <p>
+                                                Does the risk have a single item of electronic equipment or spoilage values greater than $100,000?
+                                            </p>
+                                            <div class="form-check form-check-inline">
+                                                <label class="check-container">
+                                                    Yes
+                                                    <input type="radio" name="risk">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="check-container">
+                                                    No
+                                                    <input type="radio" name="risk">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="q-content">
+                                            <p>
+                                                Does the risk have spoilage values greater than $100,000?
+                                            </p>
+                                            <div class="form-check form-check-inline">
+                                                <label class="check-container">
+                                                    Yes
+                                                    <input type="radio" name="risk-spoil">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="check-container">
+                                                    No
+                                                    <input type="radio" name="risk-spoil">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </li>
 									<li>
 										<div class="q-content">
 											<p>
@@ -182,73 +229,321 @@
 											
 										</div>
 									</li>
-									<li class="d-none">
+									<li>
 										<div class="q-content">
 											<p>
-												Does the risk have a single item of electronic equipment or spoilage values greater than $100,000?
+                                                Best description of the project.
 											</p>
-											<div class="form-check form-check-inline">
-												<label class="check-container">Yes
-													<input type="radio" name="radio1">
-													<span class="checkmark"></span>
-												</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<label class="check-container">No
-													<input type="radio" name="radio1">
-													<span class="checkmark"></span>
-												</label>
-											</div>
-										</div>
-																				
+                                            <div class="row">
+                                                <div class="form-group col-md-5">
+                                                    <select class="form-control select-product required" required="required" id="best-description">
+                                                        <option value="1">New Construction</option>
+                                                        <option value="2">Renovation</option>
+                                                        <option value="3">Addition</option>
+                                                    </select>
+                                                </div>
+                                            </div>	
+										</div>																				
 									</li>
-		                    		<li class="d-none">
-		                    			<p>
-		                    				Does the risk have a single item of electronic equipment or spoilage values greater than $100,000?
-		                    			</p>
-		                    			<div class="form-check form-check-inline">
-										  	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-										  	<label class="form-check-label" for="inlineRadio1">Yes</label>
-										</div>
-										<div class="form-check form-check-inline">
-										  	<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-										  	<label class="form-check-label" for="inlineRadio2">No</label>
-										</div>
+		                    		<li>
+                                        <div class="q-content">
+                                            <p>
+                                                Has this project already begun?
+                                            </p>
+                                            <div class="form-check form-check-inline">
+                                                <label class="check-container">
+                                                    Yes
+                                                    <input type="radio" name="project-begun">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="check-container">
+                                                    No
+                                                    <input type="radio" name="project-begun">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+		                    			
 		                    		</li>
-		                    		<li class="d-none">
-		                    			<p>
-		                    				Please select the Insured Type
-		                    			</p>
-		                    			<div class="input-group">
-		                    				<select>
-		                    					<option value="l">Owner</option>
-		                    					<option value="2">Owner</option>
-		                    				</select>
-		                    			</div>
+		                    		<li>
+                                        <div class="q-content">
+                                            <p>
+                                                Additional Costs/Coverages
+                                            </p>
+                                            <div>
+                                                <table class="table table-bordered table-dark-head table-add-cost">
+                                                    <thead>
+                                                        <tr>                                                            
+                                                            <th>
+                                                                Soft Costs
+                                                            </th>
+                                                            <th>
+                                                                Extra Expense
+                                                            </th>
+                                                            <th>
+                                                                Delay in Startup
+                                                            </th>                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>                                                            
+                                                            <td>                                                                
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>                                                            
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+		                    			
 		                    		</li>
-		                    		<li class="d-none">
-		                    			<p>
-		                    				Select the Occupancy
-		                    			</p>
-		                    			<input type="text" name=""> 
-		                    			<a href="#" data-toggle="modal" data-target="#selectOccupancyModal">
-		                    				Select
-		                    			</a>
+		                    		<li>
+                                        <div class="q-content">
+                                            <p>
+                                                Project Duration (enter number of months)
+                                            </p>
+                                            <div class="form-group row">
+
+                                                <div class="col-sm-5">
+                                                    <input type="text"
+                                                           class="form-control"
+                                                           id="project-duration">
+                                                </div>
+
+                                            </div>
+                                        </div>
+		                    			
 		                    		</li>
-		                    		<li class="d-none">
-		                    			<div class="row">
-		                    				<div class="col-4">How many locations does this risk have?</div>
-			                    			<div class="col-2">
-			                    				<select>
-			                    					<option value="1">1</option>
-			                    					<option value="1">1</option>
-			                    					<option value="1">1</option>
-			                    					<option value="1">1</option>
-			                    					<option value="1">1</option>
-			                    					<option value="1">>10</option>
-			                    				</select>
-			                    			</div>
-		                    			</div>
+		                    		<li>
+                                        <div class="q-content">
+                                            <p>
+                                                How many locations does this risk have?
+                                            </p>
+                                            <div class="row">
+                                                <div class="form-group col-md-2">
+                                                    <select class="form-control select-product required" required="required" id="risk-locations">
+                                                        <option value=""></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="tables-section d-none">
+                                                <table class="table table-bordered table-light-head table-risk-location">
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="5">
+                                                                <div class="row">
+                                                                    <div class="col-md-10">
+                                                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <a href="#">Change</a>
+                                                                    </div>
+                                                                </div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <p>
+                                                                    State/Province
+                                                                </p>
+                                                                <div class="form-group">
+                                                                    <select class="form-control select-product required" required="required" id="risk-locations">
+                                                                        <option value=""></option>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p>
+                                                                    Address
+                                                                </p>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-12">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p>
+                                                                    Building Value
+                                                                </p>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p>
+                                                                    Content Value
+                                                                </p>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p>
+                                                                    Perishable Stock Value
+                                                                </p>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    
+                                                </table>
+                                                <table class="table table-bordered table-light-head table-risk-location">
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="5">
+                                                                <div class="row">
+                                                                    <div class="col-md-10">
+                                                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <a href="#">Change</a>
+                                                                    </div>
+                                                                </div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <p>
+                                                                    State/Province
+                                                                </p>
+                                                                <div class="form-group">
+                                                                    <select class="form-control select-product required" required="required" id="risk-locations">
+                                                                        <option value=""></option>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p>
+                                                                    Address
+                                                                </p>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-12">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p>
+                                                                    Building Value
+                                                                </p>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p>
+                                                                    Content Value
+                                                                </p>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <p>
+                                                                    Perishable Stock Value
+                                                                </p>
+                                                                <div class="form-group row">
+                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                                                    <div class="col-sm-8 no-pad">
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="project-duration">
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
 		                    			
 		                    		</li>
 		                    	</ol>
@@ -369,6 +664,7 @@
 	<script type="text/javascript" src="js/plugins/jquery.validate.js"></script>
 	<script type="text/javascript" src="js/plugins/additional-methods.js"></script>
 	<script src="js/scripts.js"></script>
+    <script src="js/policy-details.js"></script>
 
 	<script id="comments" type="text/template">
 		{{#comments}}

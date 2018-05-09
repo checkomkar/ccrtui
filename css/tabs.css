@@ -2332,197 +2332,6 @@
   overflow: visible;
   clip: auto;
 }
-body,
-html {
-  font-family: Arial !important;
-}
-/* The container */
-.check-container {
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  margin-right: 15px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-a {
-  color: #00b4dc;
-}
-/* Hide the browser's default radio button */
-.check-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-/* Create a custom radio button */
-.checkmark {
-  position: absolute;
-  top: 4px;
-  left: 0;
-  height: 15px;
-  width: 15px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: solid 2px #babcbf;
-}
-/* On mouse-over, add a grey background color */
-.check-container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-/* When the radio button is checked, add a blue background */
-.check-container input:checked ~ .checkmark {
-  background-color: white;
-  border: 2px solid #00b4dc;
-}
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-/* Show the indicator (dot/circle) when checked */
-.check-container input:checked ~ .checkmark:after {
-  display: block;
-}
-/* Style the indicator (dot/circle) */
-.check-container .checkmark:after {
-  top: 2px;
-  left: 2px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #00b4dc;
-}
-.form-group label {
-  font-size: 13px;
-  color: #8c9094;
-}
-.form-group label.error {
-  color: red;
-}
-.no-pad {
-  padding: 0;
-}
-.no-margin {
-  margin: 0;
-}
-.default-border {
-  border: solid 2px #babcbf;
-}
-.bg-f2 {
-  background-color: #f2f2f2;
-}
-.form-control {
-  border-radius: 0;
-  border: solid 2px #babcbf;
-  color: #272b2e;
-  font-size: 13px;
-  padding-left: 5px;
-}
-.btn-light {
-  border: solid 2px #272b2e;
-  font-size: 16px;
-  padding: 5px 30px;
-}
-.btn.btn-primary {
-  background-color: #272b2e !important;
-  font-size: 16px;
-  padding: 5px 30px;
-  border: solid 2px #272b2e !important;
-  border-radius: 0;
-}
-#smartwizard .tab-content {
-  position: relative;
-}
-#smartwizard .tab-content .policy-details-header {
-  position: absolute;
-  top: -30px;
-  left: -5px;
-  width: 104.44%;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #ddd;
-  padding: 30px;
-}
-#smartwizard .tab-content .policy-details-header .title {
-  color: #8c9094;
-  font-size: 13px;
-  padding-bottom: 10px;
-}
-#smartwizard .tab-content .policy-details-header .sub-title {
-  font-size: 16px;
-}
-#smartwizard .tab-content .questionaire-container {
-  padding-top: 110px;
-}
-#smartwizard .tab-content .questionaire-container ol {
-  font-size: 13px;
-}
-#smartwizard .tab-content .questionaire-container ol .check-container {
-  font-size: 13px;
-}
-#smartwizard .tab-content .questionaire-container ol .check-container .checkmark {
-  top: 2px;
-}
-#smartwizard .tab-content .questionaire-container .q-content {
-  margin-left: 30px;
-  font-size: 13px;
-}
-#selectOccupancyModal #selectOccupancyModalTitle {
-  text-transform: uppercase;
-  font-size: 18px;
-}
-#selectOccupancyModal .occupancy-selection .title {
-  font-size: 16px;
-  margin-bottom: 18px;
-}
-#selectOccupancyModal .occupancy-selection .search-occupancy input {
-  border-right: 0px;
-}
-#selectOccupancyModal .occupancy-selection .search-occupancy button {
-  border-radius: 0;
-  background: transparent;
-  color: #666;
-  border: solid 2px #babcbf;
-  border-left: 0;
-}
-#selectOccupancyModal .occupancy-selection .box {
-  border: 1px solid #e6e6e6;
-  padding: 0px 0;
-  width: 100%;
-}
-#selectOccupancyModal .occupancy-selection .box option {
-  padding: 15px 15px;
-}
-#selectOccupancyModal .occupancy-selection .box.left-box {
-  min-height: 250px;
-  max-height: 250px;
-}
-#selectOccupancyModal .occupancy-selection .box.right-box {
-  min-height: 196px;
-  max-height: 196px;
-  overflow-y: scroll;
-  margin-bottom: 30px;
-}
-#selectOccupancyModal .occupancy-selection .box ul {
-  list-style: none;
-  padding: 0;
-}
-#selectOccupancyModal .occupancy-selection .box ul li {
-  padding-bottom: 15px;
-  font-size: 13px;
-}
-#selectOccupancyModal .occupancy-selection .box ul li a {
-  color: #272b2e;
-}
-#selectOccupancyModal .occupancy-selection .box ul li a:active,
-#selectOccupancyModal .occupancy-selection .box ul li a:hover {
-  color: #00b4dc;
-}
 .sw-btn-prev,
 .sw-btn-next {
   background-color: #272b2e !important;
@@ -2641,10 +2450,255 @@ a {
   font-size: 12px;
 }
 #smartwizard .tab-content {
-  padding: 30px 15px 0 15px;
+  padding: 0;
   margin-top: 25px;
   border: 1px solid #ddd;
   border-bottom: 0;
+}
+.sw-theme-arrows .step-content {
+  padding: 30px 15px 0 15px;
+}
+.sw-theme-arrows .step-content#step-2 {
+  padding: 0;
+}
+@media only screen and (max-width: 767px) {
+  .nav .nav-tabs .step-anchor li {
+    width: 100%;
+  }
+  .nav-item {
+    width: 100%;
+  }
+}
+.table-light-head {
+  font-size: 13px;
+}
+.table-light-head thead {
+  background: #f2f2f2;
+  padding: 10px;
+}
+.table-light-head thead th {
+  font-weight: normal;
+  font-size: 13px;
+}
+.table-dark-head {
+  font-size: 13px;
+}
+.table-dark-head thead {
+  background: #5d6166;
+  padding: 10px;
+  color: white;
+}
+.table-dark-head thead th {
+  font-weight: normal;
+  font-size: 13px;
+}
+body,
+html {
+  font-family: Arial !important;
+}
+div {
+  word-wrap: break-word;
+}
+span.dollar {
+  display: inline-block;
+  padding-top: 7px;
+}
+/* The container */
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a {
+  color: #00b4dc;
+}
+/* Hide the browser's default radio button */
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: solid 2px #babcbf;
+}
+/* On mouse-over, add a grey background color */
+.check-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.check-container input:checked ~ .checkmark {
+  background-color: white;
+  border: 2px solid #00b4dc;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.check-container .checkmark:after {
+  top: 2px;
+  left: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00b4dc;
+}
+.form-group label {
+  font-size: 13px;
+  color: #8c9094;
+}
+.form-group label.error {
+  color: red;
+}
+.no-pad {
+  padding: 0;
+}
+.no-margin {
+  margin: 0;
+}
+.default-border {
+  border: solid 2px #babcbf;
+}
+.bg-f2 {
+  background-color: #f2f2f2;
+}
+.form-control {
+  border-radius: 0;
+  border: solid 2px #babcbf;
+  color: #272b2e;
+  font-size: 13px;
+  padding-left: 5px;
+}
+.btn-light {
+  border: solid 2px #272b2e;
+  font-size: 16px;
+  padding: 5px 30px;
+}
+.btn.btn-primary {
+  background-color: #272b2e !important;
+  font-size: 16px;
+  padding: 5px 30px;
+  border: solid 2px #272b2e !important;
+  border-radius: 0;
+}
+#smartwizard .tab-content {
+  position: relative;
+}
+#smartwizard .tab-content .policy-details-header {
+  margin: 0;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding: 30px;
+}
+#smartwizard .tab-content .policy-details-header .title {
+  color: #8c9094;
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+#smartwizard .tab-content .policy-details-header .sub-title {
+  font-size: 16px;
+}
+#smartwizard .tab-content .questionaire-container {
+  padding-top: 20px;
+}
+#smartwizard .tab-content .questionaire-container ol {
+  font-size: 13px;
+}
+#smartwizard .tab-content .questionaire-container ol .check-container {
+  font-size: 13px;
+}
+#smartwizard .tab-content .questionaire-container ol .check-container .checkmark {
+  top: 2px;
+}
+#smartwizard .tab-content .questionaire-container .q-content {
+  margin-left: 30px;
+  font-size: 13px;
+}
+#smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location {
+  width: 95%;
+}
+#smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location td p {
+  min-height: 40px;
+  color: #8c9094;
+}
+#smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location td input {
+  padding: 8px;
+}
+#smartwizard .tab-content .questionaire-container .q-content .table-add-cost {
+  width: 95%;
+}
+#selectOccupancyModal #selectOccupancyModalTitle {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+#selectOccupancyModal .occupancy-selection .title {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+#selectOccupancyModal .occupancy-selection .search-occupancy input {
+  border-right: 0px;
+}
+#selectOccupancyModal .occupancy-selection .search-occupancy button {
+  border-radius: 0;
+  background: transparent;
+  color: #666;
+  border: solid 2px #babcbf;
+  border-left: 0;
+}
+#selectOccupancyModal .occupancy-selection .box {
+  border: 1px solid #e6e6e6;
+  padding: 0px 0;
+  width: 100%;
+}
+#selectOccupancyModal .occupancy-selection .box option {
+  padding: 15px 15px;
+}
+#selectOccupancyModal .occupancy-selection .box.left-box {
+  min-height: 250px;
+  max-height: 250px;
+}
+#selectOccupancyModal .occupancy-selection .box.right-box {
+  min-height: 196px;
+  max-height: 196px;
+  overflow-y: scroll;
+  margin-bottom: 30px;
+}
+#selectOccupancyModal .occupancy-selection .box ul {
+  list-style: none;
+  padding: 0;
+}
+#selectOccupancyModal .occupancy-selection .box ul li {
+  padding-bottom: 15px;
+  font-size: 13px;
+}
+#selectOccupancyModal .occupancy-selection .box ul li a {
+  color: #272b2e;
+}
+#selectOccupancyModal .occupancy-selection .box ul li a:active,
+#selectOccupancyModal .occupancy-selection .box ul li a:hover {
+  color: #00b4dc;
 }
 .create-quote-tabs .header-row {
   margin-top: 20px;
@@ -2691,12 +2745,4 @@ a {
   display: inline-block;
   width: 100%;
   margin-top: 5px;
-}
-@media only screen and (max-width: 767px) {
-  .nav .nav-tabs .step-anchor li {
-    width: 100%;
-  }
-  .nav-item {
-    width: 100%;
-  }
 }
