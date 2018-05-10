@@ -2499,6 +2499,7 @@ html {
 div {
   word-wrap: break-word;
 }
+.v-align-mid,
 span.dollar {
   display: inline-block;
   padding-top: 7px;
@@ -2595,6 +2596,7 @@ a {
   border: solid 2px #272b2e;
   font-size: 16px;
   padding: 5px 30px;
+  border-radius: 0;
 }
 .btn.btn-primary {
   background-color: #272b2e !important;
@@ -2645,6 +2647,9 @@ a {
 }
 #smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location td input {
   padding: 8px;
+}
+#smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location td.save-btn {
+  vertical-align: middle;
 }
 #smartwizard .tab-content .questionaire-container .q-content .table-add-cost {
   width: 95%;
@@ -2699,6 +2704,24 @@ a {
 #selectOccupancyModal .occupancy-selection .box ul li a:active,
 #selectOccupancyModal .occupancy-selection .box ul li a:hover {
   color: #00b4dc;
+}
+#refer-quote .modal-dialog {
+  max-width: 350px;
+}
+#refer-quote .modal-dialog .modal-header .modal-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+#refer-quote .modal-footer {
+  border-top: 0;
+}
+#refer-quote .modal-footer p.text-center {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+#refer-quote .modal-footer p.text-center .btn {
+  margin-right: 20px;
 }
 .create-quote-tabs .header-row {
   margin-top: 20px;

@@ -111,13 +111,13 @@
 											</p>
 											<div class="form-check form-check-inline">
 												<label class="check-container">Yes
-													<input type="radio" name="radio">
+													<input type="radio" value="1" name="equipment-break">
 													<span class="checkmark"></span>
 												</label>
 											</div>
 											<div class="form-check form-check-inline">
 												<label class="check-container">No
-													<input type="radio" name="radio">
+													<input type="radio" value="0" name="equipment-break">
 													<span class="checkmark"></span>
 												</label>
 											</div>
@@ -148,7 +148,7 @@
 											<div class="row">
 												<div class="col-md-5">
 													<div class="form-group row">
-														<div class="col-sm-1">$</div>													
+														<div class="col-sm-1"><span class="dollar">$</span></div>													
 														<div class="col-sm-10 no-pad">															
 															<input type="text" 
 															class="form-control" 
@@ -223,7 +223,7 @@
 													</div>
 												</div>
 												<div class="col-md-2">
-													<a href="#" data-toggle="modal" data-target="#selectOccupancyModal">Select</a>
+													<a href="#" class="v-align-mid" data-toggle="modal" data-target="#selectOccupancyModal">Select</a>
 												</div>
 											</div>
 											
@@ -363,16 +363,16 @@
                                                 </div>
                                             </div>
                                             <div class="tables-section d-none">
-                                                <table class="table table-bordered table-light-head table-risk-location">
+                                                <table id="risk-loc-table1" class="table table-bordered table-light-head table-risk-location">
                                                     <thead>
                                                         <tr>
-                                                            <th colspan="5">
+                                                            <th colspan="6">
                                                                 <div class="row">
                                                                     <div class="col-md-10">
                                                                         1. 8310 - Universities, Community Colleges, Cegep and Polytec
                                                                     </div>
                                                                     <div class="col-md-2">
-                                                                        <a href="#">Change</a>
+                                                                        <a href="#" class="change-occupancy">Change</a>
                                                                     </div>
                                                                 </div>
                                                             </th>
@@ -447,21 +447,24 @@
                                                                     </div>
 
                                                                 </div>
+                                                            </td>
+                                                            <td class="save-btn">
+                                                                <a class="save-table" href="#">Save</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                     
                                                 </table>
-                                                <table class="table table-bordered table-light-head table-risk-location">
+                                                <table id="risk-loc-table1" class="table table-bordered table-light-head table-risk-location">
                                                     <thead>
                                                         <tr>
-                                                            <th colspan="5">
+                                                            <th colspan="6">
                                                                 <div class="row">
                                                                     <div class="col-md-10">
                                                                         1. 8310 - Universities, Community Colleges, Cegep and Polytec
                                                                     </div>
                                                                     <div class="col-md-2">
-                                                                        <a href="#">Change</a>
+                                                                        <a href="#" class="change-occupancy">Change</a>
                                                                     </div>
                                                                 </div>
                                                             </th>
@@ -536,6 +539,9 @@
                                                                     </div>
 
                                                                 </div>
+                                                            </td>
+                                                            <td class="save-btn">
+                                                                <a class="save-table" href="#">Save</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -648,6 +654,36 @@
 		</div>
 	</div>
 
+
+    <!-- First question dialog --> 
+    <div class="modal fade" id="refer-quote" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Refer Quote</h5>
+                    <button type="button" class="close" id="close-refer-quote" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Your Quote will be referred to the
+                    Underwriter.                    
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <p class="text-center">
+                        <button type="button" data-dismiss="modal" id="cancel-refer-quote" class="btn btn-light">Cancel</button>
+                        <button class="btn btn-primary" data-dismiss="modal">Continue</button>
+                    </p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	
