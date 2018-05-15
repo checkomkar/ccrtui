@@ -2504,20 +2504,29 @@ span.dollar {
   display: inline-block;
   padding-top: 7px;
 }
+.vertical-align-mid {
+  vertical-align: middle !important;
+}
 .dis-block {
   display: block;
 }
 .error {
   color: red;
 }
+.no-border {
+  border: none !important;
+}
+.bg-white {
+  background: #fff;
+}
 @media (min-width: 1200px) {
   .container {
-    max-width: 80%;
+    max-width: 90%;
   }
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 80%;
+    max-width: 90%;
   }
 }
 /* The container */
@@ -2663,17 +2672,17 @@ a {
   margin-left: 30px;
   font-size: 13px;
 }
-#smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location {
-  width: 95%;
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location {
+  width: 100%;
 }
-#smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location td p {
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td p {
   min-height: 40px;
   color: #8c9094;
 }
-#smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location td input {
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td input {
   padding: 8px;
 }
-#smartwizard .tab-content .questionaire-container .q-content .tables-section .table-risk-location td.save-btn {
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td.save-btn {
   vertical-align: middle;
 }
 #smartwizard .tab-content .questionaire-container .q-content .table-add-cost {

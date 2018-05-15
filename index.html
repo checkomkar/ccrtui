@@ -300,8 +300,9 @@
                                                                     <div class="col-sm-1"><span class="dollar">$</span></div>
                                                                     <div class="col-sm-8 no-pad">
                                                                         <input type="text"
+                                                                               required
                                                                                class="form-control"
-                                                                               id="project-duration">
+                                                                               id="soft-cost">
                                                                     </div>
 
                                                                 </div>
@@ -311,8 +312,9 @@
                                                                     <div class="col-sm-1"><span class="dollar">$</span></div>
                                                                     <div class="col-sm-8 no-pad">
                                                                         <input type="text"
+                                                                               required
                                                                                class="form-control"
-                                                                               id="project-duration">
+                                                                               id="extra-expense">
                                                                     </div>
 
                                                                 </div>
@@ -322,8 +324,9 @@
                                                                     <div class="col-sm-1"><span class="dollar">$</span></div>
                                                                     <div class="col-sm-8 no-pad">
                                                                         <input type="text"
+                                                                               required
                                                                                class="form-control"
-                                                                               id="project-duration">
+                                                                               id="startup-delay">
                                                                     </div>
 
                                                                 </div>
@@ -361,199 +364,17 @@
                                             </p>
                                             <div class="row">
                                                 <div class="form-group col-md-2">
-                                                    <select class="form-control select-product required" required="required" id="risk-locations">
+                                                    <!--<select class="form-control select-product required" required="required" id="risk-locations">
                                                         <option value=""></option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
-                                                    </select>
+                                                    </select>-->
+                                                    <button id="add-loc-main" class="btn btn-primary" type="button">Add Location</button>
                                                 </div>
                                             </div>
-                                            <div class="tables-section d-none">
-                                                <table id="risk-loc-table1" class="table table-bordered table-light-head table-risk-location">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="6">
-                                                                <div class="row">
-                                                                    <div class="col-md-10">
-                                                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <a href="#" class="change-occupancy">Change</a>
-                                                                    </div>
-                                                                </div>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <p>
-                                                                    State/Province
-                                                                </p>
-                                                                <div class="form-group">
-                                                                    <select class="form-control select-product required" required="required" id="risk-locations">
-                                                                        <option value=""></option>
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                        <option value="3">3</option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <p>
-                                                                    Address
-                                                                </p>
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-12">
-                                                                        <input type="text"
-                                                                               class="form-control"
-                                                                               id="project-duration">
-                                                                    </div>
-
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <p>
-                                                                    Building Value
-                                                                </p>
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                                    <div class="col-sm-8 no-pad">
-                                                                        <input type="text"
-                                                                               class="form-control"
-                                                                               id="project-duration">
-                                                                    </div>
-
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <p>
-                                                                    Content Value
-                                                                </p>
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                                    <div class="col-sm-8 no-pad">
-                                                                        <input type="text"
-                                                                               class="form-control"
-                                                                               id="project-duration">
-                                                                    </div>
-
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <p>
-                                                                    Perishable Stock Value
-                                                                </p>
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                                    <div class="col-sm-8 no-pad">
-                                                                        <input type="text"
-                                                                               class="form-control"
-                                                                               id="project-duration">
-                                                                    </div>
-
-                                                                </div>
-                                                            </td>
-                                                            <td class="save-btn">
-                                                                <a class="save-table" href="#">Save</a>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                    
-                                                </table>
-                                                <table id="risk-loc-table1" class="table table-bordered table-light-head table-risk-location">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="6">
-                                                                <div class="row">
-                                                                    <div class="col-md-10">
-                                                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
-                                                                    </div>
-                                                                    <div class="col-md-2">
-                                                                        <a href="#" class="change-occupancy">Change</a>
-                                                                    </div>
-                                                                </div>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <p>
-                                                                    State/Province
-                                                                </p>
-                                                                <div class="form-group">
-                                                                    <select class="form-control select-product required" required="required" id="risk-locations">
-                                                                        <option value=""></option>
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                        <option value="3">3</option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <p>
-                                                                    Address
-                                                                </p>
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-12">
-                                                                        <input type="text"
-                                                                               class="form-control"
-                                                                               id="project-duration">
-                                                                    </div>
-
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <p>
-                                                                    Building Value
-                                                                </p>
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                                    <div class="col-sm-8 no-pad">
-                                                                        <input type="text"
-                                                                               class="form-control"
-                                                                               id="project-duration">
-                                                                    </div>
-
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <p>
-                                                                    Content Value
-                                                                </p>
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                                    <div class="col-sm-8 no-pad">
-                                                                        <input type="text"
-                                                                               class="form-control"
-                                                                               id="project-duration">
-                                                                    </div>
-
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <p>
-                                                                    Perishable Stock Value
-                                                                </p>
-                                                                <div class="form-group row">
-                                                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                                    <div class="col-sm-8 no-pad">
-                                                                        <input type="text"
-                                                                               class="form-control"
-                                                                               id="project-duration">
-                                                                    </div>
-
-                                                                </div>
-                                                            </td>
-                                                            <td class="save-btn">
-                                                                <a class="save-table" href="#">Save</a>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-
-                                                </table>
+                                            <div class="location-tables-section">
+                                                
                                             </div>
                                         </div>
 		                    		</li>
@@ -711,6 +532,112 @@
         </div>
 
 
+    </div>
+
+    <div id="location-grid-row" class="d-none">
+        <div class="row no-margin">
+            <div class="col-md-12 no-pad">
+                <table class="table table-bordered table-light-head table-risk-location no-border">
+                    <thead>
+                        <tr>
+                            <th colspan="5">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
+                                    </div>
+                                    <div class="col-md-2">
+                                        <a href="#" class="change-occupancy">Edit Occupancy</a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="no-border bg-white"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>
+                                    State/Province
+                                </p>
+                                <div class="form-group">
+                                    <select class="form-control select-product required" required="required" id="risk-locations">
+                                        <option value=""></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Address
+                                </p>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Building Value
+                                </p>
+                                <div class="form-group row">
+                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                    <div class="col-sm-8 no-pad">
+                                        <input type="text"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Content Value
+                                </p>
+                                <div class="form-group row">
+                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                    <div class="col-sm-8 no-pad">
+                                        <input type="text"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Perishable Stock Value
+                                </p>
+                                <div class="form-group row">
+                                    <div class="col-sm-1"><span class="dollar">$</span></div>
+                                    <div class="col-sm-8 no-pad">
+                                        <input type="text"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td class="no-border vertical-align-mid">
+                                <a href="#">Remove</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+
+                </table>
+            </div>
+            <!--<div class="col-md-2">
+                <div class=""><a href="#">Remove</a></div>
+            </div>-->
+            
+        </div>
+        
     </div>
 
     <!-- Modal -->
