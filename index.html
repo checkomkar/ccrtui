@@ -102,7 +102,7 @@
                                 </div>
 		                    	
 		                    </div>
-		                    <div class="questionaire-container">
+		                    <form class="questionaire-container step-2">
 		                    	<ol>
 		                    		<li>
 										<div class="q-content">
@@ -111,16 +111,17 @@
 											</p>
 											<div class="form-check form-check-inline">
 												<label class="check-container">Yes
-													<input type="radio" value="1" name="equipment-break">
+													<input type="radio" required value="1" name="equipment-break">
 													<span class="checkmark"></span>
 												</label>
 											</div>
 											<div class="form-check form-check-inline">
 												<label class="check-container">No
-													<input type="radio" value="0" name="equipment-break">
+													<input type="radio" required value="0" name="equipment-break">
 													<span class="checkmark"></span>
 												</label>
-											</div>
+                                            </div>
+                                            <label class="error dis-block d-none">This field is required.</label>
 										</div>
 		                    					                    			
 									</li>
@@ -131,7 +132,7 @@
 											</p>
 											<div class="row">
 												<div class="form-group col-md-5">
-													<select class="form-control select-product required" required="required" id="select-product">
+													<select class="form-control select-product required" required="required" id="select-insured-type">
 														<option value=""></option>
 														<option value="2">Owner</option>
 														<option value="3">Course of Construction</option>
@@ -150,7 +151,8 @@
 													<div class="form-group row">
 														<div class="col-sm-1"><span class="dollar">$</span></div>													
 														<div class="col-sm-10 no-pad">															
-															<input type="text" 
+                                                            <input type="text" data-msg="Policy limit is required"
+                                                            required="required"
 															class="form-control" 
 															id="policy-limit" >
 														</div>
@@ -181,6 +183,7 @@
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
+                                            <label class="error dis-block d-none">This field is required.</label>
                                         </div>
 
                                     </li>
@@ -203,6 +206,7 @@
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
+                                            <label class="error dis-block d-none">This field is required.</label>
                                         </div>
 
                                     </li>
@@ -215,7 +219,8 @@
 												<div class="col-md-10">
 													<div class="form-group row">													
 														<div class="col-sm-12">
-															<input type="text" 
+                                                            <input type="text" 
+                                                            required data-msg="Occupancy is required"
 															disabled class="form-control" 
 															id="select-occupancy" >
 														</div>
@@ -264,6 +269,7 @@
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
+                                            <label class="error dis-block d-none">This field is required.</label>
                                         </div>
 		                    			
 		                    		</li>
@@ -339,6 +345,7 @@
 
                                                 <div class="col-sm-5">
                                                     <input type="text"
+                                                    required data-msg="Project duration is required."
                                                            class="form-control"
                                                            id="project-duration">
                                                 </div>
@@ -549,14 +556,128 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        
-		                    			
 		                    		</li>
 		                    	</ol>
-		                    </div>
+                            </form>
 		                </div>
 		                <div id="step-3" class="">
-		                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <div class="policy-details-header">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="title">Quote</div>
+                                        <div class="sub-title">EB18-123456 (Draft)</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="title">Product Type</div>
+                                        <div class="sub-title">Equipment Breakdown</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="title">Insured Name</div>
+                                        <div class="sub-title">Murphy Brothers Inc.</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="title">Product Type</div>
+                                        <div class="sub-title">Equipment Breakdown</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="title">Insured Name</div>
+                                        <div class="sub-title">Murphy Brothers Inc.</div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+		                    <div class="step-3-container">
+                                <table id="quote-table" class="table table-bordered table-light-head table-risk-location">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="6">
+                                                <div class="row">
+                                                    <div class="col-md-10">
+                                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <a href="#" class="change-occupancy">Change</a>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    State/Province
+                                                </p>
+                                                <div class="form-group">
+                                                    <select class="form-control select-product required" required="required" id="risk-locations">
+                                                        <option value=""></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    Address
+                                                </p>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12">
+                                                        <input type="text" class="form-control" id="project-duration">
+                                                    </div>
+                                
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    Building Value
+                                                </p>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-1">
+                                                        <span class="dollar">$</span>
+                                                    </div>
+                                                    <div class="col-sm-8 no-pad">
+                                                        <input type="text" class="form-control" id="project-duration">
+                                                    </div>
+                                
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    Content Value
+                                                </p>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-1">
+                                                        <span class="dollar">$</span>
+                                                    </div>
+                                                    <div class="col-sm-8 no-pad">
+                                                        <input type="text" class="form-control" id="project-duration">
+                                                    </div>
+                                
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    Perishable Stock Value
+                                                </p>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-1">
+                                                        <span class="dollar">$</span>
+                                                    </div>
+                                                    <div class="col-sm-8 no-pad">
+                                                        <input type="text" class="form-control" id="project-duration">
+                                                    </div>
+                                
+                                                </div>
+                                            </td>
+                                            <td class="save-btn">
+                                                <a class="save-table" href="#">Save</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                
+                                </table>
+                            </div>
 		                    
 		                </div>
 		                <hr class="no-margin">

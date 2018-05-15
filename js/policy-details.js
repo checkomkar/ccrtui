@@ -51,4 +51,29 @@ $(document).ready(function () {
         
     })
     //$('.save-table').closest('table input').prop('disabled', true);
+
+    var validatorStep2 = $('.step-2').validate({
+        rules: {
+            'equipment-break': { required: true}
+        }
+    });
+
+    $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
+        console.log(validatorStep2);
+        var selectInsuredTypeIsValid = validatorStep2.element('#select-insured-type');
+        var policyLimit = validatorStep2.element('#policy-limit');
+        console.log(selectInsuredTypeIsValid);
+        console.log(stepNumber)
+        if(stepNumber == 1){
+            if (($("input[name='equipment-break']:checked").length > 0)) {
+                // one ore more checkboxes are checked
+            }
+            else {
+                // no checkboxes are checked
+                return false;
+            }
+        }
+        
+
+    })
 })

@@ -6,13 +6,20 @@
 #smartwizard {
     .tab-content {
         position: relative;
-
+		#step-3{
+			padding: 0;
+			.step-3-container{
+				padding: 20px;
+			}
+		}
         .policy-details-header {
             margin: 0;
             background-color: @policy-header-bg;
             border-bottom: 1px solid #ddd;
-            padding: 30px;
-
+            padding: 30px 30px 0px 30px;
+			.col-md-4{
+				padding-bottom: 30px;
+			}
             .title {
                 color: @light-grey-text;
                 font-size: 13px;
@@ -99,7 +106,8 @@
 			padding: 0px 0;
 			width: 100%;
 			option{
-				padding: 15px 15px;
+				padding: 10px 10px;
+				font-size: 13px;
 			}
 			&.left-box{
 				min-height: 250px;

@@ -2504,6 +2504,22 @@ span.dollar {
   display: inline-block;
   padding-top: 7px;
 }
+.dis-block {
+  display: block;
+}
+.error {
+  color: red;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 80%;
+  }
+}
 /* The container */
 .check-container {
   display: block;
@@ -2608,11 +2624,20 @@ a {
 #smartwizard .tab-content {
   position: relative;
 }
+#smartwizard .tab-content #step-3 {
+  padding: 0;
+}
+#smartwizard .tab-content #step-3 .step-3-container {
+  padding: 20px;
+}
 #smartwizard .tab-content .policy-details-header {
   margin: 0;
   background-color: #f9f9f9;
   border-bottom: 1px solid #ddd;
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
+}
+#smartwizard .tab-content .policy-details-header .col-md-4 {
+  padding-bottom: 30px;
 }
 #smartwizard .tab-content .policy-details-header .title {
   color: #8c9094;
@@ -2678,7 +2703,8 @@ a {
   width: 100%;
 }
 #selectOccupancyModal .occupancy-selection .box option {
-  padding: 15px 15px;
+  padding: 10px 10px;
+  font-size: 13px;
 }
 #selectOccupancyModal .occupancy-selection .box.left-box {
   min-height: 250px;

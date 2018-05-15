@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+    setTimeout(function(){
+        document.documentElement.scrollTop = 0;
+        $(window).scrollTop(0);
+    }, 1000)
             
             // Step show event
             $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
