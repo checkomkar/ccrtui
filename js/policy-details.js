@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     })
     var $radioEquipmentGroup = $('input[name=equipment-break]')
-    $('input[name=equipment-break]').on('change', function (e) {
+    $radioEquipmentGroup.on('change', function (e) {
         console.log(e);
         if (e.target.value === '1') {
             $('#refer-quote').modal();
@@ -64,41 +64,52 @@ $(document).ready(function () {
     });
 
     var validateRadio = function () {
+        var equipBreakIsValid, riskIsValid, riskSpoilIsValid, projectBegunIsValid;
         //check all radio buttons
         if (($("input[name='equipment-break']:checked").length > 0)) {
             // one ore more checkboxes are checked
             $("input[name='equipment-break']").parents('.q-content').find('label.error').addClass('d-none');
+            equipBreakIsValid = true;
         }
         else {
             // no checkboxes are checked
             $("input[name='equipment-break']").parents('.q-content').find('label.error').removeClass('d-none');
-            return false;
+            equipBreakIsValid = false;
         }
         if (($("input[name='risk']:checked").length > 0)) {
             // one ore more checkboxes are checked
             $("input[name='risk']").parents('.q-content').find('label.error').addClass('d-none');
+            riskIsValid = true;
         }
         else {
             // no checkboxes are checked
             $("input[name='risk']").parents('.q-content').find('label.error').removeClass('d-none');
-            return false;
+            riskIsValid = false;
         }
         if (($("input[name='risk-spoil']:checked").length > 0)) {
             // one ore more checkboxes are checked
             $("input[name='risk-spoil']").parents('.q-content').find('label.error').addClass('d-none');
+            riskSpoilIsValid = true;
         }
         else {
             // no checkboxes are checked
             $("input[name='risk-spoil']").parents('.q-content').find('label.error').removeClass('d-none');
-            return false;
+            riskSpoilIsValid = false;
         }
         if (($("input[name='project-begun']:checked").length > 0)) {
             // one ore more checkboxes are checked
             $("input[name='project-begun']").parents('.q-content').find('label.error').addClass('d-none');
+            projectBegunIsValid = true;
         }
         else {
             // no checkboxes are checked
             $("input[name='project-begun']").parents('.q-content').find('label.error').removeClass('d-none');
+            projectBegunIsValid = false;
+        }
+
+        if (equipBreakIsValid || riskIsValid || riskSpoilIsValid || projectBegunIsValid) {
+            return true;
+        } else {
             return false;
         }
     }
@@ -114,20 +125,44 @@ $(document).ready(function () {
         var extraExpense = validatorStep2.element('#extra-expense');
         var startupDelay = validatorStep2.element('#startup-delay');
         var riskLocations = validatorStep2.element('#risk-locations');
+
+        
+
         console.log(selectInsuredTypeIsValid);
         console.log(stepNumber)
 
-        $('input[type="radio"]').on('change', validateRadio);
+        
 
         if (stepNumber == 1) {
             //check all inputs and dropdownds
+            validateRadio();
+            if (selectInsuredTypeIsValid == false || policyLimit == false ||
+                selectOccupancy == false || bestDescription == false || projectDuration == false
+                || softCost == false || extraExpense == false || startupDelay == false || riskLocations == false
+                || validateRadio() == false) {
 
-            return validateRadio();
+                return false;
+            } else {
+                return true;
+            }
+            
             
         }
-        
+        $('input[type="radio"]').on('change', validateRadio);
 
     })
+
+    //$('select').on('change', function () {
+    //    console.log('select cahge')
+    //    var $this = $(this);
+    //    setTimeout(function () {
+    //        console.log($this.hasClass('valid'))
+    //        if ($this.hasClass('valid')) {
+    //            $this.removeClass('is-invalid');
+    //        }
+    //    }, 0)
+        
+    //})
 
     var addLocGridRow = function () {
         var locGridHtml = $.parseHTML($('#location-grid-row').html())[1];

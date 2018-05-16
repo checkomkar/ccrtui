@@ -2364,6 +2364,7 @@
 .step-anchor {
   border: 1px solid #ddd !important;
   border-top-right-radius: 0px !important;
+  background: white !important;
 }
 .step-anchor .active a.nav-link {
   background: #009245 !important;
@@ -2509,6 +2510,14 @@ span.dollar {
 }
 .dis-block {
   display: block;
+}
+select.error,
+input.error {
+  border-color: #dc3545;
+}
+select.error:focus,
+input.error:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 .error {
   color: red;

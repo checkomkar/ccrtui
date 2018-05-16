@@ -166,30 +166,30 @@ $(document).ready(function(){
         }
 
 
-        if(insuredNameIsValid == false){
-            $('#insuredName').addClass('is-invalid');
-        }else{
-            $('#insuredName').removeClass('is-invalid');
-        }
+        //if(insuredNameIsValid == false){
+        //    $('#insuredName').addClass('is-invalid');
+        //}else{
+        //    $('#insuredName').removeClass('is-invalid');
+        //}
 
-        if(insuredPostalCodeIsValid == false){
-            $('#insuredPostalCode').addClass('is-invalid');
-        }else{
-            $('#insuredPostalCode').removeClass('is-invalid');
-        }
+        //if(insuredPostalCodeIsValid == false){
+        //    $('#insuredPostalCode').addClass('is-invalid');
+        //}else{
+        //    $('#insuredPostalCode').removeClass('is-invalid');
+        //}
 
-        if(brokerNameIsValid == false){
-            $('#brokerName').addClass('is-invalid');
-        }else{
-            $('#brokerName').removeClass('is-invalid');
-        }
+        //if(brokerNameIsValid == false){
+        //    $('#brokerName').addClass('is-invalid');
+        //}else{
+        //    $('#brokerName').removeClass('is-invalid');
+        //}
 
-        if(selectProductIsValid == false){
-            $('#select-product').addClass('is-invalid')
-            return false;
-        }else{
-            $('#select-product').removeClass('is-invalid')
-        }
+        //if(selectProductIsValid == false){
+        //    $('#select-product').addClass('is-invalid')
+        //    return false;
+        //}else{
+        //    $('#select-product').removeClass('is-invalid')
+        //}
 
         if(insuredNameIsValid == false || insuredPostalCodeIsValid == false ||
             brokerNameIsValid == false)
