@@ -2710,6 +2710,7 @@ a {
   border: 1px solid #e6e6e6;
   padding: 0px 0;
   width: 100%;
+  overflow-x: scroll;
 }
 #selectOccupancyModal .occupancy-selection .box option {
   padding: 10px 10px;
