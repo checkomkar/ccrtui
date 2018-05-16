@@ -2685,6 +2685,13 @@ a {
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td.save-btn {
   vertical-align: middle;
 }
+#smartwizard .tab-content .questionaire-container .q-content .add-location-btn-holder {
+  display: inline-block;
+  width: 90%;
+}
+#smartwizard .tab-content .questionaire-container .q-content .add-location-btn-holder button#add-loc-main {
+  margin-right: 3px;
+}
 #smartwizard .tab-content .questionaire-container .q-content .table-add-cost {
   width: 95%;
 }

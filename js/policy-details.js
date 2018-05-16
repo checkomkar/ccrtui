@@ -17,6 +17,11 @@ $(document).ready(function () {
         if (e.target.value === '1') {
             $('#refer-quote').modal();
         }
+    });
+
+    $('#refer-to-underwriter').on('click', function (e) {
+        e.preventDefault();
+        $('#refer-quote').modal();
     })
 
     $('#refer-quote').on('hidden.bs.modal', function () {
@@ -137,6 +142,7 @@ $(document).ready(function () {
         
     }
     var locCounter = 1;
+    addLocGridRow();
     $('#add-loc-main').on('click', function () {
         addLocGridRow();
     })
