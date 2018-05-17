@@ -19,7 +19,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#refer-to-underwriter').on('click', function (e) {
+    $('#refer-to-underwriter, #refer-quote-trigger').on('click', function (e) {
         e.preventDefault();
         $('#refer-quote').modal();
     })
@@ -168,18 +168,39 @@ $(document).ready(function () {
         var locGridHtml = $.parseHTML($('#location-grid-row').html())[1];
         
         console.log(locGridHtml)
-        if (locCounter >= 10) {
+        if ($('.loc-grid-table').length >= 10) {
             return;
         } else {
+            $(locGridHtml).addClass('loc-grid-table');
             $(locGridHtml).attr("id", "table" + locCounter++);
+            //console.log($(locGridHtml).index())
             $('.location-tables-section').append(locGridHtml);
         }
         
     }
+
+    var removeLocGridRow = function () {
+        locCounter--;
+    }
+
     var locCounter = 1;
     addLocGridRow();
     $('#add-loc-main').on('click', function () {
         addLocGridRow();
+    })
+
+    $(document).on('click', '.remove-loc-grid', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        $this.closest('.loc-grid-table').remove();
+        //console.log($('.loc-grid-table').length)
+        console.log($this.closest('.loc-grid-table').index())
+        //console.log($this.closest('.loc-grid-table').index())
+    });
+
+    $(document).on('change', '.state-dd', function (e) {
+        var $this = $(this);
+        console.log($this.closest('.loc-grid-table').index())
     })
 
 })

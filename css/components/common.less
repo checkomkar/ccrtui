@@ -56,6 +56,21 @@ select.error, input.error {
     }
 }
 
+.custom-file {
+    .custom-file-label {
+        border: 2px solid @input-border;
+        border-radius: 0;
+
+        &:after {
+            background-color: black;
+            border-radius: 0;
+            color: white;
+            font-size: 16px;
+            top: -1px;
+            right: -1px;
+        }
+    }
+}
 
 /* The container */
 .check-container {

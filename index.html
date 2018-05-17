@@ -514,12 +514,29 @@
 	        	
     		</div>
         	<div class="col-sm-12 col-md-4">
-        		<div class="text-right">
+        		<div class="text-right side-field-btn">
+                    <button class="btn btn-primary" id="refer-quote-trigger">
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                        Refer this Quote
+                    </button>
         			<button class="btn btn-primary">
                         <i class="fa fa-comments" aria-hidden="true"></i>
         				Live Chat
         			</button>
-        		</div>
+        		</div>                
+                <fieldset class="side-field-set">
+                    <legend>Attachments</legend>
+                    <div class="form-group attachment">
+                        <p class="file-up-title">Add a file</p>
+                        <div class="custom-file">                            
+                            <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                            <label class="custom-file-label" for="validatedCustomFile"></label>                            
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <button class="btn btn-primary">Attach</button>
+                    </div>                    
+                </fieldset>
         		<fieldset class="side-field-set">
         			<legend>Comments</legend>
 					<div class="form-group">
@@ -568,7 +585,7 @@
                                     State/Province
                                 </p>
                                 <div class="form-group">
-                                    <select class="form-control select-product required" required="required" id="risk-locations">
+                                    <select class="form-control select-product required state-dd" required="required">
                                         <option value=""></option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -632,7 +649,7 @@
                                 </div>
                             </td>
                             <td class="no-border vertical-align-mid">
-                                <a href="#">Remove</a>
+                                <a href="#" class="remove-loc-grid">Remove</a>
                             </td>
                         </tr>
                     </tbody>

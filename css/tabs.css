@@ -2457,7 +2457,7 @@
   border-bottom: 0;
 }
 .sw-theme-arrows .step-content {
-  padding: 30px 15px 0 15px;
+  padding: 30px 25px 0 25px;
 }
 .sw-theme-arrows .step-content#step-2 {
   padding: 0;
@@ -2537,6 +2537,18 @@ input.error:focus {
   .container {
     max-width: 90%;
   }
+}
+.custom-file .custom-file-label {
+  border: 2px solid #babcbf;
+  border-radius: 0;
+}
+.custom-file .custom-file-label:after {
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  font-size: 16px;
+  top: -1px;
+  right: -1px;
 }
 /* The container */
 .check-container {
@@ -2684,8 +2696,10 @@ a {
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location {
   width: 100%;
 }
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td:nth-of-type(5) {
+  width: 23%;
+}
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td p {
-  min-height: 40px;
   color: #8c9094;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td input {
@@ -2790,6 +2804,9 @@ a {
   border-bottom: 0;
   border: 0 !important;
 }
+.create-quote-tabs .create-quote-main .side-field-btn .btn i {
+  font-size: 18px;
+}
 .create-quote-tabs .create-quote-main .side-field-set {
   margin-top: 23px;
   border-radius: 0;
@@ -2802,6 +2819,11 @@ a {
 }
 .create-quote-tabs .create-quote-main .side-field-set span {
   font-size: 12px;
+}
+.create-quote-tabs .create-quote-main .side-field-set .attachment p.file-up-title {
+  font-size: 13px;
+  color: #8c9094;
+  margin-bottom: 8px;
 }
 .create-quote-tabs .create-quote-main .show-comments-box {
   padding: 20px;
