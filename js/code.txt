@@ -1,0 +1,30 @@
+var setModalValues = function(result){
+	var div1 = document.getElementById('catID');
+			var div3 = document.getElementById('occID');
+
+			var json = JSON.parse(JSON.stringify(result));
+			var jsonObject = JSON.parse(json);
+
+			var data1 = jsonObject.category;
+			//console.log(data1);
+
+
+			var ins_len = data1.length;
+			//console.log(ins_len)
+            setTimeout(function(){
+				for (var i = 0; i < ins_len; i++) {
+				var equ_col = data1[i];
+
+				if(i == 0){
+					div1.innerHTML +='<option class="selectcat" selected value="'+ i  + '">' + equ_col.category+ '</option>';
+				}else{
+					div1.innerHTML +='<option class="selectcat" value="'+ i  + '">' + equ_col.category+ '</option>';
+				}}
+
+                for (var j = 0; j<data1[0].occupancies.length; j++){
+                    console.log('subCat', data1[0].occupancies.length);
+                    var occ = data1[0].occupancies[j];
+                    div3.innerHTML +='<option value="'+ j  + '" occupancy_code_category_key='+occ.occupancy_code_category_key+' sub_program_key='+occ.sub_program_key+'>' + occ.description+ '</option>'; 
+                }
+            },0)
+}
