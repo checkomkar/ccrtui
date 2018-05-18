@@ -280,17 +280,17 @@
                                                 Additional Costs/Coverages
                                             </p>
                                             <div>
-                                                <table class="table table-bordered table-dark-head table-add-cost">
+                                                <table class="table table-add-cost">
                                                     <thead>
                                                         <tr>                                                            
                                                             <th>
-                                                                Soft Costs
+                                                                a. Soft Costs
                                                             </th>
                                                             <th>
-                                                                Extra Expense
+                                                                b. Extra Expense
                                                             </th>
                                                             <th>
-                                                                Delay in Startup
+                                                                c. Delay in Startup
                                                             </th>                                                            
                                                         </tr>
                                                     </thead>
@@ -362,8 +362,8 @@
                                         <div class="q-content">
                                             <p>
                                                 Please add your locations <br />
-                                                If your risk has more than 10 locations, <a href="#" id="refer-to-underwriter">refer to an Underwriter.</a>
-                                            </p>
+                                                For more than 10 locations, <a href="#" id="refer-to-underwriter">refer this quote</a> to an Underwriter
+</p>
                                             <div class="row">
                                                 <div class="form-group col-md-2">
                                                     <!--<select class="form-control select-product required" required="required" id="risk-locations">
@@ -649,7 +649,7 @@
                                 </div>
                             </td>
                             <td class="no-border vertical-align-mid">
-                                <a href="#" class="remove-loc-grid">Remove</a>
+                                <button class="btn remove-loc-grid">Remove</button>
                             </td>
                         </tr>
                     </tbody>
@@ -682,13 +682,13 @@
 								Category
 							</div>
 							<div>								
-								<select class="box left-box" name="occupancy" id="" size="5">
-									<option value="0">All</option>
+								<select class="box left-box" name="occupancy" id="catID" size="5">
+									<!--<option value="0">All</option>
 									<option value="1">Education</option>
 									<option value="2">Education</option>
 									<option value="3">Education</option>
 									<option value="4">Education</option>
-									<option value="5">Education</option>
+									<option value="5">Education</option>-->
 								</select>
 							</div>	
 						</div>
@@ -707,14 +707,8 @@
 								</div>
 							</div>
 							<div class="">								
-								<select class="box right-box" name="occupancy" id="" size="10">
-									<option value="0">8324 - Trade Schools or Vocational Schools</option>
-									<option value="1">8324 - Trade Schools or Vocational Schools</option>
-									<option value="2">8324 - Trade Schools or Vocational Schools</option>
-									<option value="3">8324 - Trade Schools or Vocational Schools</option>
-									<option value="4">8324 - Trade Schools or Vocational Schools</option>
-									<option value="5">8324 - Trade Schools or Vocational Schools</option>
-                                    <option value="5">8324 - Trade Schools or Vocational Schools 8324 - Trade Schools or Vocational Schools 8324 - Trade Schools or Vocational Schools</option>
+								<select class="box right-box" name="occupancy" id="occID" size="10">
+									
 								</select>
 							</div>
 							<div class="input-group">

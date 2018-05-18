@@ -2696,17 +2696,34 @@ a {
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location {
   width: 100%;
 }
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td:nth-of-type(3),
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td:nth-of-type(4),
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td:nth-of-type(5) {
-  width: 23%;
+  width: 15%;
+}
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td:nth-of-type(2) p {
+  text-align: left;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td p {
+  min-height: 40px;
   color: #8c9094;
+  text-align: right;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td input {
   padding: 8px;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td.save-btn {
   vertical-align: middle;
+}
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td .remove-loc-grid {
+  background: none;
+  color: #00b4dc;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td .remove-loc-grid:disabled {
+  color: #8c9094;
 }
 #smartwizard .tab-content .questionaire-container .q-content .add-location-btn-holder {
   display: inline-block;
@@ -2717,6 +2734,14 @@ a {
 }
 #smartwizard .tab-content .questionaire-container .q-content .table-add-cost {
   width: 95%;
+  border: none;
+}
+#smartwizard .tab-content .questionaire-container .q-content .table-add-cost thead th {
+  border: none;
+  font-weight: normal;
+}
+#smartwizard .tab-content .questionaire-container .q-content .table-add-cost td {
+  border: none;
 }
 #selectOccupancyModal #selectOccupancyModalTitle {
   text-transform: uppercase;

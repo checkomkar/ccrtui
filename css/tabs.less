@@ -60,12 +60,20 @@
                         width: 100%;
 
                         td {
-                            &:nth-of-type(5){
-                                width: 23%;
+                            &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
+                                width: 15%;
                             }
+
+                            &:nth-of-type(2) {
+                                p {
+                                    text-align: left;
+                                }
+                            }
+
                             p {
-                                //min-height: 40px;
+                                min-height: 40px;
                                 color: #8c9094;
+                                text-align: right;
                             }
 
                             input {
@@ -75,6 +83,17 @@
                             &.save-btn {
                                 vertical-align: middle;
                             }
+
+                            .remove-loc-grid {
+                                background: none;
+                                color: @a-link;
+                                font-size: 13px;
+                                padding: 0;
+                                margin: 0;
+                                &:disabled{
+                                    color: @grey-03;
+                                }
+                            }
                         }
                     }
                 }
@@ -82,13 +101,26 @@
                 .add-location-btn-holder {
                     display: inline-block;
                     width: 90%;
-                    button#add-loc-main{
+
+                    button#add-loc-main {
                         margin-right: 3px;
                     }
                 }
 
                 .table-add-cost {
                     width: 95%;
+                    border: none;
+
+                    thead {
+                        th {
+                            border: none;
+                            font-weight: normal;
+                        }
+                    }
+
+                    td {
+                        border: none;
+                    }
                 }
             }
         }

@@ -142,6 +142,56 @@ $(document).ready(function(){
                                                 }*/);
 
             
+    var callJson = function () {
+        $.ajax({
+            url: "./js/occ.json",
+            
+        }).done(function (res) {
+            console.log(res);
+            setModalValues(res)
+        });
+    }
+
+    var setModalValues = function (result) {
+        var div1 = document.getElementById('catID');
+        var div3 = document.getElementById('occID');
+
+        var json = JSON.parse(JSON.stringify(result));
+        var jsonObject = result;//JSON.parse(json);
+
+        var data1 = jsonObject.category;
+        //console.log(data1);
+
+
+        var ins_len = data1.length;
+        //console.log(ins_len)
+        setTimeout(function () {
+            for (var i = 0; i < ins_len; i++) {
+                var equ_col = data1[i];
+
+                if (i == 0) {
+                    div1.innerHTML += '<option class="selectcat" selected value="' + i + '">' + equ_col.category + '</option>';
+                } else {
+                    div1.innerHTML += '<option class="selectcat" value="' + i + '">' + equ_col.category + '</option>';
+                }
+            }
+
+            //for (var j = 0; j < data1[0].occupancies.length; j++) {
+            //    //console.log('subCat', data1[0].occupancies.length);
+            //    var occ = data1[0].occupancies[j];
+            //    div3.innerHTML += '<option value="' + j + '" occupancy_code_category_key=' + occ.occupancy_code_category_key + ' sub_program_key=' + occ.sub_program_key + '>' + occ.description + '</option>';
+            //}
+
+            $.each(data1[0].occupancies, function (index, occ) {
+                var $catogoryItem = '<option value="' + index + '" occupancy_code_category_key="' + occ.occupancy_code_category_key + '" sub_program_key="' + occ.sub_program_key + '">' + occ.description + '</option>';
+                //console.log($.parseHTML($catogoryItem));
+                $('#occID').append($catogoryItem);
+                
+            });
+
+        }, 0)
+    }
+
 
     $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
         //var l = confirm("Do you want to leave the step "+stepNumber+"?");
@@ -166,62 +216,15 @@ $(document).ready(function(){
         }
 
 
-        //if(insuredNameIsValid == false){
-        //    $('#insuredName').addClass('is-invalid');
-        //}else{
-        //    $('#insuredName').removeClass('is-invalid');
-        //}
-
-        //if(insuredPostalCodeIsValid == false){
-        //    $('#insuredPostalCode').addClass('is-invalid');
-        //}else{
-        //    $('#insuredPostalCode').removeClass('is-invalid');
-        //}
-
-        //if(brokerNameIsValid == false){
-        //    $('#brokerName').addClass('is-invalid');
-        //}else{
-        //    $('#brokerName').removeClass('is-invalid');
-        //}
-
-        //if(selectProductIsValid == false){
-        //    $('#select-product').addClass('is-invalid')
-        //    return false;
-        //}else{
-        //    $('#select-product').removeClass('is-invalid')
-        //}
+        
 
         if(insuredNameIsValid == false || insuredPostalCodeIsValid == false ||
             brokerNameIsValid == false)
             return false;
 
-        /*try{
-            var a = validator.element('#insuredName');
-            var b = validator.element('#select-product');
-            console.log(a)
-            if(a == false) throw "required"
-        }
-        catch(ex){
-
-        }*/
+        callJson();
 
     });
 
-    /*$('.sw-btn-next').on('click', function(){
-        var l = validator.element('#insuredName');
-        console.log(l);
-        console.log(validator)
-        if(validator == false) return;
-        //return;
-    })*/
-            
-
-    /*$("#theme_selector").on("change", function() {
-        // Change theme
-        $('#smartwizard').smartWizard("theme", $(this).val());
-        return true;
-    });
-
-    // Set selected theme on page refresh
-    $("#theme_selector").change();*/
+    
 });
