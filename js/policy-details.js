@@ -187,6 +187,7 @@ $(document).ready(function () {
     addLocGridRow();
     $('#add-loc-main').on('click', function () {
         addLocGridRow();
+        
     })
 
     $(document).on('click', '.remove-loc-grid', function (e) {

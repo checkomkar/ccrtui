@@ -1,0 +1,107 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/master.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    </head>
+    <body>
+        <div class="container dashboard-container">
+            <ul class="nav nav-pills mb-3" id="pills-tab-dashboard" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-quotes-tab" data-toggle="pill" href="#pills-quotes" role="tab" aria-controls="pills-quotes" aria-selected="true">Quotes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-due-tab" data-toggle="pill" 
+                       href="#pills-due" role="tab" aria-controls="pills-due" 
+                       aria-selected="false">
+                    Due Soon <span class="notification">5</span>
+                    </a>
+                    
+                </li>                
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-quotes" role="tabpanel" aria-labelledby="pills-quotes-tab">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="input-group mb-3">
+                                <div class="input-group search">
+                                    <input type="text" class="form-control" id="searchTable" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-secondary" type="button">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-primary btn-filter">
+                                <i class="fa fa-filter" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 text-right">
+                            <button class="btn btn-primary">
+                                <i class="fa fa-comments" aria-hidden="true"></i>
+                                Live Chat
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-primary">Create Quote</button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table id="table_quotes" class="table table-bordered table-dark display">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Column 1</th>
+                                    <th>Column 2</th>
+                                    <th>Column 3</th>
+                                    <th>Column 4</th>
+                                    <th>Column 5</th>
+                                    <th>Column 6</th>
+                                    <th>Column 7</th>
+                                    <th>Column 8</th>
+                                    <th>Column 9</th>
+                                </tr>
+                            </thead>
+                            <!--<tbody>
+                                <tr>
+                                    <td>Row 1 Data 1</td>
+                                    <td>Row 1 Data 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 2 Data 1</td>
+                                    <td>Row 2 Data 2</td>
+                                </tr>
+                            </tbody>-->
+                        </table>
+                    </div>
+
+
+                </div>
+                <div class="tab-pane fade" id="pills-due" role="tabpanel" aria-labelledby="pills-due-tab">Tab2</div>
+            </div>
+        </div>
+        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/plugins/jquery.smartWizard.js"></script>
+        <script type="text/javascript" src="js/plugins/mustache.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/plugins/additional-methods.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="js/plugins/dataTables.bootstrap4.min.js"></script>    
+        <script type="text/javascript" src="js/dashboard-quotes.js"></script>
+    </body>
+</html>

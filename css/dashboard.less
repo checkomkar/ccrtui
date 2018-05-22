@@ -1,0 +1,92 @@
+//dashboard.less
+@import "./components/variables";
+
+.dashboard-container {
+    ul#pills-tab-dashboard {
+        border-bottom: 1px solid @border-color;
+        margin-bottom: 30px !important;
+
+        li {
+            margin-right: 30px;
+
+            a {
+                padding: 0;
+                padding-bottom: 16px;
+                font-size: 18px;
+                text-transform: uppercase;
+                text-align: left;
+                color: #272b2e;
+                position: relative;
+
+                &.active {
+                    background: white;
+                    border-radius: 0;
+                    border-bottom: 4px solid @blue-border;
+                }
+
+                span.notification {
+                    border-radius: 50%;
+                    background-color: red;
+                    color: white;
+                    padding: 0px 6px 0px;
+                    font-size: 12px;
+                    margin-top: -8px;
+                    position: absolute;
+                    top: 12px;
+                    right: -23px;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        #pills-quotes {
+            .btn-filter {
+                padding: 6px 10px;
+
+                i {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .table-container {
+        margin-top: 15px;
+
+        #table_quotes_wrapper {
+            padding: 0;
+        }
+
+        table#table_quotes {
+            font-size: 13px;
+            border: 1px solid #ccc;
+
+            thead {
+                th {
+                    border-left: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    background-color: #5d6166;
+
+                    &:first-of-type {
+                        border-left: 0px solid #ccc;
+                    }
+
+                    &:last-of-type {
+                        border-right: 0px solid #ccc;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    color: #272b2e;
+                }
+
+                td {
+                    border-color: #dee2e6;
+                }
+            }
+        }
+    }
+}

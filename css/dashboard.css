@@ -1,0 +1,65 @@
+.dashboard-container ul#pills-tab-dashboard {
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 30px !important;
+}
+.dashboard-container ul#pills-tab-dashboard li {
+  margin-right: 30px;
+}
+.dashboard-container ul#pills-tab-dashboard li a {
+  padding: 0;
+  padding-bottom: 16px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #272b2e;
+  position: relative;
+}
+.dashboard-container ul#pills-tab-dashboard li a.active {
+  background: white;
+  border-radius: 0;
+  border-bottom: 4px solid #00b4dc;
+}
+.dashboard-container ul#pills-tab-dashboard li a span.notification {
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  padding: 0px 6px 0px;
+  font-size: 12px;
+  margin-top: -8px;
+  position: absolute;
+  top: 12px;
+  right: -23px;
+}
+.dashboard-container .tab-content #pills-quotes .btn-filter {
+  padding: 6px 10px;
+}
+.dashboard-container .tab-content #pills-quotes .btn-filter i {
+  font-size: 24px;
+}
+.dashboard-container .table-container {
+  margin-top: 15px;
+}
+.dashboard-container .table-container #table_quotes_wrapper {
+  padding: 0;
+}
+.dashboard-container .table-container table#table_quotes {
+  font-size: 13px;
+  border: 1px solid #ccc;
+}
+.dashboard-container .table-container table#table_quotes thead th {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #5d6166;
+}
+.dashboard-container .table-container table#table_quotes thead th:first-of-type {
+  border-left: 0px solid #ccc;
+}
+.dashboard-container .table-container table#table_quotes thead th:last-of-type {
+  border-right: 0px solid #ccc;
+}
+.dashboard-container .table-container table#table_quotes tbody tr {
+  color: #272b2e;
+}
+.dashboard-container .table-container table#table_quotes tbody td {
+  border-color: #dee2e6;
+}

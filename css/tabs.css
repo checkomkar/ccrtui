@@ -2538,6 +2538,17 @@ input.error:focus {
     max-width: 90%;
   }
 }
+.search input {
+  border-right: 0px;
+}
+.search button {
+  border-radius: 0;
+  background: transparent;
+  color: #666;
+  border: solid 2px #babcbf;
+  border-left: 0;
+  padding: 10px;
+}
 .custom-file .custom-file-label {
   border: 2px solid #babcbf;
   border-radius: 0;
@@ -2732,15 +2743,16 @@ a {
 #smartwizard .tab-content .questionaire-container .q-content .add-location-btn-holder button#add-loc-main {
   margin-right: 3px;
 }
-#smartwizard .tab-content .questionaire-container .q-content .table-add-cost {
+#smartwizard .tab-content .questionaire-container .table-add-cost {
   width: 95%;
   border: none;
+  margin-left: 15px;
 }
-#smartwizard .tab-content .questionaire-container .q-content .table-add-cost thead th {
+#smartwizard .tab-content .questionaire-container .table-add-cost thead th {
   border: none;
   font-weight: normal;
 }
-#smartwizard .tab-content .questionaire-container .q-content .table-add-cost td {
+#smartwizard .tab-content .questionaire-container .table-add-cost td {
   border: none;
 }
 #selectOccupancyModal #selectOccupancyModalTitle {

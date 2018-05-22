@@ -1,6 +1,9 @@
 @import "smart_wizard.min.css";
 @import "smart_wizard_theme_arrows.css";
+@import "jquery.dataTables.min.css";
+@import "dataTables.bootstrap4.min.css";
 @import "tabs.css";
+@import "dashboard.css";
 
 .sw-main .sw-container{
 	padding: 20px 0;
