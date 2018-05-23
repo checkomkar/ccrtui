@@ -2511,6 +2511,9 @@ span.dollar {
 .dis-block {
   display: block;
 }
+.form-control:focus {
+  border-color: #007f92;
+}
 select.error,
 input.error {
   border-color: #dc3545;
@@ -2661,6 +2664,28 @@ a {
   padding: 5px 30px;
   border: solid 2px #272b2e !important;
   border-radius: 0;
+}
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 127, 146, 0.9);
+}
+.breadcrumb-section {
+  background-color: #f2f2f2;
+}
+.breadcrumb-section ul.breadcrumb {
+  background-color: #f2f2f2;
+  padding: 0.75rem 0;
+}
+.breadcrumb-section ul.breadcrumb li {
+  font-size: 13px;
+}
+.breadcrumb-section ul.breadcrumb li:first-of-type i.fa-home {
+  font-size: 14px;
+  margin-left: 0;
+}
+.breadcrumb-section ul.breadcrumb li i {
+  color: #666;
+  font-size: 11px;
+  margin: 0px 8px 0px;
 }
 #smartwizard .tab-content {
   position: relative;

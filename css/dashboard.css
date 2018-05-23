@@ -63,3 +63,49 @@
 .dashboard-container .table-container table#table_quotes tbody td {
   border-color: #dee2e6;
 }
+.dashboard-container .table-container .dataTables_info {
+  font-size: 13px;
+  text-align: right;
+  width: 100%;
+}
+.dashboard-container .table-container .dataTables_length {
+  font-size: 13px;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination {
+  font-size: 13px;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li {
+  border: none !important;
+  padding: 0px;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li a {
+  border: none !important;
+  color: #00b4dc;
+  padding: .5rem 10px;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li a:focus {
+  border: none;
+  border-radius: 0;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li.disabled a {
+  color: #6c757d;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li.previous a i {
+  margin-right: 10px;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li.previous a:hover {
+  border-radius: 0;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li.next a i {
+  margin-left: 10px;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li.next a:hover {
+  border-radius: 0;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li.active:hover {
+  background: #ddd;
+}
+.dashboard-container .table-container .dataTables_paginate ul.pagination li.active a {
+  background: none;
+  color: black;
+}

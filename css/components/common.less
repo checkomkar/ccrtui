@@ -24,6 +24,12 @@ div {
     display: block;
 }
 
+.form-control {
+    &:focus {
+        border-color: @munich-re-petrol;
+    }
+}
+
 select.error, input.error {
     border-color: #dc3545;
 
@@ -196,12 +202,42 @@ a{
     border-radius: 0;
 }
 
-.btn{
-	&.btn-primary{
-		background-color: #272b2e !important;
-		font-size: 16px;
-		padding: 5px 30px;
-		border: solid 2px #272b2e !important;
-		border-radius: 0;
-	}
+.btn {
+    &.btn-primary {
+        background-color: #272b2e !important;
+        font-size: 16px;
+        padding: 5px 30px;
+        border: solid 2px #272b2e !important;
+        border-radius: 0;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 127, 146,.9)
+    }
+}
+
+.breadcrumb-section {
+    background-color: @grey-08;
+
+    ul.breadcrumb {
+        background-color: @grey-08;
+        padding: 0.75rem 0;
+
+        li {
+            font-size: 13px;
+
+            &:first-of-type {
+                i.fa-home {
+                    font-size: 14px;
+                    margin-left: 0;
+                }
+            }
+
+            i {
+                color: @grey-01;
+                font-size: 11px;
+                margin: 0px 8px 0px;
+            }
+        }
+    }
 }
