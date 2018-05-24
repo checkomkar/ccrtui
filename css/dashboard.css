@@ -45,6 +45,7 @@
 .dashboard-container .table-container table#table_quotes {
   font-size: 13px;
   border: 1px solid #ccc;
+  width: 100%;
 }
 .dashboard-container .table-container table#table_quotes thead th {
   border-left: 1px solid #ccc;
@@ -108,4 +109,15 @@
 .dashboard-container .table-container .dataTables_paginate ul.pagination li.active a {
   background: none;
   color: black;
+}
+#filterModal .checkbox-container {
+  display: inline-block;
+  width: 25%;
+}
+#filterModal select.form-control {
+  height: inherit;
+  padding: 7px;
+}
+#filterModal .buttons-container button {
+  margin-right: 10px;
 }

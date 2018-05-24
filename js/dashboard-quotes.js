@@ -1,6 +1,11 @@
 $(document).ready(function () {
     
-    
+    $('.btn-filter').on('click', function () {
+        console.log('Modal')
+        $('#filterModal').modal();
+    })
+
+
     var callJson = function () {
         $.ajax({
             url: "./js/quotesData.json",
@@ -17,7 +22,7 @@ $(document).ready(function () {
                         "sLast": ">>"
                     }
                 },
-                "dom": '<"top row"<"col-md-5"><"col-md-3"i><"col-md-4"p>>rt<"bottom row"<"col-md-5"l><"col-md-3"i><"col-md-4"p>><"clear">',
+                "dom": '<"top row"<"col-md-3"><"col-md-5"i><"col-md-4"p>>rt<"bottom row"<"col-md-5"l><"col-md-3"i><"col-md-4"p>><"clear">',
                 columns: [
                     {
                         data: null,

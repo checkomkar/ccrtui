@@ -61,6 +61,7 @@
         table#table_quotes {
             font-size: 13px;
             border: 1px solid #ccc;
+            width: 100%;
 
             thead {
                 th {
@@ -126,7 +127,8 @@
                         border: none !important;
                         color: @a-link;
                         padding: .5rem 10px;
-                        &:focus{
+
+                        &:focus {
                             border: none;
                             border-radius: 0;
                         }
@@ -174,6 +176,24 @@
                     }
                 }
             }
+        }
+    }    
+}
+
+#filterModal {
+    .checkbox-container {
+        display: inline-block;
+        width: 25%;
+    }
+
+    select.form-control {
+        height: inherit;
+        padding: 7px;
+    }
+
+    .buttons-container {
+        button {
+            margin-right: 10px;
         }
     }
 }
