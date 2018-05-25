@@ -415,103 +415,175 @@
                                         <div class="sub-title">Murphy Brothers Inc.</div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="title">Product Type</div>
-                                        <div class="sub-title">Equipment Breakdown</div>
+                                        <div class="title">Primary Occupancy</div>
+                                        <div class="sub-title">8302 - Public Primary Schools</div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="title">Insured Name</div>
-                                        <div class="sub-title">Murphy Brothers Inc.</div>
+                                        <div class="title">Insured Type</div>
+                                        <div class="sub-title">Owner</div>
                                     </div>
                                 </div>
                             
                             </div>
 		                    <div class="step-3-container">
-                                <table id="quote-table" class="table table-bordered table-light-head table-risk-location">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="6">
-                                                <div class="row">
-                                                    <div class="col-md-10">
-                                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <a href="#" class="change-occupancy">Change</a>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                        </tr>
-                                    </thead>
+                                <div class="pdf-bind-section text-right">
+                                    <span class="vertical-align-mid small-font">EB18 - 123456 - 01</span>
+                                    <button class="btn btn-primary" disabled><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Download Quote Summary</button>
+                                    <button class="btn btn-primary" disabled>Bind</button>
+                                </div>
+                                <p class="small-font table-title">
+                                    Select a quote from the options below:
+                                </p>
+                                <table id="quote-table" class="table table-light-head table-quote">                                    
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <p>
-                                                    State/Province
-                                                </p>
-                                                <div class="form-group">
-                                                    <select class="form-control select-product required" required="required" id="risk-locations">
-                                                        <option value=""></option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                    </select>
+                                            <td class="quote-labels">
+                                                <div class="row bold">
+                                                    <div class="col-md-12">
+                                                        &nbsp;
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <span class="label">
+                                                            Coverage
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <span class="label">
+                                                            *Deductibles
+                                                        </span>                                                        
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <span class="label">
+                                                            Credits (Optional)
+                                                        </span>                                                        
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <span class="label">
+                                                            Quoted Premium
+                                                        </span>                                                        
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <span class="label">
+                                                            Comments
+                                                        </span>                                                        
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <p>
-                                                    Address
-                                                </p>
-                                                <div class="form-group row">
-                                                    <div class="col-sm-12">
-                                                        <input type="text" class="form-control" id="project-duration">
+                                            <td class="quote-radio-section">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="check-container small-font">
+                                                                EB18 - 123456 - 01
+                                                                <input type="radio" value="1" class="quote-radio" name="quote1">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                
+                                                    <div class="col-md-12">
+                                                        <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                            <option value="1">Including Electronic Equ..</option>
+                                                            <option value="2">Renovation</option>
+                                                            <option value="3">Addition</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" required="" 
+                                                               data-msg="This field is required" 
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" required="" 
+                                                               data-msg="This field is required" 
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" required="" 
+                                                               data-msg="This field is required" 
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control quote-input"></textarea>
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <p>
-                                                    Building Value
-                                                </p>
-                                                <div class="form-group row">
-                                                    <div class="col-sm-1">
-                                                        <span class="dollar">$</span>
+                                            <td class="quote-radio-section">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="check-container small-font">
+                                                                EB18 - 123456 - 01
+                                                                <input type="radio" value="1" class="quote-radio" name="quote1">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-sm-8 no-pad">
-                                                        <input type="text" class="form-control" id="project-duration">
+                                                    <div class="col-md-12">
+                                                        <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                            <option value="1">Including Electronic Equ..</option>
+                                                            <option value="2">Renovation</option>
+                                                            <option value="3">Addition</option>
+                                                        </select>
                                                     </div>
-                                
+                                                    <div class="col-md-12">
+                                                        <input type="text" required=""
+                                                               data-msg="This field is required"
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" required=""
+                                                               data-msg="This field is required"
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" required=""
+                                                               data-msg="This field is required"
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control quote-input"></textarea>
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <p>
-                                                    Content Value
-                                                </p>
-                                                <div class="form-group row">
-                                                    <div class="col-sm-1">
-                                                        <span class="dollar">$</span>
+                                            <td class="quote-radio-section">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="check-container small-font">
+                                                                EB18 - 123456 - 01
+                                                                <input type="radio" value="1" class="quote-radio" name="quote1">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-sm-8 no-pad">
-                                                        <input type="text" class="form-control" id="project-duration">
+                                                    <div class="col-md-12">
+                                                        <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                            <option value="1">Including Electronic Equ..</option>
+                                                            <option value="2">Renovation</option>
+                                                            <option value="3">Addition</option>
+                                                        </select>
                                                     </div>
-                                
+                                                    <div class="col-md-12">
+                                                        <input type="text" required=""
+                                                               data-msg="This field is required"
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" required=""
+                                                               data-msg="This field is required"
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" required=""
+                                                               data-msg="This field is required"
+                                                               class="form-control quote-input">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control quote-input"></textarea>
+                                                    </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <p>
-                                                    Perishable Stock Value
-                                                </p>
-                                                <div class="form-group row">
-                                                    <div class="col-sm-1">
-                                                        <span class="dollar">$</span>
-                                                    </div>
-                                                    <div class="col-sm-8 no-pad">
-                                                        <input type="text" class="form-control" id="project-duration">
-                                                    </div>
-                                
-                                                </div>
-                                            </td>
-                                            <td class="save-btn">
-                                                <a class="save-table" href="#">Save</a>
-                                            </td>
+                                                                                      
                                         </tr>
                                     </tbody>
                                 
@@ -780,6 +852,7 @@
 	<script type="text/javascript" src="js/plugins/additional-methods.js"></script>
 	<script src="js/scripts.js"></script>
     <script src="js/policy-details.js"></script>
+    <script src="js/get-quotes.js"></script>
 
 	<script id="comments" type="text/template">
 		{{#comments}}

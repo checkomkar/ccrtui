@@ -11,6 +11,10 @@ div {
     word-wrap: break-word;
 }
 
+.small-font{
+    font-size: 13px !important;
+}
+
 .v-align-mid, span.dollar {
     display: inline-block;
     padding-top: 7px;
@@ -249,6 +253,10 @@ a{
 	margin: 0;
 }
 
+.bold{
+    font-weight: bold !important;
+}
+
 .default-border{	
   	border: solid 2px #babcbf;
 }
@@ -279,6 +287,12 @@ a{
         padding: 5px 30px;
         border: solid 2px #272b2e !important;
         border-radius: 0;
+
+        &:disabled {
+            color: #808080;
+            background-color: #272b2e;
+            opacity: 1;
+        }
     }
 
     &:focus {

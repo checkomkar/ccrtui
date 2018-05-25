@@ -116,15 +116,7 @@ $(document).ready(function () {
 
     $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
         console.log(validatorStep2);
-        var selectInsuredTypeIsValid = validatorStep2.element('#select-insured-type');
-        var policyLimit = validatorStep2.element('#policy-limit');
-        var selectOccupancy = validatorStep2.element('#select-occupancy');
-        var bestDescription = validatorStep2.element('#best-description');
-        var projectDuration = validatorStep2.element('#project-duration');
-        var softCost = validatorStep2.element('#soft-cost');
-        var extraExpense = validatorStep2.element('#extra-expense');
-        var startupDelay = validatorStep2.element('#startup-delay');
-        var riskLocations = validatorStep2.element('#risk-locations');
+        
 
         
 
@@ -134,6 +126,15 @@ $(document).ready(function () {
         
 
         if (stepNumber == 1) {
+            var selectInsuredTypeIsValid = validatorStep2.element('#select-insured-type');
+            var policyLimit = validatorStep2.element('#policy-limit');
+            var selectOccupancy = validatorStep2.element('#select-occupancy');
+            var bestDescription = validatorStep2.element('#best-description');
+            var projectDuration = validatorStep2.element('#project-duration');
+            var softCost = validatorStep2.element('#soft-cost');
+            var extraExpense = validatorStep2.element('#extra-expense');
+            var startupDelay = validatorStep2.element('#startup-delay');
+            var riskLocations = validatorStep2.element('#risk-locations');
             //check all inputs and dropdownds
             validateRadio();
             if (selectInsuredTypeIsValid == false || policyLimit == false ||

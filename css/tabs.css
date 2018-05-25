@@ -2500,6 +2500,9 @@ html {
 div {
   word-wrap: break-word;
 }
+.small-font {
+  font-size: 13px !important;
+}
 .v-align-mid,
 span.dollar {
   display: inline-block;
@@ -2700,6 +2703,9 @@ a {
 .no-margin {
   margin: 0;
 }
+.bold {
+  font-weight: bold !important;
+}
 .default-border {
   border: solid 2px #babcbf;
 }
@@ -2725,6 +2731,11 @@ a {
   padding: 5px 30px;
   border: solid 2px #272b2e !important;
   border-radius: 0;
+}
+.btn.btn-primary:disabled {
+  color: #808080;
+  background-color: #272b2e;
+  opacity: 1;
 }
 .btn:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 127, 146, 0.9);
@@ -2756,6 +2767,43 @@ a {
 }
 #smartwizard .tab-content #step-3 .step-3-container {
   padding: 20px;
+}
+#smartwizard .tab-content #step-3 .step-3-container p {
+  margin-bottom: 30px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 30px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section button {
+  margin-left: 20px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section button i {
+  margin-right: 10px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .table-quote {
+  border-top: none;
+}
+#smartwizard .tab-content #step-3 .step-3-container .table-quote td {
+  border-top: 0px solid #ddd;
+}
+#smartwizard .tab-content #step-3 .step-3-container .table-quote td .col-md-12 {
+  padding: 15px;
+  min-height: 65px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .table-quote td .col-md-12 .label {
+  padding-top: 10px;
+  display: inline-block;
+}
+#smartwizard .tab-content #step-3 .step-3-container .table-quote td.quote-labels {
+  width: 20%;
+}
+#smartwizard .tab-content #step-3 .step-3-container .table-quote td.quote-radio-section {
+  border: 1px solid #e6e6e6;
+}
+#smartwizard .tab-content #step-3 .step-3-container .table-quote td.blue-border {
+  box-shadow: inset 0px 0px 0px 1px #00b4dc;
 }
 #smartwizard .tab-content .policy-details-header {
   margin: 0;

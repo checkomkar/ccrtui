@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     // Smart Wizard
     $('#smartwizard').smartWizard({
-            selected: 0,
+            selected: 2,
             theme: 'default',
             transitionEffect:'fade',
             showStepURLhash: true,
