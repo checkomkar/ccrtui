@@ -3014,3 +3014,108 @@ a {
   width: 100%;
   margin-top: 5px;
 }
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+  #smartwizard .q-content .location-tables-section {
+    overflow-x: scroll;
+    max-width: 500px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location {
+    width: 100%;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(3),
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(4),
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(5) {
+    width: 17% !important;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .no-pad {
+    padding-right: 15px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .form-control {
+    padding: 0;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td p {
+    font-size: 9px;
+    min-height: 25px !important;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .remove-loc-grid {
+    font-size: 11px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location thead .row {
+    font-size: 11px;
+  }
+  #smartwizard .q-content .add-location-btn-holder {
+    width: 83% !important;
+  }
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+  #smartwizard .q-content .location-tables-section {
+    overflow-x: scroll;
+    max-width: 500px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location {
+    width: 100%;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(3),
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(4),
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(5) {
+    width: 17% !important;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .no-pad {
+    padding-right: 15px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .form-control {
+    padding: 0;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td p {
+    font-size: 9px;
+    min-height: 25px !important;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .remove-loc-grid {
+    font-size: 11px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location thead .row {
+    font-size: 11px;
+  }
+  #smartwizard .q-content .add-location-btn-holder {
+    width: 83% !important;
+  }
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+  #smartwizard .q-content .location-tables-section {
+    overflow-x: scroll;
+    max-width: 500px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location {
+    width: 500px !important;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(3),
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(4),
+  #smartwizard .q-content .location-tables-section .table-risk-location td:nth-of-type(5) {
+    width: 17% !important;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .no-pad {
+    padding-right: 15px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .form-control {
+    padding: 0;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td p {
+    font-size: 9px;
+    min-height: 25px !important;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location td .remove-loc-grid {
+    font-size: 11px;
+  }
+  #smartwizard .q-content .location-tables-section .table-risk-location thead .row {
+    font-size: 11px;
+  }
+  #smartwizard .q-content .add-location-btn-holder {
+    width: 95% !important;
+  }
+}
