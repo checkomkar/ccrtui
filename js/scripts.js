@@ -4,7 +4,8 @@ $(document).ready(function(){
         document.documentElement.scrollTop = 0;
         $(window).scrollTop(0);
     }, 1000)
-            
+    $('[data-toggle="tooltip"]').tooltip()
+        
     // Step show event
     $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
         //alert("You are on step "+stepNumber+" now");

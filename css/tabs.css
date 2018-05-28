@@ -2913,9 +2913,13 @@ a {
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location.alt-table td:nth-of-type(5) {
   width: 23%;
 }
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid {
+  padding: 5px;
+  font-size: 20px;
+}
 #smartwizard .tab-content .questionaire-container .q-content .add-location-btn-holder {
   display: inline-block;
-  width: 90%;
+  width: 97%;
 }
 #smartwizard .tab-content .questionaire-container .q-content .add-location-btn-holder button#add-loc-main {
   margin-right: 3px;

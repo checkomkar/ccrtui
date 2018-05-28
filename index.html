@@ -24,7 +24,7 @@
 	<div class="container create-quote-tabs">
         <!-- SmartWizard html -->
         <div class="row header-row">
-        	<div class="col-sm-12 col-md-12">
+        	<div class="col-sm-12 col-md-12 pad-lr-10">
         		<h4>CREATE QUOTE</h4>
         	</div>
         	
@@ -836,6 +836,103 @@
 
 
                 </table>
+                <table class="table table-bordered table-light-head table-risk-location no-border alt-table">
+                    <thead>
+                        <tr>
+                            <th colspan="5">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
+                                    </div>
+                                    <div class="col-md-3 text-right">
+                                        <a href="#" class="change-occupancy">Edit Occupancy</a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="no-border bg-white"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>
+                                    State/Province
+                                </p>
+                                <div class="form-group">
+                                    <select class="form-control select-product required state-dd" required="required">
+                                        <option value=""></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Address
+                                </p>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Building Value
+                                </p>
+                                <div class="form-group row">
+                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               placeholder="$"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Content Value
+                                </p>
+                                <div class="form-group row">
+                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               placeholder="$"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Perishable Stock Value
+                                </p>
+                                <div class="form-group row">
+                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               placeholder="$"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td class="no-border vertical-align-mid">
+                                <button class="btn remove-loc-grid alt-remove-loc-grid" type="button" data-toggle="tooltip" data-placement="left" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+
+                </table>
             </div>
             <!--<div class="col-md-2">
                 <div class=""><a href="#">Remove</a></div>
@@ -933,7 +1030,7 @@
         </div>
     </div>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<script src="js/plugins/popper.js"></script>-->
 	
 	<script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -941,8 +1038,10 @@
       crossorigin="anonymous"></script>
 
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
 	<script type="text/javascript" src="js/plugins/jquery.smartWizard.js"></script>
 	<script type="text/javascript" src="js/plugins/mustache.js"></script>
 	<script type="text/javascript" src="js/plugins/jquery.validate.js"></script>
