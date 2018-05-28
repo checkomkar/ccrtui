@@ -31,7 +31,7 @@
         </div>
         <hr class="seperator-quote">
         <div class="row create-quote-main">
-        	<div class="col-sm-12 col-md-8">
+        	<div class="col-sm-12 col-md-8 pad-lr-10">
         		<div id="smartwizard">
 		            <ul>
 		                <li><a href="#step-1">1. Getting Started</a></li>
@@ -294,7 +294,7 @@
 		                    			
 		                    		</li>
                                     <div>
-                                        <table class="table table-add-cost">
+                                        <table class="table table-responsive table-add-cost">
                                             <thead>
                                                 <tr>
                                                     <th>
@@ -434,7 +434,7 @@
                                 <p class="small-font table-title">
                                     Select a quote from the options below:
                                 </p>
-                                <table id="quote-table" class="table table-light-head table-quote">                                    
+                                <table id="quote-table" class="table table-responsive table-light-head table-quote">                                    
                                     <tbody>
                                         <tr>
                                             <td class="quote-labels">
@@ -596,7 +596,7 @@
 	        	</div>
 	        	
     		</div>
-        	<div class="col-sm-12 col-md-4">
+        	<div class="col-sm-12 col-md-4 pad-lr-10">
         		<div class="text-right side-field-btn">
                     <button class="btn btn-primary" id="refer-quote-trigger">
                         <i class="fa fa-link" aria-hidden="true"></i>
@@ -695,7 +695,7 @@
                                 </p>
                                 <div class="form-group row">
                                     <div class="col-sm-1"><span class="dollar">$</span></div>
-                                    <div class="col-sm-8 no-pad">
+                                    <div class="col-sm-8 no-pad-left">
                                         <input type="text"
                                                class="form-control"
                                                id="project-duration">
@@ -709,7 +709,7 @@
                                 </p>
                                 <div class="form-group row">
                                     <div class="col-sm-1"><span class="dollar">$</span></div>
-                                    <div class="col-sm-8 no-pad">
+                                    <div class="col-sm-8 no-pad-left">
                                         <input type="text"
                                                class="form-control"
                                                id="project-duration">
@@ -723,8 +723,105 @@
                                 </p>
                                 <div class="form-group row">
                                     <div class="col-sm-1"><span class="dollar">$</span></div>
-                                    <div class="col-sm-8 no-pad">
+                                    <div class="col-sm-8 no-pad-left">
                                         <input type="text"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td class="no-border vertical-align-mid">
+                                <button class="btn remove-loc-grid">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+
+                </table>
+                <table class="table table-bordered table-light-head table-risk-location no-border alt-table">
+                    <thead>
+                        <tr>
+                            <th colspan="5">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
+                                    </div>
+                                    <div class="col-md-3 text-right">
+                                        <a href="#" class="change-occupancy">Edit Occupancy</a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="no-border bg-white"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>
+                                    State/Province
+                                </p>
+                                <div class="form-group">
+                                    <select class="form-control select-product required state-dd" required="required">
+                                        <option value=""></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Address
+                                </p>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Building Value
+                                </p>
+                                <div class="form-group row">
+                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               placeholder="$"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Content Value
+                                </p>
+                                <div class="form-group row">
+                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               placeholder="$"
+                                               class="form-control"
+                                               id="project-duration">
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>
+                                    Perishable Stock Value
+                                </p>
+                                <div class="form-group row">
+                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                                    <div class="col-sm-12">
+                                        <input type="text"
+                                               placeholder="$"
                                                class="form-control"
                                                id="project-duration">
                                     </div>
