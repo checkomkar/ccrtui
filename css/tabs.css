@@ -2384,11 +2384,21 @@
   margin-right: -10px;
   margin-left: -10px;
 }
+.sw-theme-arrows > ul.step-anchor > li {
+  width: 33%;
+  text-align: center;
+}
 .sw-theme-arrows > ul.step-anchor > li.done > a {
-  background-color: #006837 !important;
+  background-color: #009245 !important;
 }
 .sw-theme-arrows > ul.step-anchor > li.done > a:after {
-  border-left: 30px solid #006837 !important;
+  border-left: 30px solid #009245 !important;
+}
+.sw-theme-arrows > ul.step-anchor > li.active > a {
+  background-color: #009245 !important;
+}
+.sw-theme-arrows > ul.step-anchor > li.active > a:after {
+  border-left: 30px solid #009245 !important;
 }
 /*.sw-btn-next:after {
 	border-left: 15px solid #5cb85c !important;
@@ -2516,7 +2526,7 @@ span.dollar {
 }
 .form-control:focus {
   border-color: #00b4dc;
-  box-shadow: 0 0 0 1px #00b4dc;
+  box-shadow: 0 0 0 0.1px #00b4dc;
 }
 select.error,
 input.error {
@@ -2732,13 +2742,13 @@ a {
 .btn-light {
   border: solid 2px #272b2e;
   font-size: 16px;
-  padding: 5px 30px;
+  padding: 6px 30px;
   border-radius: 0;
 }
 .btn.btn-primary {
   background-color: #272b2e !important;
   font-size: 16px;
-  padding: 5px 30px;
+  padding: 6px 30px;
   border: solid 2px #272b2e !important;
   border-radius: 0;
 }
@@ -2797,28 +2807,45 @@ a {
 #smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section button i {
   margin-right: 10px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .table-quote {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container {
+  margin-bottom: 50px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote {
   border-top: none;
 }
-#smartwizard .tab-content #step-3 .step-3-container .table-quote td {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td {
   border-top: 0px solid #ddd;
 }
-#smartwizard .tab-content #step-3 .step-3-container .table-quote td .col-md-12 {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 {
   padding: 15px;
   min-height: 65px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .table-quote td .col-md-12 .label {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .label {
   padding-top: 10px;
   display: inline-block;
 }
-#smartwizard .tab-content #step-3 .step-3-container .table-quote td.quote-labels {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-labels {
   width: 20%;
 }
-#smartwizard .tab-content #step-3 .step-3-container .table-quote td.quote-radio-section {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-radio-section {
   border: 1px solid #e6e6e6;
 }
-#smartwizard .tab-content #step-3 .step-3-container .table-quote td.blue-border {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.blue-border {
   box-shadow: inset 0px 0px 0px 1px #00b4dc;
+}
+#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian {
+  margin-bottom: 30px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-header {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: 12px 30px;
+  font-size: 16px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-content {
+  padding: 20px;
+  border: 1px solid #ddd;
 }
 #smartwizard .tab-content .policy-details-header {
   margin: 0;
@@ -2849,8 +2876,11 @@ a {
 #smartwizard .tab-content .questionaire-container ol .check-container .checkmark {
   top: 2px;
 }
+#smartwizard .tab-content .questionaire-container ol li:last-of-type {
+  margin-bottom: 0;
+}
 #smartwizard .tab-content .questionaire-container .q-content {
-  margin-left: 15px;
+  margin-left: 10px;
   font-size: 13px;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location {
@@ -2922,6 +2952,94 @@ a {
   width: 97%;
 }
 #smartwizard .tab-content .questionaire-container .q-content .add-location-btn-holder button#add-loc-main {
+  margin-right: 3px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section {
+  margin-left: 20px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location {
+  width: 100%;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td {
+  padding: 7px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:nth-of-type(3),
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:nth-of-type(4),
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:nth-of-type(5) {
+  width: 15%;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:nth-of-type(3) .col-sm-8,
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:nth-of-type(4) .col-sm-8,
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:nth-of-type(5) .col-sm-8 {
+  padding-right: 8px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:nth-of-type(2) p {
+  text-align: left;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:last-of-type {
+  padding: 5px !important;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td p {
+  min-height: 40px;
+  color: #8c9094;
+  text-align: right;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td input {
+  padding: 8px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td textarea {
+  min-height: 39px;
+  height: 39px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td.save-btn {
+  vertical-align: middle;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td .remove-loc-grid {
+  background: none;
+  color: #00b4dc;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td .remove-loc-grid:disabled {
+  color: #8c9094;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td p {
+  min-height: 0;
+  margin-bottom: 10px;
+  text-align: left !important;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:nth-of-type(1) {
+  width: 5%;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:nth-of-type(2) input {
+  height: 100px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:nth-of-type(3),
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:nth-of-type(4) {
+  width: 15%;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:nth-of-type(3) .col-sm-8,
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:nth-of-type(4) .col-sm-8 {
+  padding-right: 8px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:nth-of-type(5) {
+  width: 23%;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid {
+  padding: 5px;
+  font-size: 20px;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid:focus {
+  border: none;
+  box-shadow: none;
+}
+#smartwizard .tab-content .questionaire-container .add-location-btn-holder {
+  display: inline-block;
+  width: 95%;
+  margin-bottom: 20px;
+}
+#smartwizard .tab-content .questionaire-container .add-location-btn-holder button#add-loc-main {
   margin-right: 3px;
 }
 #smartwizard .tab-content .questionaire-container .table-add-cost {
@@ -3038,6 +3156,28 @@ a {
 .create-quote-tabs .create-quote-main .side-field-set span {
   font-size: 12px;
 }
+.create-quote-tabs .create-quote-main .side-field-set .attachment-container {
+  margin-bottom: 20px;
+}
+.create-quote-tabs .create-quote-main .side-field-set .attachment-container section {
+  display: inline-block;
+  color: #00b4dc;
+}
+.create-quote-tabs .create-quote-main .side-field-set .attachment-container section.file {
+  width: 49%;
+}
+.create-quote-tabs .create-quote-main .side-field-set .attachment-container section.file i {
+  font-size: 18px;
+  padding-right: 15px;
+  color: black;
+}
+.create-quote-tabs .create-quote-main .side-field-set .attachment-container section.remove-file {
+  width: 29%;
+}
+.create-quote-tabs .create-quote-main .side-field-set .attachment-container section.remove-file i {
+  color: #8c9094;
+  padding-right: 10px;
+}
 .create-quote-tabs .create-quote-main .side-field-set .attachment p.file-up-title {
   font-size: 13px;
   color: #8c9094;
@@ -3083,14 +3223,14 @@ a {
     padding: 0;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location td p {
-    font-size: 9px;
+    font-size: 13px;
     min-height: 25px !important;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location td .remove-loc-grid {
     font-size: 11px;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location thead .row {
-    font-size: 11px;
+    font-size: 13px;
   }
   #smartwizard .q-content .add-location-btn-holder {
     width: 83% !important;
@@ -3118,14 +3258,14 @@ a {
     padding: 0;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location td p {
-    font-size: 9px;
+    font-size: 13px;
     min-height: 25px !important;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location td .remove-loc-grid {
     font-size: 11px;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location thead .row {
-    font-size: 11px;
+    font-size: 13px;
   }
   #smartwizard .q-content .add-location-btn-holder {
     width: 83% !important;
@@ -3153,14 +3293,14 @@ a {
     padding: 0;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location td p {
-    font-size: 9px;
+    font-size: 13px;
     min-height: 25px !important;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location td .remove-loc-grid {
     font-size: 11px;
   }
   #smartwizard .q-content .location-tables-section .table-risk-location thead .row {
-    font-size: 11px;
+    font-size: 13px;
   }
   #smartwizard .q-content .add-location-btn-holder {
     width: 95% !important;

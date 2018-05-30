@@ -4,7 +4,10 @@ $(document).ready(function(){
         document.documentElement.scrollTop = 0;
         $(window).scrollTop(0);
     }, 1000)
-    $('[data-toggle="tooltip"]').tooltip()
+    $(function () {
+        $(document).find('[data-toggle="tooltip"]').tooltip()
+    })
+
         
     // Step show event
     $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
@@ -35,7 +38,7 @@ $(document).ready(function(){
 
     // Smart Wizard
     $('#smartwizard').smartWizard({
-            selected: 1,
+            selected: 2,
             theme: 'default',
             transitionEffect:'fade',
             showStepURLhash: true,
@@ -56,7 +59,10 @@ $(document).ready(function(){
         $('.sw-btn-next').html('Next <i class="fa fa-angle-right"></i>');
         $('.sw-btn-prev').html('<i class="fa fa-angle-left"></i> Previous');
     },0)
-    
+
+    $('#triggerFile').on('click', function () {
+        $('#validatedCustomFile1').click();
+    })
 
     $('.sw-toolbar-bottom').addClass('row');
     $('.sw-btn-group-extra').addClass('col-md-2');

@@ -158,12 +158,12 @@
 											</p>
 											<div class="row">
 												<div class="col-md-5">
-													<div class="form-group row">
-														<div class="col-sm-1"><span class="dollar">$</span></div>													
-														<div class="col-sm-10 no-pad">															
+													<div class="form-group row">																											
+														<div class="col-sm-12">															
                                                             <input type="text" data-msg="Policy limit is required"
                                                             required="required"
-															class="form-control" 
+															class="form-control"
+                                                            placeholder="$"
 															id="policy-limit" >
 														</div>
 			
@@ -312,11 +312,11 @@
                                                 <tr>
                                                     <td>
                                                         <div class="form-group row">
-                                                            <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                            <div class="col-sm-8 no-pad">
+                                                            <div class="col-sm-12">
                                                                 <input type="text"
                                                                        required
                                                                        class="form-control"
+                                                                       placeholder="$"
                                                                        id="soft-cost">
                                                             </div>
 
@@ -324,10 +324,10 @@
                                                     </td>
                                                     <td>
                                                         <div class="form-group row">
-                                                            <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                            <div class="col-sm-8 no-pad">
+                                                            <div class="col-sm-12">
                                                                 <input type="text"
                                                                        required
+                                                                       placeholder="$"
                                                                        class="form-control"
                                                                        id="extra-expense">
                                                             </div>
@@ -336,10 +336,10 @@
                                                     </td>
                                                     <td>
                                                         <div class="form-group row">
-                                                            <div class="col-sm-1"><span class="dollar">$</span></div>
-                                                            <div class="col-sm-8 no-pad">
+                                                            <div class="col-sm-12">
                                                                 <input type="text"
                                                                        required
+                                                                       placeholder="$"
                                                                        class="form-control"
                                                                        id="startup-delay">
                                                             </div>
@@ -375,28 +375,17 @@
                                                 Please add your locations <br />
                                                 For more than 10 locations, <a href="#" id="refer-to-underwriter">refer this quote</a> to an Underwriter
                                             </p>
-                                            <div class="row">
-                                                <div class="form-group col-md-2">
-                                                    <!--<select class="form-control select-product required" required="required" id="risk-locations">
-                                                        <option value=""></option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                    </select>-->
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="location-tables-section">
-                                                
-                                                
-                                            </div>
-                                            <div class="add-location-btn-holder text-right">
-                                                <button id="add-loc-main" class="btn btn-primary" type="button">Add Location</button>
-
-                                            </div>
                                         </div>
 		                    		</li>
 		                    	</ol>
+                                <div class="location-tables-section">
+
+
+                                </div>
+                                <div class="add-location-btn-holder text-right">
+                                    <button id="add-loc-main" class="btn btn-primary" type="button">Add Location</button>
+
+                                </div>
                             </form>
 		                </div>
 		                <div id="step-3" class="">
@@ -434,160 +423,194 @@
                                 <p class="small-font table-title">
                                     Select a quote from the options below:
                                 </p>
-                                <table id="quote-table" class="table table-responsive table-light-head table-quote">                                    
-                                    <tbody>
-                                        <tr>
-                                            <td class="quote-labels">
-                                                <div class="row bold">
-                                                    <div class="col-md-12">
-                                                        &nbsp;
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <span class="label">
-                                                            Coverage
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <span class="label">
-                                                            *Deductibles
-                                                        </span>                                                        
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <span class="label">
-                                                            Credits (Optional)
-                                                        </span>                                                        
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <span class="label">
-                                                            Quoted Premium
-                                                        </span>                                                        
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <span class="label">
-                                                            Comments
-                                                        </span>                                                        
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="quote-radio-section">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-check form-check-inline">
-                                                            <label class="check-container small-font">
-                                                                EB18 - 123456 - 01
-                                                                <input type="radio" value="1" class="quote-radio" name="quote1">
-                                                                <span class="checkmark"></span>
-                                                            </label>
+                                <div class="quotes-table-container">
+                                    <table id="quote-table" class="table table-light-head table-quote">
+                                        <tbody>
+                                            <tr>
+                                                <td class="quote-labels">
+                                                    <div class="row bold">
+                                                        <div class="col-md-12">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <span class="label">
+                                                                Coverage
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <span class="label">
+                                                                *Deductibles
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <span class="label">
+                                                                Credits (Optional)
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <span class="label">
+                                                                Quoted Premium
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <span class="label">
+                                                                Comments
+                                                            </span>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12">
-                                                        <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
-                                                            <option value="1">Including Electronic Equ..</option>
-                                                            <option value="2">Renovation</option>
-                                                            <option value="3">Addition</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required="" 
-                                                               data-msg="This field is required" 
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required="" 
-                                                               data-msg="This field is required" 
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required="" 
-                                                               data-msg="This field is required" 
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <textarea class="form-control quote-input"></textarea>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="quote-radio-section">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-check form-check-inline">
-                                                            <label class="check-container small-font">
-                                                                EB18 - 123456 - 01
-                                                                <input type="radio" value="1" class="quote-radio" name="quote1">
-                                                                <span class="checkmark"></span>
-                                                            </label>
+                                                </td>
+                                                <td class="quote-radio-section">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-check form-check-inline">
+                                                                <label class="check-container small-font">
+                                                                    EB18 - 123456 - 01
+                                                                    <input type="radio" value="1" class="quote-radio" name="quote1">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                                <option value="1">Including Electronic Equ..</option>
+                                                                <option value="2">Renovation</option>
+                                                                <option value="3">Addition</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control quote-input"></textarea>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12">
-                                                        <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
-                                                            <option value="1">Including Electronic Equ..</option>
-                                                            <option value="2">Renovation</option>
-                                                            <option value="3">Addition</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required=""
-                                                               data-msg="This field is required"
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required=""
-                                                               data-msg="This field is required"
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required=""
-                                                               data-msg="This field is required"
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <textarea class="form-control quote-input"></textarea>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="quote-radio-section">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-check form-check-inline">
-                                                            <label class="check-container small-font">
-                                                                EB18 - 123456 - 01
-                                                                <input type="radio" value="1" class="quote-radio" name="quote1">
-                                                                <span class="checkmark"></span>
-                                                            </label>
+                                                </td>
+                                                <td class="quote-radio-section">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-check form-check-inline">
+                                                                <label class="check-container small-font">
+                                                                    EB18 - 123456 - 01
+                                                                    <input type="radio" value="1" class="quote-radio" name="quote1">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                                <option value="1">Including Electronic Equ..</option>
+                                                                <option value="2">Renovation</option>
+                                                                <option value="3">Addition</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control quote-input"></textarea>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12">
-                                                        <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
-                                                            <option value="1">Including Electronic Equ..</option>
-                                                            <option value="2">Renovation</option>
-                                                            <option value="3">Addition</option>
-                                                        </select>
+                                                </td>
+                                                <td class="quote-radio-section">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-check form-check-inline">
+                                                                <label class="check-container small-font">
+                                                                    EB18 - 123456 - 01
+                                                                    <input type="radio" value="1" class="quote-radio" name="quote1">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                                <option value="1">Including Electronic Equ..</option>
+                                                                <option value="2">Renovation</option>
+                                                                <option value="3">Addition</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input type="text" required=""
+                                                                   data-msg="This field is required"
+                                                                   class="form-control quote-input">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control quote-input"></textarea>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required=""
-                                                               data-msg="This field is required"
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required=""
-                                                               data-msg="This field is required"
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <input type="text" required=""
-                                                               data-msg="This field is required"
-                                                               class="form-control quote-input">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <textarea class="form-control quote-input"></textarea>
-                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <div class="accordian-container">
+                                    <div class="accordian">
+                                        <div class="accordian-header">
+                                            <div class="row">
+                                                <div class="col-md-10 no-pad">
+                                                    Other Coverages and Sublimits
                                                 </div>
-                                            </td>
-                                                                                      
-                                        </tr>
-                                    </tbody>
-                                
-                                </table>
+                                                <div class="col-md-2 no-pad text-right">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordian-content d-none">
+                                            Hello
+                                        </div>
+                                    </div>
+                                    <div class="accordian">
+                                        <div class="accordian-header">
+                                            <div class="row">
+                                                <div class="col-md-10 no-pad">
+                                                    Locations
+                                                </div>
+                                                <div class="col-md-2 no-pad text-right">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordian-content d-none">
+                                            World
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 		                    
 		                </div>
@@ -598,15 +621,42 @@
     		</div>
         	<div class="col-sm-12 col-md-4 pad-lr-10">
         		<div class="text-right side-field-btn">
-                    <button class="btn btn-primary" id="refer-quote-trigger">
-                        <i class="fa fa-link" aria-hidden="true"></i>
-                        Refer this Quote
-                    </button>
-        			<button class="btn btn-primary">
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-        				Live Chat
-        			</button>
-        		</div>                
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 text-left">
+                            <button class="btn btn-primary" id="refer-quote-trigger">
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                                Refer this Quote
+                            </button>
+                        </div>
+                        <div class="col-sm-12 col-md-6 text-right">
+                            <button class="btn btn-primary">
+                                <i class="fa fa-comments" aria-hidden="true"></i>
+                                Live Chat
+                            </button>
+                        </div>
+                    </div>
+                    
+        			
+        		</div>   
+                <fieldset class="side-field-set d-none">
+                    <legend>Attachments</legend>
+                    <article class="attachment-container">
+                        <section class="file"><i class="fa fa-file-o" aria-hidden="true"></i> 40152_a.docx</section>
+                        <section class="remove-file"><i class="fa fa-times" aria-hidden="true"></i>Remove</section>
+                    </article>
+                    <article class="attachment-container">
+                        <section class="file"><i class="fa fa-file-o" aria-hidden="true"></i> 40152_b.docx</section>
+                        <section class="remove-file"><i class="fa fa-times" aria-hidden="true"></i>Remove</section>
+                    </article>
+                    <article class="attachment-container">
+                        <section class="file"><i class="fa fa-file-o" aria-hidden="true"></i> 40152_c.docx</section>
+                        <section class="remove-file"><i class="fa fa-times" aria-hidden="true"></i>Remove</section>
+                    </article>
+                    <div class="text-left">
+                        <button class="btn btn-primary" id="triggerFile">Attach a file</button>
+                        <input type="file" class="custom-file-input d-none" id="validatedCustomFile1" required>
+                    </div>
+                </fieldset>
                 <fieldset class="side-field-set">
                     <legend>Attachments</legend>
                     <div class="form-group attachment">
@@ -620,6 +670,7 @@
                         <button class="btn btn-primary">Attach</button>
                     </div>                    
                 </fieldset>
+                
         		<fieldset class="side-field-set">
         			<legend>Comments</legend>
 					<div class="form-group">
@@ -644,101 +695,7 @@
 
     <div id="location-grid-row" class="d-none">
         <div class="row no-margin">
-            <div class="col-md-12 no-pad">
-                <table class="table table-bordered table-light-head table-risk-location no-border">
-                    <thead>
-                        <tr>
-                            <th colspan="5">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
-                                    </div>
-                                    <div class="col-md-3 text-right">
-                                        <a href="#" class="change-occupancy">Edit Occupancy</a>
-                                    </div>
-                                </div>
-                            </th>
-                            <th class="no-border bg-white"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p>
-                                    State/Province
-                                </p>
-                                <div class="form-group">
-                                    <select class="form-control select-product required state-dd" required="required">
-                                        <option value=""></option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <td>
-                                <p>
-                                    Address
-                                </p>
-                                <div class="form-group row">
-                                    <div class="col-sm-12">
-                                        <input type="text"
-                                               class="form-control"
-                                               id="project-duration">
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td>
-                                <p>
-                                    Building Value
-                                </p>
-                                <div class="form-group row">
-                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                    <div class="col-sm-8 no-pad-left">
-                                        <input type="text"
-                                               class="form-control"
-                                               id="project-duration">
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td>
-                                <p>
-                                    Content Value
-                                </p>
-                                <div class="form-group row">
-                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                    <div class="col-sm-8 no-pad-left">
-                                        <input type="text"
-                                               class="form-control"
-                                               id="project-duration">
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td>
-                                <p>
-                                    Perishable Stock Value
-                                </p>
-                                <div class="form-group row">
-                                    <div class="col-sm-1"><span class="dollar">$</span></div>
-                                    <div class="col-sm-8 no-pad-left">
-                                        <input type="text"
-                                               class="form-control"
-                                               id="project-duration">
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td class="no-border vertical-align-mid">
-                                <button class="btn remove-loc-grid">Remove</button>
-                            </td>
-                        </tr>
-                    </tbody>
-
-
-                </table>
+            <div class="col-md-12 no-pad">                
                 <table class="table table-bordered table-light-head table-risk-location no-border alt-table">
                     <thead>
                         <tr>
@@ -776,9 +733,7 @@
                                 </p>
                                 <div class="form-group row">
                                     <div class="col-sm-12">
-                                        <input type="text"
-                                               class="form-control"
-                                               id="project-duration">
+                                        <textarea class="form-control"></textarea>                                        
                                     </div>
 
                                 </div>
@@ -787,12 +742,12 @@
                                 <p>
                                     Building Value
                                 </p>
-                                <div class="form-group row">
-                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                                <div class="form-group row">                                    
                                     <div class="col-sm-12">
                                         <input type="text"
                                                placeholder="$"
                                                class="form-control"
+                                               value=""
                                                id="project-duration">
                                     </div>
 
@@ -829,110 +784,14 @@
                                 </div>
                             </td>
                             <td class="no-border vertical-align-mid">
-                                <button class="btn remove-loc-grid">Remove</button>
+                                <button class="btn remove-loc-grid alt-remove-loc-grid" type="button" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                             </td>
                         </tr>
                     </tbody>
 
 
                 </table>
-                <table class="table table-bordered table-light-head table-risk-location no-border alt-table">
-                    <thead>
-                        <tr>
-                            <th colspan="5">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        1. 8310 - Universities, Community Colleges, Cegep and Polytec
-                                    </div>
-                                    <div class="col-md-3 text-right">
-                                        <a href="#" class="change-occupancy">Edit Occupancy</a>
-                                    </div>
-                                </div>
-                            </th>
-                            <th class="no-border bg-white"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p>
-                                    State/Province
-                                </p>
-                                <div class="form-group">
-                                    <select class="form-control select-product required state-dd" required="required">
-                                        <option value=""></option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <td>
-                                <p>
-                                    Address
-                                </p>
-                                <div class="form-group row">
-                                    <div class="col-sm-12">
-                                        <input type="text"
-                                               class="form-control"
-                                               id="project-duration">
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td>
-                                <p>
-                                    Building Value
-                                </p>
-                                <div class="form-group row">
-                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
-                                    <div class="col-sm-12">
-                                        <input type="text"
-                                               placeholder="$"
-                                               class="form-control"
-                                               id="project-duration">
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td>
-                                <p>
-                                    Content Value
-                                </p>
-                                <div class="form-group row">
-                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
-                                    <div class="col-sm-12">
-                                        <input type="text"
-                                               placeholder="$"
-                                               class="form-control"
-                                               id="project-duration">
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td>
-                                <p>
-                                    Perishable Stock Value
-                                </p>
-                                <div class="form-group row">
-                                    <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
-                                    <div class="col-sm-12">
-                                        <input type="text"
-                                               placeholder="$"
-                                               class="form-control"
-                                               id="project-duration">
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td class="no-border vertical-align-mid">
-                                <button class="btn remove-loc-grid alt-remove-loc-grid" type="button" data-toggle="tooltip" data-placement="left" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-
-
-                </table>
+                
             </div>
             <!--<div class="col-md-2">
                 <div class=""><a href="#">Remove</a></div>
@@ -940,6 +799,196 @@
             
         </div>
         
+    </div>
+
+    <div class="d-none">
+        <table class="table table-bordered table-light-head table-risk-location no-border">
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        <div class="row">
+                            <div class="col-md-9">
+                                1. 8310 - Universities, Community Colleges, Cegep and Polytec
+                            </div>
+                            <div class="col-md-3 text-right">
+                                <a href="#" class="change-occupancy">Edit Occupancy</a>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="no-border bg-white"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>
+                            State/Province
+                        </p>
+                        <div class="form-group">
+                            <select class="form-control select-product required state-dd" required="required">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <p>
+                            Address
+                        </p>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <textarea class="form-control"></textarea>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <p>
+                            Building Value
+                        </p>
+                        <div class="form-group row">
+                            <div class="col-sm-1"><span class="dollar">$</span></div>
+                            <div class="col-sm-8 no-pad-left">
+                                <input type="text"
+                                       class="form-control"
+                                       id="project-duration">
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <p>
+                            Content Value
+                        </p>
+                        <div class="form-group row">
+                            <div class="col-sm-1"><span class="dollar">$</span></div>
+                            <div class="col-sm-8 no-pad-left">
+                                <input type="text"
+                                       class="form-control"
+                                       id="project-duration">
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <p>
+                            Perishable Stock Value
+                        </p>
+                        <div class="form-group row">
+                            <div class="col-sm-1"><span class="dollar">$</span></div>
+                            <div class="col-sm-8 no-pad-left">
+                                <input type="text"
+                                       class="form-control"
+                                       id="project-duration">
+                            </div>
+
+                        </div>
+                    </td>
+                    <td class="no-border vertical-align-mid">
+                        <button class="btn remove-loc-grid">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+
+
+        </table>
+        <table class="table table-bordered table-light-head table-risk-location no-border alt-table">
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        <div class="row">
+                            <div class="col-md-9">
+                                1. 8310 - Universities, Community Colleges, Cegep and Polytec
+                            </div>
+                            <div class="col-md-3 text-right">
+                                <a href="#" class="change-occupancy">Edit Occupancy</a>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="no-border bg-white"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>
+                            State/Province
+                        </p>
+                        <div class="form-group">
+                            <select class="form-control select-product required state-dd" required="required">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <p>
+                            Address
+                        </p>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <textarea class="form-control"></textarea>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <p>
+                            Building Value
+                        </p>
+                        <div class="form-group row">
+                            <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                            <div class="col-sm-12">
+                                <input type="text"
+                                       placeholder="$"
+                                       class="form-control"
+                                       id="project-duration">
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <p>
+                            Content Value
+                        </p>
+                        <div class="form-group row">
+                            <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                            <div class="col-sm-12">
+                                <input type="text"
+                                       placeholder="$"
+                                       class="form-control"
+                                       id="project-duration">
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <p>
+                            Perishable Stock Value
+                        </p>
+                        <div class="form-group row">
+                            <!--<div class="col-sm-1"><span class="dollar">$</span></div>-->
+                            <div class="col-sm-12">
+                                <input type="text"
+                                       placeholder="$"
+                                       class="form-control"
+                                       id="project-duration">
+                            </div>
+
+                        </div>
+                    </td>
+                    <td class="no-border vertical-align-mid">
+                        <button class="btn remove-loc-grid">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+
+
+        </table>
     </div>
 
     <!-- Modal -->

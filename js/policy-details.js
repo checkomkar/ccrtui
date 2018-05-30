@@ -116,15 +116,8 @@ $(document).ready(function () {
 
     $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
         console.log(validatorStep2);
-        
-
-        
-
         console.log(selectInsuredTypeIsValid);
         console.log(stepNumber)
-
-        
-
         if (stepNumber == 1) {
             var selectInsuredTypeIsValid = validatorStep2.element('#select-insured-type');
             var policyLimit = validatorStep2.element('#policy-limit');
@@ -176,6 +169,9 @@ $(document).ready(function () {
             $(locGridHtml).attr("id", "table" + locCounter++);
             //console.log($(locGridHtml).index())
             $('.location-tables-section').append(locGridHtml);
+            $(function () {
+                $(document).find('[data-toggle="tooltip"]').tooltip()
+            })
         }
         
     }
@@ -194,7 +190,12 @@ $(document).ready(function () {
     $(document).on('click', '.remove-loc-grid', function (e) {
         e.preventDefault();
         var $this = $(this);
+        if ($('.loc-grid-table').length == 1) {
+            return;
+        }
+        $this.closest('[data-toggle="tooltip"]').tooltip('hide')
         $this.closest('.loc-grid-table').remove();
+        
         //console.log($('.loc-grid-table').length)
         console.log($this.closest('.loc-grid-table').index())
         //console.log($this.closest('.loc-grid-table').index())

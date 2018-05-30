@@ -10,7 +10,20 @@ $(document).ready(function () {
         })
     }
 
-    
+    $(".accordian-header").click(function () {
+        var $this = $(this);
+        var $icon = $this.find('i');
+        if ($icon.hasClass('fa-plus')) {
+            $icon.removeClass('fa-plus');
+            $icon.addClass('fa-minus')
+        } else if ($icon.hasClass('fa-minus')) {
+            $icon.removeClass('fa-minus');
+            $icon.addClass('fa-plus')
+        }
+        var $accordianContent = $this.closest('.accordian').find('.accordian-content');
+        $accordianContent.toggleClass('d-none');
+        
+    });
 
     disableInputs();
     $quoteRadio.on('click', function () {
