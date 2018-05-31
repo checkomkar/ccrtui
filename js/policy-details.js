@@ -57,11 +57,11 @@ $(document).ready(function () {
     })
     //$('.save-table').closest('table input').prop('disabled', true);
 
-    var validatorStep2 = $('.step-2').validate({
-        rules: {
-            'equipment-break': { required: true}
-        }
-    });
+    //var validatorStep2 = $('.step-2').validate({
+    //    rules: {
+    //        'equipment-break': { required: true}
+    //    }
+    //});
 
     var validateRadio = function () {
         var equipBreakIsValid, riskIsValid, riskSpoilIsValid, projectBegunIsValid;
@@ -115,34 +115,34 @@ $(document).ready(function () {
     }
 
     $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
-        console.log(validatorStep2);
-        console.log(selectInsuredTypeIsValid);
+        //console.log(validatorStep2);
+        //console.log(selectInsuredTypeIsValid);
         console.log(stepNumber)
         if (stepNumber == 1) {
-            var selectInsuredTypeIsValid = validatorStep2.element('#select-insured-type');
-            var policyLimit = validatorStep2.element('#policy-limit');
-            var selectOccupancy = validatorStep2.element('#select-occupancy');
-            var bestDescription = validatorStep2.element('#best-description');
-            var projectDuration = validatorStep2.element('#project-duration');
-            var softCost = validatorStep2.element('#soft-cost');
-            var extraExpense = validatorStep2.element('#extra-expense');
-            var startupDelay = validatorStep2.element('#startup-delay');
-            var riskLocations = validatorStep2.element('#risk-locations');
+            //var selectInsuredTypeIsValid = validatorStep2.element('#select-insured-type');
+            //var policyLimit = validatorStep2.element('#policy-limit');
+            //var selectOccupancy = validatorStep2.element('#select-occupancy');
+            //var bestDescription = validatorStep2.element('#best-description');
+            //var projectDuration = validatorStep2.element('#project-duration');
+            //var softCost = validatorStep2.element('#soft-cost');
+            //var extraExpense = validatorStep2.element('#extra-expense');
+            //var startupDelay = validatorStep2.element('#startup-delay');
+            //var riskLocations = validatorStep2.element('#risk-locations');
             //check all inputs and dropdownds
-            validateRadio();
-            if (selectInsuredTypeIsValid == false || policyLimit == false ||
-                selectOccupancy == false || bestDescription == false || projectDuration == false
-                || softCost == false || extraExpense == false || startupDelay == false || riskLocations == false
-                || validateRadio() == false) {
+            //validateRadio();
+            //if (selectInsuredTypeIsValid == false || policyLimit == false ||
+            //    selectOccupancy == false || bestDescription == false || projectDuration == false
+            //    || softCost == false || extraExpense == false || startupDelay == false || riskLocations == false
+            //    || validateRadio() == false) {
 
-                return false;
-            } else {
-                return true;
-            }
+            //    return false;
+            //} else {
+            //    return true;
+            //}
             
             
         }
-        $('input[type="radio"]').on('change', validateRadio);
+        //$('input[type="radio"]').on('change', validateRadio);
 
     })
 

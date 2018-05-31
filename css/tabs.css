@@ -2348,7 +2348,7 @@
   background: #192919;
   color: white;
   border: none;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .tab-headers {
   font-size: 16px;
@@ -2439,7 +2439,7 @@
   left: 25px;
 }
 .sw-theme-arrows .sw-toolbar {
-  padding: 10px 25px;
+  padding: 10px 30px;
 }
 #step-2 ol > li {
   margin-bottom: 28px;
@@ -2791,7 +2791,7 @@ a {
   padding: 0;
 }
 #smartwizard .tab-content #step-3 .step-3-container {
-  padding: 20px;
+  padding: 30px;
 }
 #smartwizard .tab-content #step-3 .step-3-container p {
   margin-bottom: 30px;

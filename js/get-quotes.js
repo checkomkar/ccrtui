@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     disableInputs();
     $quoteRadio.on('click', function () {
-        console.log('xxxxxx');        
+        console.log('xxxxxx');
         var $this = $(this);
         var $quoteInputs = $this.closest('.quote-radio-section').find('.quote-input');
         var $getClosestTd = $this.closest('.quote-radio-section');
@@ -41,6 +41,17 @@ $(document).ready(function () {
 
             })
         }
-    })
+    });
+
+    $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection) {
+        console.log(stepNumber);
+        if (stepNumber == 2) {
+            $('.sw-btn-next').text('Finish').removeClass('disabled');
+            $('.sw-btn-group-extra').addClass('d-none');
+        } else {
+            $('.sw-btn-next').html('Next <i class="fa fa-angle-right"></i>');
+            $('.sw-btn-group-extra').removeClass('d-none');
+        }
+    });
     
 })

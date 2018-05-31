@@ -42,6 +42,9 @@ $(document).ready(function(){
             theme: 'default',
             transitionEffect:'fade',
             showStepURLhash: true,
+            keyNavigation: false,
+            backButtonSupport: false,
+            //enableFinishButton: true,
             toolbarSettings: {toolbarPosition: 'bottom',
                                 toolbarButtonPosition: 'end',
                                 toolbarExtraButtons: [btnCancel]
