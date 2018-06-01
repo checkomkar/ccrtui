@@ -33,13 +33,25 @@
 
                 .quotes-table-container {
                     margin-bottom: 50px;
+
                     .table-quote {
                         border-top: none;
 
                         td {
                             .col-md-12 {
                                 padding: 15px;
-                                min-height: 65px;
+                                min-height: 75px;
+
+                                .big-dollar {
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                }
+
+                                .dollar-value {
+                                    font-size: 30px;
+                                    font-weight: bold;
+                                    padding-left: 15px;
+                                }
 
                                 .label {
                                     padding-top: 10px;
@@ -55,6 +67,16 @@
 
                             &.quote-radio-section {
                                 border: 1px solid #e6e6e6;
+
+                                .form-check-inline {
+                                    margin-right: 0;
+
+                                    .check-container {
+                                        span.checkmark {
+                                            top: 2px;
+                                        }
+                                    }
+                                }
                             }
 
                             &.blue-border {
@@ -78,8 +100,30 @@
                         }
 
                         .accordian-content {
-                            padding: 20px;
+                            //padding: 20px;
                             border: 1px solid #ddd;
+                            border-top: 0;
+                        }
+                    }
+                }
+
+                table.head-values, table.content-values {
+                    font-size: 13px;
+
+                    td {
+                        border-top: 0px;
+                        padding: 10px 15px 0;
+
+                        &:nth-of-type(2) {
+                            text-align: right;
+                        }
+                    }
+                }
+
+                table.head-values {
+                    tr {
+                        &:nth-of-type(1), &:nth-of-type(2) {
+                            font-weight: bold;
                         }
                     }
                 }

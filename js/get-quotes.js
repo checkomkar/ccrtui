@@ -46,7 +46,7 @@ $(document).ready(function () {
     $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection) {
         console.log(stepNumber);
         if (stepNumber == 2) {
-            $('.sw-btn-next').text('Finish').removeClass('disabled');
+            $('.sw-btn-next').text('Save & Close').removeClass('disabled');
             $('.sw-btn-group-extra').addClass('d-none');
         } else {
             $('.sw-btn-next').html('Next <i class="fa fa-angle-right"></i>');

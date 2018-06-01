@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     // Smart Wizard
     $('#smartwizard').smartWizard({
-            selected: 2,
+            selected: 0,
             theme: 'default',
             transitionEffect:'fade',
             showStepURLhash: true,
@@ -89,6 +89,21 @@ $(document).ready(function(){
         $('#smartwizard').smartWizard("next");
         return true;
     });
+
+    $('.postalcode').on('keypress change', function(e){
+        var $this = $(this);
+        $this.prop('maxlength', 7);
+        /*$this.val(function (i, v) {
+            
+            if (v.length > 3) {
+                console.log(v)
+                //return v + ' ';
+            }
+        })*/
+        if ($this.val().length == 3) {
+            $this.val($this.val() + ' ');
+        }
+    })
 
     $('#smartwizard').smartWizard("theme", "arrows");
 

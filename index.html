@@ -70,7 +70,7 @@
 										<div class="form-group row">
 								    		<label for="insuredPostalCode" class="col-sm-12 col-form-label">Insured Postal Code</label>
 										    <div class="col-sm-12">
-										      	<input type="text" required placeholder="Insured Postal Code" class="form-control" id="insuredPostalCode">
+										      	<input type="text" maxlength="7" required placeholder="Insured Postal Code" class="form-control postalcode" id="insuredPostalCode">
 										    </div>
 								  		</div>
 									</div>
@@ -403,7 +403,7 @@
                                         <div class="title">Insured Name</div>
                                         <div class="sub-title">Murphy Brothers Inc.</div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-8">
                                         <div class="title">Primary Occupancy</div>
                                         <div class="sub-title">8302 - Public Primary Schools</div>
                                     </div>
@@ -411,13 +411,12 @@
                                         <div class="title">Insured Type</div>
                                         <div class="sub-title">Owner</div>
                                     </div>
-                                </div>
-                            
+                                </div>                            
                             </div>
 		                    <div class="step-3-container">
                                 <div class="pdf-bind-section text-right">
-                                    <span class="vertical-align-mid small-font">EB18 - 123456 - 01</span>
-                                    <button class="btn btn-primary" disabled><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Download Quote Summary</button>
+                                    <span class="vertical-align-mid span-quote-number small-font d-none">EB18 - 123456 - 01</span>
+                                    <button class="btn btn-primary" disabled><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Download Quote</button>
                                     <button class="btn btn-primary" disabled>Bind</button>
                                 </div>
                                 <p class="small-font table-title">
@@ -483,14 +482,15 @@
                                                                    class="form-control quote-input">
                                                         </div>
                                                         <div class="col-md-12">
-                                                            <input type="text" required=""
-                                                                   data-msg="This field is required"
-                                                                   class="form-control quote-input">
+                                                            <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                                <option value=""></option>
+                                                                <option value="10000">$10,000</option>
+                                                                <option value="5000">$5000</option>
+                                                                <option value="1000">$1000</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <input type="text" required=""
-                                                                   data-msg="This field is required"
-                                                                   class="form-control quote-input">
+                                                        <div class="col-md-12 text-center dollar-value-calc">
+                                                            <span class="big-dollar">$</span><span class="dollar-value">556</span>
                                                         </div>
                                                         <div class="col-md-12">
                                                             <textarea class="form-control quote-input"></textarea>
@@ -521,14 +521,15 @@
                                                                    class="form-control quote-input">
                                                         </div>
                                                         <div class="col-md-12">
-                                                            <input type="text" required=""
-                                                                   data-msg="This field is required"
-                                                                   class="form-control quote-input">
+                                                            <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                                <option value=""></option>
+                                                                <option value="10000">$10,000</option>
+                                                                <option value="5000">$5000</option>
+                                                                <option value="1000">$1000</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <input type="text" required=""
-                                                                   data-msg="This field is required"
-                                                                   class="form-control quote-input">
+                                                        <div class="col-md-12 text-center dollar-value-calc">
+                                                            <span class="big-dollar">$</span><span class="dollar-value">556</span>
                                                         </div>
                                                         <div class="col-md-12">
                                                             <textarea class="form-control quote-input"></textarea>
@@ -559,14 +560,15 @@
                                                                    class="form-control quote-input">
                                                         </div>
                                                         <div class="col-md-12">
-                                                            <input type="text" required=""
-                                                                   data-msg="This field is required"
-                                                                   class="form-control quote-input">
+                                                            <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
+                                                                <option value=""></option>
+                                                                <option value="10000">$10,000</option>
+                                                                <option value="5000">$5000</option>
+                                                                <option value="1000">$1000</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <input type="text" required=""
-                                                                   data-msg="This field is required"
-                                                                   class="form-control quote-input">
+                                                        <div class="col-md-12 text-center dollar-value-calc">
+                                                            <span class="big-dollar">$</span><span class="dollar-value">556</span>
                                                         </div>
                                                         <div class="col-md-12">
                                                             <textarea class="form-control quote-input"></textarea>
@@ -574,6 +576,10 @@
                                                     </div>
                                                 </td>
 
+                                            </tr>
+                                            <tr class="condition-text d-none">
+                                                <td>&nbsp;</td>
+                                                <td colspan="3">*The minimum deductible is $5,000 on Complete Production Machines.</td>
                                             </tr>
                                         </tbody>
 
@@ -592,7 +598,102 @@
                                             </div>
                                         </div>
                                         <div class="accordian-content d-none">
-                                            Hello
+                                            <table class="table head-values">
+                                                <tr>
+                                                    <td>Propery Damage</td>
+                                                    <td>$4,075,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Business Interruption/Extra Expense</td>
+                                                    <td>As per property policy</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Waiting Period
+                                                    </td>
+                                                    <td>
+                                                        24 Hours
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Exception
+                                                    </td>
+                                                    <td>
+                                                        48 hours on complete production machines
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="table content-values">
+                                                <tr>
+                                                    <td>Automatic Coverage</td>
+                                                    <td>$1,000,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>By-Laws, Demolition and Increased Cost of Construction</td>
+                                                    <td>$1,000,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Errors & Omissions</td>
+                                                    <td>$250,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hazardous Substances (Including Mould)</td>
+                                                    <td>$250,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Water Damage</td>
+                                                    <td>$250,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ammonia Contamination</td>
+                                                    <td>$250,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Professional Fees</td>
+                                                    <td>$250,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expediting Expenses</td>
+                                                    <td>$250,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Spoilage</td>
+                                                    <td>$100,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brands and Labels</td>
+                                                    <td>$100,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Data Restoration</td>
+                                                    <td>$50,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Green Coverage</td>
+                                                    <td>$50,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Off Premises Transportable Objects</td>
+                                                    <td>$10,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Public Relations (included only if Business Interruption is included)</td>
+                                                    <td>$5,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Civil Authority or Denial of Access  (Coverage Period: 30 days)</td>
+                                                    <td>Included</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Service Interruption (Within 1,000 metres)</td>
+                                                    <td>Included</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Anchor Location</td>
+                                                    <td>Included</td>
+                                                </tr>
+                                            </table>
                                         </div>
                                     </div>
                                     <div class="accordian">
@@ -611,6 +712,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <p class="small-font">
+                                    This quote is valid for 90 days from the date this quote was generated.
+                                </p>
                             </div>
 		                    
 		                </div>
