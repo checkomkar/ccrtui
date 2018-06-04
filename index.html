@@ -220,31 +220,7 @@
                                         </div>
 
                                     </li>
-									<li>
-										<div class="q-content">
-											<p>
-												Select the Primary Occupancy
-											</p>
-											<div class="row">
-												<div class="col-md-10">
-													<div class="form-group row">													
-														<div class="col-sm-12">
-                                                            <input type="text" 
-                                                                   value="q"
-                                                            required data-msg="Occupancy is required"
-															disabled class="form-control" 
-															id="select-occupancy" >
-														</div>
-			
-													</div>
-												</div>
-												<div class="col-md-2">
-													<a href="#" class="v-align-mid" data-toggle="modal" data-target="#selectOccupancyModal">Select</a>
-												</div>
-											</div>
-											
-										</div>
-									</li>
+									
 									<li>
 										<div class="q-content">
 											<p>
@@ -369,6 +345,30 @@
                                         </div>
 		                    			
 		                    		</li>
+                                    <li>
+                                        <div class="q-content">
+                                            <p>
+                                                Select the Primary Occupancy
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <div class="sel-occ-input">
+                                                            <input type="text"
+                                                                   value="q"
+                                                                   required data-msg="Occupancy is required"
+                                                                   disabled class="form-control"
+                                                                   id="select-occupancy">
+                                                            <a href="#" class="v-align-mid occ-modal-trigger" data-toggle="modal" data-target="#selectOccupancyModal">Select</a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </li>
 		                    		<li>
                                         <div class="q-content">
                                             <p>
@@ -376,12 +376,13 @@
                                                 For more than 10 locations, <a href="#" id="refer-to-underwriter">refer this quote</a> to an Underwriter
                                             </p>
                                         </div>
+                                        <div class="location-tables-section">
+
+
+                                        </div>
 		                    		</li>
 		                    	</ol>
-                                <div class="location-tables-section">
-
-
-                                </div>
+                                
                                 <div class="add-location-btn-holder text-right">
                                     <button id="add-loc-main" class="btn btn-primary" type="button">Add Location</button>
 
@@ -708,7 +709,96 @@
                                             </div>
                                         </div>
                                         <div class="accordian-content d-none">
-                                            World
+                                            <table class="table table-locations">
+                                                <tr class="head">
+                                                    <td>
+                                                        Province /
+                                                        State
+                                                    </td>
+                                                    <td>
+                                                        Address
+                                                    </td>
+                                                    <td>
+                                                        Occupancy
+                                                        Code
+                                                    </td>
+                                                    <td>
+                                                        Building
+                                                        Value
+                                                    </td>
+                                                    <td>
+                                                        Content
+                                                        Value
+                                                    </td>
+                                                    <td>
+                                                        Perishable
+                                                        Goods Value
+                                                    </td>
+                                                </tr>
+                                                <tr class="head">
+                                                    <td>
+                                                        NB
+                                                    </td>
+                                                    <td>
+                                                        452 Holly Lane Hopewell,
+                                                        VA 23860
+                                                    </td>
+                                                    <td>
+                                                        8203
+                                                    </td>
+                                                    <td>
+                                                        $ 250
+                                                    </td>
+                                                    <td>
+                                                        $ 223
+                                                    </td>
+                                                    <td>
+                                                        $ 250
+                                                    </td>
+                                                </tr>
+                                                <tr class="head">
+                                                    <td>
+                                                        NB
+                                                    </td>
+                                                    <td>
+                                                        452 Holly Lane Hopewell,
+                                                        VA 23860
+                                                    </td>
+                                                    <td>
+                                                        8203
+                                                    </td>
+                                                    <td>
+                                                        $ 250
+                                                    </td>
+                                                    <td>
+                                                        $ 223
+                                                    </td>
+                                                    <td>
+                                                        $ 250
+                                                    </td>
+                                                </tr>
+                                                <tr class="head">
+                                                    <td>
+                                                        NB
+                                                    </td>
+                                                    <td>
+                                                        86 Chapel St. Mason City,
+                                                        IA 50401
+                                                    </td>
+                                                    <td>
+                                                        8203
+                                                    </td>
+                                                    <td>
+                                                        $ 400
+                                                    </td>
+                                                    <td>
+                                                        $ 400
+                                                    </td>
+                                                    <td>
+                                                        $ 250
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -888,7 +978,7 @@
                                 </div>
                             </td>
                             <td class="no-border vertical-align-mid">
-                                <button class="btn remove-loc-grid alt-remove-loc-grid" type="button" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                <button class="btn remove-loc-grid alt-remove-loc-grid" type="button" data-toggle="tooltip" data-placement="bottom" title="Remove">&times;</button>
                             </td>
                         </tr>
                     </tbody>

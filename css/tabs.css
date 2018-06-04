@@ -2545,14 +2545,12 @@ input.error:focus {
 .bg-white {
   background: #fff;
 }
-@media (min-width: 1200px) {
-  .container {
-    max-width: 90%;
-  }
+.container {
+  max-width: 1200px;
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 90%;
+    max-width: 1200px;
   }
 }
 .search input {
@@ -2879,6 +2877,18 @@ a {
 #smartwizard .tab-content #step-3 .step-3-container table.head-values tr:nth-of-type(2) {
   font-weight: bold;
 }
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations {
+  font-size: 13px;
+}
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations tr:first-of-type {
+  color: #8c9094;
+}
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations tr:first-of-type td {
+  border-top: 0px;
+}
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations td {
+  padding: 20px;
+}
 #smartwizard .tab-content .policy-details-header {
   margin: 0;
   background-color: #f9f9f9;
@@ -2914,6 +2924,20 @@ a {
 #smartwizard .tab-content .questionaire-container .q-content {
   margin-left: 10px;
   font-size: 13px;
+}
+#smartwizard .tab-content .questionaire-container .q-content .sel-occ-input {
+  position: relative;
+  width: 95%;
+}
+#smartwizard .tab-content .questionaire-container .q-content .sel-occ-input .occ-modal-trigger {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+#smartwizard .tab-content .questionaire-container .q-content .sel-occ-input .occ-modal-trigger:active,
+#smartwizard .tab-content .questionaire-container .q-content .sel-occ-input .occ-modal-trigger:focus {
+  border: none;
+  box-shadow: none;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location {
   width: 100%;
@@ -2987,7 +3011,7 @@ a {
   margin-right: 3px;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location {
   width: 100%;
