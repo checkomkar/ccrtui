@@ -1,0 +1,10 @@
+.columncontainer .referthisquote .btn,
+.columncontainer .livechat .btn {
+  width: 100% !important;
+  padding: 7px 0 !important;
+  text-align: center;
+}
+.columncontainer .referthisquote .btn i,
+.columncontainer .livechat .btn i {
+  font-size: 18px;
+}
