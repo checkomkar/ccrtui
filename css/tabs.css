@@ -2503,10 +2503,6 @@
   font-weight: normal;
   font-size: 13px;
 }
-body,
-html {
-  font-family: Arial !important;
-}
 div {
   word-wrap: break-word;
 }
@@ -2743,12 +2739,22 @@ a {
   padding: 6px 30px;
   border-radius: 0;
 }
+.btn.sw-btn-next i,
+.btn.sw-btn-prev i {
+  color: white !important;
+}
 .btn.btn-primary {
   background-color: #272b2e !important;
   font-size: 16px;
   padding: 6px 30px;
   border: solid 2px #272b2e !important;
   border-radius: 0;
+}
+.btn.btn-primary:disabled i {
+  color: #808080 !important;
+}
+.btn.btn-primary i {
+  color: white !important;
 }
 .btn.btn-primary:disabled {
   color: #808080;
@@ -2855,6 +2861,9 @@ a {
   background-color: #eee;
   padding: 12px 30px;
   font-size: 16px;
+}
+#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-header .fa-plus:before {
+  color: #212529 !important;
 }
 #smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-content {
   border: 1px solid #ddd;
@@ -3181,6 +3190,20 @@ a {
 #refer-quote .modal-footer p.text-center .btn {
   margin-right: 20px;
 }
+.columncontainer .referthisquote .btn,
+.columncontainer .livechat .btn {
+  width: 100% !important;
+  padding: 7px 0 !important;
+  text-align: center;
+}
+.columncontainer .referthisquote .btn i,
+.columncontainer .livechat .btn i {
+  font-size: 18px;
+}
+hr.seperator-quote {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
 .create-quote-tabs .header-row {
   margin-top: 20px;
 }
@@ -3188,13 +3211,14 @@ a {
   font-size: 18px;
   font-weight: normal;
 }
-.create-quote-tabs hr.seperator-quote {
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
 .create-quote-tabs .create-quote-main #smartwizard ul.step-anchor {
   border-bottom: 0;
   border: 0 !important;
+}
+.create-quote-tabs .create-quote-main .side-field-btn .btn {
+  width: 100% !important;
+  padding: 7px 0 !important;
+  text-align: center;
 }
 .create-quote-tabs .create-quote-main .side-field-btn .btn i {
   font-size: 18px;

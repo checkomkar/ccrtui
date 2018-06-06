@@ -4,7 +4,7 @@
 @import "tables";
 
 body, html{
-	font-family: Arial !important;
+	//font-family: Arial !important;
 }
 
 div {
@@ -299,13 +299,25 @@ a{
 }
 
 .btn {
+    &.sw-btn-next, &.sw-btn-prev{
+        i{
+            color: white !important;
+        }
+    }
     &.btn-primary {
         background-color: #272b2e !important;
         font-size: 16px;
         padding: 6px 30px;
         border: solid 2px #272b2e !important;
         border-radius: 0;
-
+        &:disabled{
+            i{
+                color: #808080 !important;
+            }
+        }
+        i{
+            color: white !important;
+        }
         &:disabled {
             color: #808080;
             background-color: #272b2e;
