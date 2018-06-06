@@ -86,6 +86,44 @@ select.error, input.error {
     }
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('dropdown-arrow-down.svg') no-repeat right #ddd;
+    //background-position-x: 98%;
+    background-origin: content-box;
+    option{
+        padding: 10px;
+    }
+}
+select:active, select:hover {
+    //background: none;
+    color: @a-link;
+}
+
+select option:hover {
+    color: #000;
+    box-shadow: inset 20px 20px #00f;
+}
+select::after {
+    content: '>';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #0ebeff;
+    right: 11px;
+    top: 6px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;
+    border-left: 1px solid #0ebeff;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+    display: none;
+}
+
 .custom-file {
     .custom-file-label {
         border: 2px solid @input-border;
@@ -142,7 +180,8 @@ a{
 
 /* On mouse-over, add a grey background color */
 .check-container:hover input ~ .checkmark {
-    background-color: #ccc;
+    //background-color: #ccc;
+    border: 2px solid @a-link;
 }
 
 /* When the radio button is checked, add a blue background */
@@ -291,33 +330,55 @@ a{
 	padding-left: 5px;
 }
 
-.btn-light{
-	border: solid 2px #272b2e;
-	font-size: 16px;
-	padding: 6px 30px;
-    border-radius: 0;
-}
+
 
 .btn {
-    &.sw-btn-next, &.sw-btn-prev{
-        i{
+    &.sw-btn-next, &.sw-btn-prev {
+        i {
             color: white !important;
         }
+
+        &:hover {
+            background-color: #007f92 !important;
+            border: 2px solid #007f92 !important;
+        }
     }
+
+    &.btn-light {
+        border: solid 2px #272b2e;
+        font-size: 16px;
+        padding: 6px 30px;
+        border-radius: 0;
+
+        &:hover {
+            background-color: #007f92 !important;
+            border: 2px solid #007f92 !important;
+            color: white;
+        }
+    }
+
     &.btn-primary {
         background-color: #272b2e !important;
         font-size: 16px;
         padding: 6px 30px;
         border: solid 2px #272b2e !important;
         border-radius: 0;
-        &:disabled{
-            i{
+
+        &:hover {
+            background-color: #007f92 !important;
+            border: 2px solid #007f92 !important;
+        }
+
+        &:disabled {
+            i {
                 color: #808080 !important;
             }
         }
-        i{
+
+        i {
             color: white !important;
         }
+
         &:disabled {
             color: #808080;
             background-color: #272b2e;

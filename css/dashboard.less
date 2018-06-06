@@ -117,7 +117,11 @@
                     border-left: 1px solid #ccc;
                     border-right: 1px solid #ccc;
                     background-color: #5d6166;
-
+                    &.radio{
+                        &:before, &:after{
+                            content: '';
+                        }
+                    }
                     &:first-of-type {
                         border-left: 0px solid #ccc;
                     }
@@ -135,6 +139,13 @@
 
                 td {
                     border-color: #dee2e6;
+                    label.check-container{
+                        padding-left:0;
+                        margin-right: 0px;
+                    }
+                    span.red{
+                        color: red;
+                    }
                 }
             }
         }

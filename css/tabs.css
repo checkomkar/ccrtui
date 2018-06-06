@@ -2472,6 +2472,13 @@
 .sw-theme-arrows .step-content#step-2 {
   padding: 0;
 }
+.sw-theme-arrows > ul.step-anchor > li > a:hover {
+  background: #00b4dc;
+  color: white;
+}
+.sw-theme-arrows > ul.step-anchor > li > a:hover:after {
+  border-left-color: #00b4dc;
+}
 @media only screen and (max-width: 767px) {
   .nav .nav-tabs .step-anchor li {
     width: 100%;
@@ -2560,6 +2567,40 @@ input.error:focus {
   border-left: 0;
   padding: 10px;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('dropdown-arrow-down.svg') no-repeat right #ddd;
+  background-origin: content-box;
+}
+select option {
+  padding: 10px;
+}
+select:active,
+select:hover {
+  color: #00b4dc;
+}
+select option:hover {
+  color: #000;
+  box-shadow: inset 20px 20px #00f;
+}
+select::after {
+  content: '>';
+  font: normal normal normal 17px/1 FontAwesome;
+  color: #0ebeff;
+  right: 11px;
+  top: 6px;
+  height: 34px;
+  padding: 15px 0px 0px 8px;
+  border-left: 1px solid #0ebeff;
+  position: absolute;
+  pointer-events: none;
+}
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+  display: none;
+}
 .custom-file .custom-file-label {
   border: 2px solid #babcbf;
   border-radius: 0;
@@ -2608,7 +2649,7 @@ a {
 }
 /* On mouse-over, add a grey background color */
 .check-container:hover input ~ .checkmark {
-  background-color: #ccc;
+  border: 2px solid #00b4dc;
 }
 /* When the radio button is checked, add a blue background */
 .check-container input:checked ~ .checkmark {
@@ -2733,15 +2774,25 @@ a {
   font-size: 13px;
   padding-left: 5px;
 }
-.btn-light {
+.btn.sw-btn-next i,
+.btn.sw-btn-prev i {
+  color: white !important;
+}
+.btn.sw-btn-next:hover,
+.btn.sw-btn-prev:hover {
+  background-color: #007f92 !important;
+  border: 2px solid #007f92 !important;
+}
+.btn.btn-light {
   border: solid 2px #272b2e;
   font-size: 16px;
   padding: 6px 30px;
   border-radius: 0;
 }
-.btn.sw-btn-next i,
-.btn.sw-btn-prev i {
-  color: white !important;
+.btn.btn-light:hover {
+  background-color: #007f92 !important;
+  border: 2px solid #007f92 !important;
+  color: white;
 }
 .btn.btn-primary {
   background-color: #272b2e !important;
@@ -2749,6 +2800,10 @@ a {
   padding: 6px 30px;
   border: solid 2px #272b2e !important;
   border-radius: 0;
+}
+.btn.btn-primary:hover {
+  background-color: #007f92 !important;
+  border: 2px solid #007f92 !important;
 }
 .btn.btn-primary:disabled i {
   color: #808080 !important;

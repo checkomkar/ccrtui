@@ -22,6 +22,7 @@ $(document).ready(function () {
                         "sLast": ">>"
                     }
                 },
+                "autoWidth": false,
                 "dom": '<"top row"<"col-md-3"><"col-md-5"i><"col-md-4"p>>rt<"bottom row"<"col-md-5"l><"col-md-3"i><"col-md-4"p>><"clear">',
                 columns: [
                     {
@@ -36,18 +37,27 @@ $(document).ready(function () {
                             return $inputRadio;
                         },
                         orderable: false,
-                        width: '1px'
-
+                        width: '10px'
                     },
-                    { data: 'quoteNumber' },
-                    { data: 'dateCreated' },
-                    { data: 'insuredName' },
-                    { data: 'brokerName' },
+                    {
+                        data: 'quoteNumber'                        
+                    },
+                    {
+                        data: 'dateCreated'                        
+                    },
+                    {
+                        data: 'insuredName'                        
+                    },
+                    {
+                        data: 'brokerName'                        
+                    },
                     { data: 'productType' },
                     { data: 'premium' },
                     { data: 'status' },
                     { data: 'createdBy' },
-                    { data: 'lastModifiedDate' },
+                    {
+                        data: 'lastModifiedDate'                        
+                    },
                     
                 ]
             });
@@ -115,16 +125,31 @@ $(document).ready(function () {
                         width: '1px'
 
                     },
-                    { data: 'quoteNo' },
+                    {
+                        data: 'quoteNo',
+                        render: function (data, type, row) {
+                            var $quote = '<a href="">' + data + '</a>';                            
+                            return $quote;
+                        },
+                    },
                     { data: 'insuredName' },
-                    { data: 'expiringDays' },
+                    {
+                        data: 'expiringDays',
+                        render: function (data, type, row) {
+                            var $span = null;
+                            if (data <= 30) {
+                                $span = '<span class="red">' + data + '</span>';
+                            } else {
+                                $span = '<span>' + data + '</span>';
+                            }
+                            return $span;
+                        },
+                    },
                     { data: 'status' },
                     { data: 'createdBy' },
                     { data: 'ccRef' },
                     { data: 'brokerName' },
                     { data: 'brokerPostal' },
-                    
-
                 ]
             });
 

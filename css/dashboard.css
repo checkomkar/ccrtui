@@ -91,6 +91,12 @@
   border-right: 1px solid #ccc;
   background-color: #5d6166;
 }
+.dashboard-container .table-container table#table_quotes thead th.radio:before,
+.dashboard-container .table-container table#table_due_soon thead th.radio:before,
+.dashboard-container .table-container table#table_quotes thead th.radio:after,
+.dashboard-container .table-container table#table_due_soon thead th.radio:after {
+  content: '';
+}
 .dashboard-container .table-container table#table_quotes thead th:first-of-type,
 .dashboard-container .table-container table#table_due_soon thead th:first-of-type {
   border-left: 0px solid #ccc;
@@ -106,6 +112,15 @@
 .dashboard-container .table-container table#table_quotes tbody td,
 .dashboard-container .table-container table#table_due_soon tbody td {
   border-color: #dee2e6;
+}
+.dashboard-container .table-container table#table_quotes tbody td label.check-container,
+.dashboard-container .table-container table#table_due_soon tbody td label.check-container {
+  padding-left: 0;
+  margin-right: 0px;
+}
+.dashboard-container .table-container table#table_quotes tbody td span.red,
+.dashboard-container .table-container table#table_due_soon tbody td span.red {
+  color: red;
 }
 .dashboard-container .table-container .dataTables_info {
   font-size: 13px;
