@@ -49,26 +49,79 @@
                 }
             }
         }
+
+        .filter-row {
+            background: @grey-08;
+            padding: 10px 0;
+            margin: 0;
+            margin-bottom: 20px;
+
+            div {
+                display: inline-block;
+            }
+
+            .filter-title {
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .filter-group {
+                margin: 0 10px;
+                font-size: 13px;
+            }
+
+            .badge {
+                &.badge-primary {
+                    border: solid 1px #babcbf;
+                    border-radius: 5px;
+                    padding: 7px 10px;
+                    background: white;
+                    color: @munich-re-dark-grey;
+                    font-size: 13px;
+                    font-weight: normal;
+
+                    .times {
+                        position: relative;
+                        top: 3px;
+                        font-size: 22px;
+                        line-height: 0;
+                    }
+                }
+            }
+
+            .remove {
+                a {
+                    font-size: 13px;
+                    cursor: pointer;
+                }
+            }
+        }
     }
+
+
 
     .table-container {
         margin-top: 15px;
 
-        #table_quotes_wrapper {
+        #table_quotes_wrapper, #table_due_soon_wrapper {
             padding: 0;
         }
 
-        table#table_quotes {
+        table#table_quotes, table#table_due_soon {
             font-size: 13px;
             border: 1px solid #ccc;
-            width: 100%;
+            width: 100% !important;
 
             thead {
                 th {
                     border-left: 1px solid #ccc;
                     border-right: 1px solid #ccc;
                     background-color: #5d6166;
-
+                    &.radio{
+                        &:before, &:after{
+                            content: '';
+                        }
+                    }
                     &:first-of-type {
                         border-left: 0px solid #ccc;
                     }
@@ -86,6 +139,13 @@
 
                 td {
                     border-color: #dee2e6;
+                    label.check-container{
+                        padding-left:0;
+                        margin-right: 0px;
+                    }
+                    span.red{
+                        color: red;
+                    }
                 }
             }
         }
@@ -177,7 +237,7 @@
                 }
             }
         }
-    }    
+    }
 }
 
 #filterModal {
