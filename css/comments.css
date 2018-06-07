@@ -11,3 +11,21 @@
 .side-field-set span {
   font-size: 12px;
 }
+.show-comments-box {
+  padding: 20px;
+  margin-top: 20px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+.show-comments-box .comment {
+  font-size: 12px;
+  color: #272b2e;
+  margin-bottom: 15px;
+}
+.show-comments-box .comment span.name {
+  color: #8c9094;
+  font-size: 13px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+}
