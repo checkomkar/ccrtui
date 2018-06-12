@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     // Smart Wizard
     $('#smartwizard').smartWizard({
-            selected: 0,
+            selected: 1,
             theme: 'default',
             transitionEffect:'fade',
             showStepURLhash: true,
@@ -96,11 +96,20 @@ $(document).ready(function(){
         val = val.replace(/\s/g, '');
         e.preventDefault();
         for (var i = 0; i < val.length; i++) {
-            if (i % 3 == 0 && i > 0) {  newval = newval.concat(' ') };
+            if (i % 3 == 0 && i > 0) { newval = newval.concat(' ') };
             newval = newval.concat(val[i]);
         }
         $(this).val(newval);
-    }) 
+    });
+
+    $('#policy-limit').on('keyup', function () {
+        var $this = $(this);
+        var val = $this.val();
+        if (val.indexOf('$') != 0) {
+            val = "$" + val;
+        }
+        $this.val(val)
+    })
 
     $('#smartwizard').smartWizard("theme", "arrows");
 
