@@ -2,6 +2,7 @@
 @import "smart_wizard_theme_arrows.css";
 @import "jquery.dataTables.min.css";
 @import "dataTables.bootstrap4.min.css";
+@import "components/common.css";
 @import "tabs.css";
 @import "dashboard.css";
 

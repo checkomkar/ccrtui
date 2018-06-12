@@ -29,8 +29,8 @@ $(document).ready(function () {
                         data: null,
                         render: function (data, type, row) {
                             var $inputRadio = '<div class="form-check form-check-inline">'+
-                                                '<label class="check-container">'+
-                                                '<input type="radio" name="copy">'+
+                                                '<label class="checkbox-container">'+
+                                                '<input type="checkbox">'+
                                                 '<span class="checkmark"></span>'+
                                                 '</label>'+
                                                 '</div>';
@@ -67,25 +67,34 @@ $(document).ready(function () {
             })
             var selectedRow = null;
             var $copyBtn = $('.copy');
+            var selected = [];
             $('#table_quotes tbody').on('click', 'tr', function () {
                 //console.log(qoutesTable.row(this).data());
                 selectedRow = qoutesTable.row(this).data();
                 var $this = $(this);
-                $this.find(':radio').prop('checked', true);
-                if ($(this).hasClass('selected')) {
-                    $(this).removeClass('selected');
-                }
-                else {
-                    qoutesTable.$('tr.selected').removeClass('selected');
-                    $(this).addClass('selected');
+                if ($this.find(':checkbox').is(':checked')) {
+                    $this.find(':checkbox').prop('checked', false);
+                } else {
+                    $this.find(':checkbox').prop('checked', true);
                 }
                 
+                //if ($(this).hasClass('selected')) {
+                //    $(this).removeClass('selected');
+                //}
+                //else {
+                //    qoutesTable.$('tr.selected').removeClass('selected');
+                //    $(this).addClass('selected');
+                //}
+                
+                $this.toggleClass('selected');
                 $copyBtn.removeClass('d-none');
 
             });
 
             $copyBtn.on('click', function () {
-                console.log(selectedRow);
+                var array = [];
+                var a = qoutesTable.rows('.selected').data().toArray()
+                console.log(a);
             })
             
 

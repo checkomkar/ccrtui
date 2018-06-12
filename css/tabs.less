@@ -1,7 +1,7 @@
 //tabs.less
 @import "./components/variables";
-@import "./components/common";
-
+//@import "./components/common";
+@import "./components/pages/sw-custom";
 
 #smartwizard {
     .tab-content {
@@ -97,8 +97,9 @@
                             background-color: @grey-07;
                             padding: 12px 30px;
                             font-size: 16px;
-                            .fa-plus{
-                                &:before{
+
+                            .fa-plus {
+                                &:before {
                                     color: #212529 !important;
                                 }
                             }
@@ -133,21 +134,22 @@
                     }
                 }
 
-                table.table-locations{
+                table.table-locations {
                     font-size: 13px;
-                    tr{
-                        &:first-of-type{
+
+                    tr {
+                        &:first-of-type {
                             color: #8c9094;
-                            td{
+
+                            td {
                                 border-top: 0px;
                             }
                         }
                     }
 
-                    td{
+                    td {
                         padding: 20px;
                     }
-                    
                 }
             }
         }
@@ -425,6 +427,22 @@
 
                 button#add-loc-main {
                     margin-right: 3px;
+                }
+            }
+
+            .additional-cost-list {
+                overflow: auto;
+                padding-left: 10px;
+
+                li {
+                    float: left;
+                    list-style: lower-alpha;
+                    margin-right: 25px;
+                    list-style-position: inside;
+
+                    input {
+                        margin-top: 15px;
+                    }
                 }
             }
 
