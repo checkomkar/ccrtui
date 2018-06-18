@@ -254,7 +254,7 @@
                             }
 
                             .remove-loc-grid {
-                                background: none;
+                                background: url('../images/delete-active.svg') !important;
                                 color: @a-link;
                                 font-size: 13px;
                                 padding: 0;
@@ -262,6 +262,8 @@
 
                                 &:disabled {
                                     color: @grey-03;
+                                    background: url('../images/delete-inactive.svg') !important;
+
                                 }
                             }
                         }
@@ -296,8 +298,12 @@
 
                                 &:last-of-type {
                                     button.alt-remove-loc-grid {
+                                        background: url('../images/delete-active.svg');
                                         padding: 5px;
                                         font-size: 20px;
+                                        &:disabled{
+                                            background: url('../images/delete-active.svg');
+                                        }
                                     }
                                 }
                             }
@@ -362,13 +368,20 @@
                         }
 
                         .remove-loc-grid {
-                            background: none;
+                            background: url('../images/delete-active.svg');
+                            background-repeat: no-repeat;
+                            background-position: center center; 
+                            background-size: 12px;
                             color: @a-link;
                             font-size: 13px;
-                            padding: 0;
+                            padding: 10px;
                             margin: 0;
 
                             &:disabled {
+                                background: url('../images/delete-inactive.svg');
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                                background-size: 12px;
                                 color: @grey-03;
                             }
                         }
@@ -406,7 +419,7 @@
 
                             &:last-of-type {
                                 button.alt-remove-loc-grid {
-                                    padding: 5px;
+                                    padding: 15px;
                                     font-size: 20px;
 
                                     &:focus {
