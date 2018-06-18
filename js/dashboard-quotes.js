@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     var callJson = function () {
         $.ajax({
-            url: "./js/quotesData.json",
+            url: "./js/quotesData1.json",
 
         }).done(function (res) {
             console.log(res);
@@ -42,25 +42,51 @@ $(document).ready(function () {
                         
                     },
                     {
-                        data: 'quoteNumber'                        
+                        data: 'quoteNumber',
+                        render: function (data, type, row) {
+                            var $quote = '<a href="">' + data + '</a>';
+                            return $quote;
+                        },
                     },
                     {
-                        data: 'dateCreated'                        
+                        data: 'insuredName'
                     },
                     {
-                        data: 'insuredName'                        
+                        data: 'lastModifiedDate'
                     },
                     {
-                        data: 'brokerName'                        
+                        data: 'expireInDays',
+                        render: function (data, type, row) {
+                            var $span = null;
+                            if (data <= 30) {
+                                $span = '<span class="red">' + data + '</span>';
+                            } else {
+                                $span = '<span>' + data + '</span>';
+                            }
+                            return $span;
+                        }
+                    },
+                    {
+                        data: 'brokerName'
                     },
                     { data: 'productType' },
                     { data: 'premium' },
-                    { data: 'status' },
-                    { data: 'createdBy' },
                     {
-                        data: 'lastModifiedDate'                        
+                        data: 'status',
+                        render: function (data, type, row) {
+                            var $span = null;
+                            if (data) {
+                                $span = '<span>Referred</span>';
+                            } else {
+                                $span = '<span>Quoted</span>';
+                            }
+                            return $span;
+                        }
                     },
-                    
+                    //{
+                    //    data: 'dateCreated'                        
+                    //},
+                    { data: 'createdBy' }
                 ]
             });
 
@@ -99,6 +125,7 @@ $(document).ready(function () {
                 var array = [];
                 var a = selectedRow;
                 console.log(a);
+                alert(JSON.stringify(a))
             })
             
 
