@@ -14,6 +14,7 @@ $(document).ready(function () {
             console.log(res);
             var qoutesTable = $('#table_quotes').DataTable({
                 data: res,
+                order: [],
                 "oLanguage": {
                     "oPaginate": {
                         "sFirst": "<<",
@@ -29,15 +30,16 @@ $(document).ready(function () {
                         data: null,
                         render: function (data, type, row) {
                             var $inputRadio = '<div class="form-check form-check-inline">'+
-                                                '<label class="checkbox-container">'+
-                                                '<input type="checkbox">'+
+                                                '<label class="check-container">'+
+                                                '<input type="radio" name="radio">'+
                                                 '<span class="checkmark"></span>'+
                                                 '</label>'+
                                                 '</div>';
                             return $inputRadio;
                         },
                         orderable: false,
-                        width: '10px'
+                        width: '10px',
+                        
                     },
                     {
                         data: 'quoteNumber'                        
@@ -72,28 +74,30 @@ $(document).ready(function () {
                 //console.log(qoutesTable.row(this).data());
                 selectedRow = qoutesTable.row(this).data();
                 var $this = $(this);
-                if ($this.find(':checkbox').is(':checked')) {
-                    $this.find(':checkbox').prop('checked', false);
-                } else {
-                    $this.find(':checkbox').prop('checked', true);
+                //if ($this.find(':checkbox').is(':checked')) {
+                //    $this.find(':checkbox').prop('checked', false);
+                //} else {
+                //    $this.find(':checkbox').prop('checked', true);
+                //}
+                var $radioBtn = $this.find('input[type="radio"]');
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+
+                }
+                else {
+                    qoutesTable.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                    $radioBtn.prop('checked', true);
                 }
                 
-                //if ($(this).hasClass('selected')) {
-                //    $(this).removeClass('selected');
-                //}
-                //else {
-                //    qoutesTable.$('tr.selected').removeClass('selected');
-                //    $(this).addClass('selected');
-                //}
-                
-                $this.toggleClass('selected');
+                //$this.toggleClass('selected');
                 $copyBtn.removeClass('d-none');
 
             });
 
             $copyBtn.on('click', function () {
                 var array = [];
-                var a = qoutesTable.rows('.selected').data().toArray()
+                var a = selectedRow;
                 console.log(a);
             })
             

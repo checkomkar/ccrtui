@@ -435,12 +435,19 @@ a{
             border-left: 1px solid #ccc;
             border-right: 1px solid #ccc;
             background-color: #5d6166;
-            &.sorting, &.sorting_asc, &.sorting_desc{
+
+            &.no-sort::after {
+                display: none !important;
+            }
+
+            &.sorting, &.sorting_asc, &.sorting_desc {
                 background-position: 96% 50% !important;
-                &:after, &:before{
+
+                &:after, &:before {
                     content: none;
                 }
             }
+
             .sorting_asc {
                 background-image: url('../../images/sort-ascending.svg');
             }
@@ -466,6 +473,7 @@ a{
     tbody {
         tr {
             color: #272b2e;
+            cursor: pointer;
         }
 
         td {
