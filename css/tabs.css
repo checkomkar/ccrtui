@@ -40,6 +40,17 @@
   margin-right: 0 !important;
   padding-right: 0 !important;
 }
+.sw-btn-group-extra {
+  width: 183px;
+}
+.sw-btn-group-extra .btn {
+  width: 100%;
+}
+.sw-btn-prev,
+.sw-btn-next {
+  padding: 5px 0;
+  width: 183px;
+}
 .sw-btn-next {
   margin-right: 0 !important;
 }
@@ -196,7 +207,7 @@
 #smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .dollar-value {
   font-size: 30px;
   font-weight: bold;
-  padding-left: 15px;
+  padding-left: 5px;
 }
 #smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .label {
   padding-top: 10px;
@@ -292,6 +303,9 @@
 #smartwizard .tab-content .questionaire-container ol .check-container .checkmark {
   top: 2px;
 }
+#smartwizard .tab-content .questionaire-container ol li {
+  margin-bottom: 15px;
+}
 #smartwizard .tab-content .questionaire-container ol li:last-of-type {
   margin-bottom: 0;
 }
@@ -331,6 +345,9 @@
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td:last-of-type {
   padding: 5px !important;
+}
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td:last-of-type button {
+  padding: 9px;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td p {
   min-height: 40px;
@@ -376,7 +393,7 @@
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid {
   background: url('../images/delete-active.svg');
-  padding: 5px;
+  padding: 9px;
   font-size: 20px;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid:disabled {
@@ -413,6 +430,9 @@
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:last-of-type {
   padding: 5px !important;
+}
+#smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td:last-of-type button {
+  padding: 9px;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td p {
   min-height: 40px;
@@ -469,7 +489,7 @@
   width: 23%;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid {
-  padding: 15px;
+  padding: 10px 5px;
   font-size: 20px;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid:focus {

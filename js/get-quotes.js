@@ -46,6 +46,11 @@ $(document).ready(function () {
     $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection) {
         console.log(stepNumber);
         if (stepNumber == 2) {
+            console.log('is reset form: ', resetStep3)
+            if(resetStep3){
+                $(document).find('input[type="radio"]').prop('checked', false);
+                $(document).find('input').prop('disabled', true);
+            }
             $('.sw-btn-next').text('Save & Close').removeClass('disabled');
             $('.sw-btn-group-extra').addClass('d-none');
         } else {
@@ -53,5 +58,20 @@ $(document).ready(function () {
             $('.sw-btn-group-extra').removeClass('d-none');
         }
     });
+
+    $("#including-credit").on('change', function(e){
+        var $this = $(this);
+        
+        console.log()
+        $("#including-credit option:selected").text("$"+$this.val());
+        
+    })
+
+    $("#including-credit").on('click', function(e){
+        $.each($('#including-credit option'), function (k, v) {
+            console.log(v)
+            //$(v).text($(v).val())
+        })
+    })
     
 })

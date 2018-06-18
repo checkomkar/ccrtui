@@ -1,3 +1,4 @@
+var resetStep3 = false;
 $(document).ready(function () {
     var $riskLocationdd = $('#risk-locations');
     var $riskTables = $('.tables-section');
@@ -113,11 +114,15 @@ $(document).ready(function () {
             return false;
         }
     }
-
+    var stepNumberGlob = null;
+    var stepDirectionGlob = null;
     $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDirection) {
         //console.log(validatorStep2);
         //console.log(selectInsuredTypeIsValid);
         console.log(stepNumber)
+        console.log(stepDirection)
+        stepNumberGlob = stepNumber;
+        stepDirectionGlob = stepDirection;
         if (stepNumber == 1) {
             //var selectInsuredTypeIsValid = validatorStep2.element('#select-insured-type');
             //var policyLimit = validatorStep2.element('#policy-limit');
@@ -214,4 +219,15 @@ $(document).ready(function () {
             return false;
         }
     });
+
+    
+
+    $(document).on('change', 'input[type="text"], input[type="radio"], input[type="select"], textarea', function (e) {
+        console.log(stepDirectionGlob, stepNumberGlob)
+        if (stepNumberGlob == 2 && stepDirectionGlob == 'backward'){
+            resetStep3 = true;
+        }
+        
+    })
+
 })

@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
     setTimeout(function(){
@@ -38,7 +39,7 @@ $(document).ready(function(){
 
     // Smart Wizard
     $('#smartwizard').smartWizard({
-            selected: 1,
+            selected: 0,
             theme: 'default',
             transitionEffect:'fade',
             showStepURLhash: true,
