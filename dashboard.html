@@ -87,14 +87,15 @@
                                 <tr>
                                     <th class="radio"></th>
                                     <th>Quote No.</th>
-                                    <th>Date Created</th>
                                     <th>Insured Name</th>
+                                    <th>Last Modified</th>
+                                    <th>Expires (Days)</th>
                                     <th>Broker Name</th>
                                     <th>Product Type</th>
                                     <th>Premium</th>
                                     <th>Status</th>
                                     <th>Created By</th>
-                                    <th>Last Modified Date</th>
+                                    
                                 </tr>
                             </thead>
                             <!--<tbody>
@@ -183,8 +184,8 @@
         </div>
 
 
-        <!-- Modal -->
-        <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true" >
+        <!-- Modal Filter1 -->
+        <div class="modal" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true" >
             <div class="modal-dialog modal-lg" role="document" id="filterApp">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -284,6 +285,113 @@
                             </div>
                         </form>                            
                         
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Filter2 -->
+        <div class="modal" id="filterModal2" tabindex="-1" role="dialog" aria-labelledby="filterModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document" id="filter2App">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="filterModal2Title">Filter Search Results By </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body filter-modal-body">
+
+                        <form action="/" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="quoteNo">Email address</label>
+                                                <input type="text" class="form-control" id="quoteNo">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="dcFrom">Date Created</label>
+                                                <input type="date" class="form-control" id="dcFrom">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="dcTo"> &nbsp;</label>
+                                                <input type="date" class="form-control" id="dcTo">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="lastMod">Last modified date</label>
+                                                <input type="text" class="form-control" id="lastMod">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="checkbox-container">
+                                                Draft
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="checkbox-container">
+                                                Quoted
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="checkbox-container">
+                                                Bound
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="checkbox-container">
+                                                Referred
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="checkbox-container">
+                                                Expired
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="product-type">Product Type</label>
+                                        <select class="form-control product-type required" required="required" id="product-type">
+                                            <option value=""></option>
+                                            <option value="2">Equipment Break Down</option>
+                                            <option value="3">Course of Construction</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="insuredName">Insured Name</label>
+                                        <input type="text" class="form-control" id="insuredName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="brokerName">Broker Name</label>
+                                        <input type="text" class="form-control" id="brokerName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="createdBy">Created By</label>
+                                        <input type="text" class="form-control" id="createdBy">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 text-left buttons-container">
+                                    <button class="btn btn-light" data-dismiss="modal">Cancel</button>
+                                    <button id="applyFilters" class="btn btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
 
                 </div>

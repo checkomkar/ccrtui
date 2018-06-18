@@ -8,12 +8,13 @@ $(document).ready(function () {
 
     var callJson = function () {
         $.ajax({
-            url: "./js/quotesData.json",
+            url: "./js/quotesData1.json",
 
         }).done(function (res) {
             console.log(res);
             var qoutesTable = $('#table_quotes').DataTable({
                 data: res,
+                order: [],
                 "oLanguage": {
                     "oPaginate": {
                         "sFirst": "<<",
@@ -29,36 +30,63 @@ $(document).ready(function () {
                         data: null,
                         render: function (data, type, row) {
                             var $inputRadio = '<div class="form-check form-check-inline">'+
-                                                '<label class="checkbox-container">'+
-                                                '<input type="checkbox">'+
+                                                '<label class="check-container">'+
+                                                '<input type="radio" name="radio">'+
                                                 '<span class="checkmark"></span>'+
                                                 '</label>'+
                                                 '</div>';
                             return $inputRadio;
                         },
                         orderable: false,
-                        width: '10px'
+                        width: '10px',
+                        
                     },
                     {
-                        data: 'quoteNumber'                        
+                        data: 'quoteNumber',
+                        render: function (data, type, row) {
+                            var $quote = '<a href="">' + data + '</a>';
+                            return $quote;
+                        },
                     },
                     {
-                        data: 'dateCreated'                        
+                        data: 'insuredName'
                     },
                     {
-                        data: 'insuredName'                        
+                        data: 'lastModifiedDate'
                     },
                     {
-                        data: 'brokerName'                        
+                        data: 'expireInDays',
+                        render: function (data, type, row) {
+                            var $span = null;
+                            if (data <= 30) {
+                                $span = '<span class="red">' + data + '</span>';
+                            } else {
+                                $span = '<span>' + data + '</span>';
+                            }
+                            return $span;
+                        }
+                    },
+                    {
+                        data: 'brokerName'
                     },
                     { data: 'productType' },
                     { data: 'premium' },
-                    { data: 'status' },
-                    { data: 'createdBy' },
                     {
-                        data: 'lastModifiedDate'                        
+                        data: 'status',
+                        render: function (data, type, row) {
+                            var $span = null;
+                            if (data) {
+                                $span = '<span>Referred</span>';
+                            } else {
+                                $span = '<span>Quoted</span>';
+                            }
+                            return $span;
+                        }
                     },
-                    
+                    //{
+                    //    data: 'dateCreated'                        
+                    //},
+                    { data: 'createdBy' }
                 ]
             });
 
@@ -72,29 +100,32 @@ $(document).ready(function () {
                 //console.log(qoutesTable.row(this).data());
                 selectedRow = qoutesTable.row(this).data();
                 var $this = $(this);
-                if ($this.find(':checkbox').is(':checked')) {
-                    $this.find(':checkbox').prop('checked', false);
-                } else {
-                    $this.find(':checkbox').prop('checked', true);
+                //if ($this.find(':checkbox').is(':checked')) {
+                //    $this.find(':checkbox').prop('checked', false);
+                //} else {
+                //    $this.find(':checkbox').prop('checked', true);
+                //}
+                var $radioBtn = $this.find('input[type="radio"]');
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+
+                }
+                else {
+                    qoutesTable.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                    $radioBtn.prop('checked', true);
                 }
                 
-                //if ($(this).hasClass('selected')) {
-                //    $(this).removeClass('selected');
-                //}
-                //else {
-                //    qoutesTable.$('tr.selected').removeClass('selected');
-                //    $(this).addClass('selected');
-                //}
-                
-                $this.toggleClass('selected');
+                //$this.toggleClass('selected');
                 $copyBtn.removeClass('d-none');
 
             });
 
             $copyBtn.on('click', function () {
                 var array = [];
-                var a = qoutesTable.rows('.selected').data().toArray()
+                var a = selectedRow;
                 console.log(a);
+                alert(JSON.stringify(a))
             })
             
 

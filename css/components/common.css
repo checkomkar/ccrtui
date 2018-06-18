@@ -2703,6 +2703,9 @@ a {
                 //content: url('../../images/sort-ascending.svg');
             }*/
 }
+.dataTable thead th.no-sort::after {
+  display: none !important;
+}
 .dataTable thead th.sorting,
 .dataTable thead th.sorting_asc,
 .dataTable thead th.sorting_desc {
@@ -2731,6 +2734,7 @@ a {
 }
 .dataTable tbody tr {
   color: #272b2e;
+  cursor: pointer;
 }
 .dataTable tbody td {
   border-color: #dee2e6;
