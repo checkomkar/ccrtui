@@ -344,7 +344,7 @@
   vertical-align: middle;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td .remove-loc-grid {
-  background: none;
+  background: url('../images/delete-active.svg') !important;
   color: #00b4dc;
   font-size: 13px;
   padding: 0;
@@ -352,6 +352,7 @@
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location td .remove-loc-grid:disabled {
   color: #8c9094;
+  background: url('../images/delete-inactive.svg') !important;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location.alt-table td p {
   min-height: 40px;
@@ -374,8 +375,12 @@
   width: 23%;
 }
 #smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid {
+  background: url('../images/delete-active.svg');
   padding: 5px;
   font-size: 20px;
+}
+#smartwizard .tab-content .questionaire-container .q-content .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid:disabled {
+  background: url('../images/delete-active.svg');
 }
 #smartwizard .tab-content .questionaire-container .q-content .add-location-btn-holder {
   display: inline-block;
@@ -425,13 +430,20 @@
   vertical-align: middle;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td .remove-loc-grid {
-  background: none;
+  background: url('../images/delete-active.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px;
   color: #00b4dc;
   font-size: 13px;
-  padding: 0;
+  padding: 10px;
   margin: 0;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location td .remove-loc-grid:disabled {
+  background: url('../images/delete-inactive.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px;
   color: #8c9094;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td p {
@@ -457,7 +469,7 @@
   width: 23%;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid {
-  padding: 5px;
+  padding: 15px;
   font-size: 20px;
 }
 #smartwizard .tab-content .questionaire-container .location-tables-section .table-risk-location.alt-table td:last-of-type button.alt-remove-loc-grid:focus {
