@@ -14,7 +14,10 @@ $(document).ready(function () {
             console.log(res);
             var qoutesTable = $('#table_quotes').DataTable({
                 data: res,
+                colReorder: true,
                 order: [],
+                //"stateSave": true,
+                //"stateDuration": 1800, 
                 "oLanguage": {
                     "oPaginate": {
                         "sFirst": "<<",
@@ -108,16 +111,18 @@ $(document).ready(function () {
                 var $radioBtn = $this.find('input[type="radio"]');
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
-
+                    $radioBtn.prop('checked', false);
+                    $copyBtn.addClass('d-none');
                 }
                 else {
                     qoutesTable.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                     $radioBtn.prop('checked', true);
+                    $copyBtn.removeClass('d-none');
                 }
                 
                 //$this.toggleClass('selected');
-                $copyBtn.removeClass('d-none');
+                
 
             });
 
@@ -126,8 +131,17 @@ $(document).ready(function () {
                 var a = selectedRow;
                 console.log(a);
                 alert(JSON.stringify(a))
+                
             })
-            
+
+            $('#remove').on('click', function (e) {
+                e.preventDefault();
+                qoutesTable.rows('.selected').deselect();
+                //console.log(qoutesTable.colReorder.reset())
+                qoutesTable.colReorder.reset();
+                
+                //callJson();
+            })
 
         });
     }
@@ -225,6 +239,22 @@ $(document).ready(function () {
 
     callJson();
     callJson2();
+
+    jQuery.fn.dataTableExt.oApi.fnSortNeutral = function (oSettings) {
+        /* Remove any current sorting */
+        oSettings.aaSorting = [];
+
+        /* Sort display arrays so we get them in numerical order */
+        oSettings.aiDisplay.sort(function (x, y) {
+            return x - y;
+        });
+        oSettings.aiDisplayMaster.sort(function (x, y) {
+            return x - y;
+        });
+
+        /* Redraw */
+        oSettings.oApi._fnReDraw(oSettings);
+    };
 })
 
 
