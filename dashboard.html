@@ -13,390 +13,443 @@
                     <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a><i class="fa fa-chevron-right" aria-hidden="true"></i> </li>
                     <li><a href="#">CCRT</a> <i class="fa fa-chevron-right" aria-hidden="true"></i> </li>
                     <li><a>Dashboard</a></li>
-                    
+
                 </ul>
             </div>
         </section>
-        <div class="container dashboard-container">
-            <ul class="nav nav-pills mb-3" id="pills-tab-dashboard" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="pills-quotes-tab" data-toggle="pill" href="#pills-quotes" role="tab" aria-controls="pills-quotes" aria-selected="true">Quotes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-due-tab" data-toggle="pill" 
-                       href="#pills-due" role="tab" aria-controls="pills-due" 
-                       aria-selected="false">
-                        Due Soon <span class="notification">5</span>
-                    </a>
-                    
-                </li>                
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-quotes" role="tabpanel" aria-labelledby="pills-quotes-tab">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="input-group mb-3">
-                                <div class="input-group search">
-                                    <input type="text" class="form-control" id="searchTable" placeholder="Search by Quote No./ Insured Name/Broker Name/Created By">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button">
-                                            <i class="fa fa-search" aria-hidden="true"></i>
-                                        </button>
-                                    </span>
+        <div id="appDashboard">            
+            <div class="container dashboard-container">
+                <ul class="nav nav-pills mb-3" id="pills-tab-dashboard" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-quotes-tab" data-toggle="pill" href="#pills-quotes" role="tab" aria-controls="pills-quotes" aria-selected="true">Quotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-due-tab" data-toggle="pill"
+                           href="#pills-due" role="tab" aria-controls="pills-due"
+                           aria-selected="false">
+                            Due Soon <span class="notification">5</span>
+                        </a>
+
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-quotes" role="tabpanel" aria-labelledby="pills-quotes-tab">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="input-group mb-3">
+                                    <div class="input-group search">
+                                        <input type="text" class="form-control" id="searchTable" placeholder="Search by Quote No./ Insured Name/Broker Name/Created By">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <button class="btn btn-primary btn-filter">
-                                <i class="fa fa-filter" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <div class="col-md-3 text-right">
-                            <button class="btn btn-primary">
-                                <i class="fa fa-comments" aria-hidden="true"></i>
-                                Live Chat
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row filter-row" id="filterApp" v-if="showFilter">
-                        <div class="col-md-12">
-                            <div class="filter-title">Filters:</div>
-                            <div class="filter-group">                                
-                                <span class="badge badge-primary">Quoted <span class="times"> &times;</span></span>
-                                <span class="badge badge-primary">Bound <span class="times"> &times;</span></span>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary btn-filter">
+                                    <i class="fa fa-filter" aria-hidden="true"></i>
+                                </button>
                             </div>
-                            <div class="filter-group">
-                                Broker Name
-                                <span class="badge badge-primary">ABC LLC <span class="times"> &times;</span></span>                                
+                            <div class="col-md-3 text-right">
+                                <button class="btn btn-primary">
+                                    <i class="fa fa-comments" aria-hidden="true"></i>
+                                    Live Chat
+                                </button>
                             </div>
-                            <div class="remove" id="remove"><a href="">Remove all</a></div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <button class="btn btn-primary">Create Quote</button>
-                        </div>
-                        <div class="col-md-3 no-pad">
-                            <button class="btn btn-primary copy d-none">Copy Quote</button>
-                        </div>
-                    </div>
-                    
-                    <div class="table-container">
-                        <table id="table_quotes" class="table table-bordered table-dark display">
-                            <thead>
-                                <tr>
-                                    <th class="radio"></th>
-                                    <th>Quote No.</th>
-                                    <th>Insured Name</th>
-                                    <th>Last Modified</th>
-                                    <th>Expires (Days)</th>
-                                    <th>Broker Name</th>
-                                    <th>Product Type</th>
-                                    <th>Premium</th>
-                                    <th>Status</th>
-                                    <th>Created By</th>
+                        <div class="row filter-row d-none" id="filterApp">
+                            <div class="col-md-12">
+                                <div class="filter-title">Filters:</div>
+                                <div class="filter-group" id="status">
                                     
-                                </tr>
-                            </thead>
-                            <!--<tbody>
-                                <tr>
-                                    <td>Row 1 Data 1</td>
-                                    <td>Row 1 Data 2</td>
-                                </tr>
-                                <tr>
-                                    <td>Row 2 Data 1</td>
-                                    <td>Row 2 Data 2</td>
-                                </tr>
-                            </tbody>-->
-                        </table>
-                    </div>
-
-
-                </div>
-                <div class="tab-pane fade" id="pills-due" role="tabpanel" aria-labelledby="pills-due-tab">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="input-group mb-3">
-                                <div class="input-group search">
-                                    <input type="text" class="form-control" id="searchTable" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button">
-                                            <i class="fa fa-search" aria-hidden="true"></i>
-                                        </button>
-                                    </span>
                                 </div>
+                                <div class="filter-group" id="brokerName">
+                                    
+                                </div>
+                                <div class="remove" id="removeFilters"><a href="">Remove all</a></div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <button class="btn btn-primary btn-filter">
-                                <i class="fa fa-filter" aria-hidden="true"></i>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button id="createQuote" class="btn btn-primary">Create Quote</button>
+                            </div>
+                            <div class="col-md-3 no-pad">
+                                <button class="btn btn-primary copy d-none">Copy Quote</button>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <table id="table_quotes" class="table table-bordered table-dark display">
+                                <thead>
+                                    <tr>
+                                        <th class="radio"></th>
+                                        <th>Quote No.</th>
+                                        <th>Insured Name</th>
+                                        <th>Last Modified</th>
+                                        <th>Expires (Days)</th>
+                                        <th>Broker Name</th>
+                                        <th>Product Type</th>
+                                        <th>Premium</th>
+                                        <th>Status</th>
+                                        <th>Created By</th>
+
+                                    </tr>
+                                </thead>
+                                <!--<tbody>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Row 1 Data 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Row 2 Data 2</td>
+                            </tr>
+                        </tbody>-->
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-due" role="tabpanel" aria-labelledby="pills-due-tab">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="input-group mb-3">
+                                    <div class="input-group search">
+                                        <input type="text" class="form-control" id="searchTable" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary btn-filter">
+                                    <i class="fa fa-filter" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-3 text-right">
+                                <button class="btn btn-primary">
+                                    <i class="fa fa-comments" aria-hidden="true"></i>
+                                    Live Chat
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row filter-row" id="filterApp" >
+                            <div class="col-md-12">
+                                <div class="filter-title">Filters:</div>
+                                <div class="filter-group">
+                                    
+                                </div>
+                                <div class="filter-group">
+                                    
+                                </div>
+                                <div class="remove"><a href="">Remove all</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button class="btn btn-primary">Create Quote</button>
+                            </div>
+                            <div class="col-md-3 no-pad">
+                                <button class="btn btn-primary copy-due d-none">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <table id="table_due_soon" class="table table-bordered table-dark display">
+                                <thead>
+                                    <tr>
+                                        <th class="radio"></th>
+                                        <th>Quote No</th>
+                                        <th>Insured Name</th>
+                                        <th>Expiring Days</th>
+                                        <th>Status</th>
+                                        <th>Created By</th>
+                                        <th>CC Ref</th>
+                                        <th>Broker Name</th>
+                                        <th>Broker Postal</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal Filter1 -->
+            <div class="modal" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document" id="filterApp">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="filterModalTitle">Filter Search Results By </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="col-md-3 text-right">
-                            <button class="btn btn-primary">
-                                <i class="fa fa-comments" aria-hidden="true"></i>
-                                Live Chat
+                        <div class="modal-body filter-modal-body">
+
+                            <form action="/" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="quoteNo">Email address</label>
+                                                    <input type="text" class="form-control" id="quoteNo">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="dcFrom">Date Created</label>
+                                                    <input type="date" class="form-control" id="dcFrom">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="dcTo"> &nbsp;</label>
+                                                    <input type="date" class="form-control" id="dcTo">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="lastMod">Last modified date</label>
+                                                    <input type="text" class="form-control" id="lastMod">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="checkbox-container">
+                                                    Draft
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="checkbox-container">
+                                                    Quoted
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="checkbox-container">
+                                                    Bound
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="checkbox-container">
+                                                    Referred
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="checkbox-container">
+                                                    Expired
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="product-type">Product Type</label>
+                                            <select class="form-control product-type required" required="required" id="product-type">
+                                                <option value=""></option>
+                                                <option value="2">Equipment Break Down</option>
+                                                <option value="3">Course of Construction</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="insuredName">Insured Name</label>
+                                            <input type="text" class="form-control" id="insuredName">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="brokerName">Broker Name</label>
+                                            <input type="text" class="form-control" id="brokerName">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="createdBy">Created By</label>
+                                            <input type="text" class="form-control" id="createdBy">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-left buttons-container">
+                                        <button class="btn btn-light" data-dismiss="modal">Cancel</button>
+                                        <button id="applyFilters" class="btn btn-primary">Apply</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Filter2 -->
+            <div class="modal" id="filterModal2" tabindex="-1" role="dialog" aria-labelledby="filterModal2Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document" id="filter2App">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="filterModal2Title">Filter Search Results By </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                    </div>
-                    <div class="row filter-row" id="filterApp" v-if="showFilter">
-                        <div class="col-md-12">
-                            <div class="filter-title">Filters:</div>
-                            <div class="filter-group">
-                                <span class="badge badge-primary">Quoted <span class="times"> &times;</span></span>
-                                <span class="badge badge-primary">Bound <span class="times"> &times;</span></span>
-                            </div>
-                            <div class="filter-group">
-                                Broker Name
-                                <span class="badge badge-primary">ABC LLC <span class="times"> &times;</span></span>
-                            </div>
-                            <div class="remove"><a href="">Remove all</a></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <button class="btn btn-primary">Create Quote</button>
-                        </div>
-                        <div class="col-md-3 no-pad">
-                            <button class="btn btn-primary copy-due d-none">Copy</button>
-                        </div>
-                    </div>
+                        <div class="modal-body filter-modal-body">
 
-                    <div class="table-container">
-                        <table id="table_due_soon" class="table table-bordered table-dark display">
-                            <thead>
-                                <tr>
-                                    <th class="radio"></th>
-                                    <th>Quote No</th>
-                                    <th>Insured Name</th>
-                                    <th>Expiring Days</th>
-                                    <th>Status</th>
-                                    <th>Created By</th>
-                                    <th>CC Ref</th>
-                                    <th>Broker Name</th>
-                                    <th>Broker Postal</th>                                      
-                                </tr>
-                            </thead>                            
-                        </table>
+                            <form action="/" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">                                            
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label for="dcFrom">From Date</label>
+                                                    <input type="date" class="form-control" v-model="filter.date.dcFrom" id="dcFrom">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label for="dcTo">To Date</label>
+                                                    <input type="date" class="form-control" v-model="filter.date.dcTo" id="dcTo">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="product-type">Group</label>
+                                            <select class="form-control product-type required" v-model="filter.prodType" required="required" id="product-type">
+                                                <option value=""></option>
+                                                <option value="2">Equipment Break Down</option>
+                                                <option value="3">Course of Construction</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-3 filter-holder">
+                                                <p>
+                                                    Product Type
+                                                </p>
+                                                <div class="filters-check">
+                                                    <label class="checkbox-container">
+                                                        Equipment Breakdown
+                                                        <input type="checkbox" v-model="filter.prodTypeArr.equipBreak">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        Course of Construction
+                                                        <input type="checkbox" v-model="filter.prodTypeArr.courseConst">
+                                                        <span class="checkmark"></span>
+                                                    </label>                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 filter-holder">
+                                                <p>
+                                                    Status
+                                                </p>
+                                                <div class="filters-check">
+                                                    <label class="checkbox-container">
+                                                        Draft
+                                                        <input type="checkbox" name="status" value="draft">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        Quoted
+                                                        <input type="checkbox" name="status" value="quoted">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        Referred
+                                                        <input type="checkbox" name="status" value="referred">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        Expired
+                                                        <input type="checkbox" name="status" value="expired">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        Closed
+                                                        <input type="checkbox" name="status" value="closed">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 filter-holder">
+                                                <p>
+                                                    Broker Name
+                                                </p>
+                                                <div class="filters-check">
+                                                    <label class="checkbox-container">
+                                                        Aivee
+                                                        <input type="checkbox" name="bname" value="Aivee">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        Dynava
+                                                        <input type="checkbox" name="bname" value="Dynava">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        Browsedrive
+                                                        <input type="checkbox" name="bname" value="Browsedrive">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        Realfire
+                                                        <input type="checkbox" name="bname" value="Realfire">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 filter-holder">
+                                                <p>
+                                                    Created By
+                                                </p>
+                                                <div class="filters-check">
+                                                    <label class="checkbox-container">
+                                                        James Sheehan
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        James Sheehan
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        James Sheehan
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="checkbox-container">
+                                                        James Sheehan
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-left buttons-container">
+                                        <button class="btn btn-light" data-dismiss="modal">Cancel</button>
+                                        <button id="applyFilters" data-dismiss="modal" class="btn btn-primary">Apply</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <!-- Modal Filter1 -->
-        <div class="modal" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true" >
-            <div class="modal-dialog modal-lg" role="document" id="filterApp">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="filterModalTitle">Filter Search Results By </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body filter-modal-body">
-                        
-                        <form action="/" method="post">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="quoteNo">Email address</label>
-                                                <input type="text" class="form-control" id="quoteNo">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="dcFrom">Date Created</label>
-                                                <input type="date" class="form-control" id="dcFrom">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="dcTo"> &nbsp;</label>
-                                                <input type="date" class="form-control" id="dcTo">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="lastMod">Last modified date</label>
-                                                <input type="text" class="form-control" id="lastMod">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="checkbox-container">
-                                                Draft
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="checkbox-container">
-                                                Quoted
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="checkbox-container">
-                                                Bound
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="checkbox-container">
-                                                Referred
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="checkbox-container">
-                                                Expired
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="product-type">Product Type</label>
-                                        <select class="form-control product-type required" required="required" id="product-type">
-                                            <option value=""></option>
-                                            <option value="2">Equipment Break Down</option>
-                                            <option value="3">Course of Construction</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="insuredName">Insured Name</label>
-                                        <input type="text" class="form-control" id="insuredName">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="brokerName">Broker Name</label>
-                                        <input type="text" class="form-control" id="brokerName">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="createdBy">Created By</label>
-                                        <input type="text" class="form-control" id="createdBy">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 text-left buttons-container">
-                                    <button class="btn btn-light" data-dismiss="modal">Cancel</button>
-                                    <button id="applyFilters" class="btn btn-primary">Apply</button>
-                                </div>
-                            </div>
-                        </form>                            
-                        
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Filter2 -->
-        <div class="modal" id="filterModal2" tabindex="-1" role="dialog" aria-labelledby="filterModal2Label" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document" id="filter2App">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="filterModal2Title">Filter Search Results By </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body filter-modal-body">
-
-                        <form action="/" method="post">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="quoteNo">Email address</label>
-                                                <input type="text" class="form-control" id="quoteNo">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="dcFrom">Date Created</label>
-                                                <input type="date" class="form-control" id="dcFrom">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="dcTo"> &nbsp;</label>
-                                                <input type="date" class="form-control" id="dcTo">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="lastMod">Last modified date</label>
-                                                <input type="text" class="form-control" id="lastMod">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="checkbox-container">
-                                                Draft
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="checkbox-container">
-                                                Quoted
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="checkbox-container">
-                                                Bound
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="checkbox-container">
-                                                Referred
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="checkbox-container">
-                                                Expired
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="product-type">Product Type</label>
-                                        <select class="form-control product-type required" required="required" id="product-type">
-                                            <option value=""></option>
-                                            <option value="2">Equipment Break Down</option>
-                                            <option value="3">Course of Construction</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="insuredName">Insured Name</label>
-                                        <input type="text" class="form-control" id="insuredName">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="brokerName">Broker Name</label>
-                                        <input type="text" class="form-control" id="brokerName">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="createdBy">Created By</label>
-                                        <input type="text" class="form-control" id="createdBy">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 text-left buttons-container">
-                                    <button class="btn btn-light" data-dismiss="modal">Cancel</button>
-                                    <button id="applyFilters" class="btn btn-primary">Apply</button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        
         
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -411,6 +464,7 @@
         <script type="text/javascript" src="js/plugins/jquery.validate.js"></script>
         <script type="text/javascript" src="js/plugins/additional-methods.js"></script>
         <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+        <!--<script src="js/plugins/lodash.js"></script>-->
         <script src="https://cdn.datatables.net/colreorder/1.5.0/js/dataTables.colReorder.min.js"></script>
         <script type="text/javascript" src="js/plugins/dataTables.bootstrap4.min.js"></script>    
         <script type="text/javascript" src="js/dashboard-quotes.js"></script>
