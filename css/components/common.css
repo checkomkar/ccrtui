@@ -2531,7 +2531,7 @@ a {
 .checkbox-container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 13px;
@@ -2558,7 +2558,8 @@ a {
 }
 /* On mouse-over, add a grey background color */
 .checkbox-container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: white;
+  border: 2px solid #00b4dc;
 }
 /* When the checkbox is checked, add a blue background */
 .checkbox-container input:checked ~ .checkmark {

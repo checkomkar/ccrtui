@@ -1,10 +1,7 @@
 $(document).ready(function () {
     
-    $('.btn-filter').on('click', function () {
-        console.log('Modal')
-        $('#filterModal').modal();
-    })
-
+    
+    var qoutesTable = null;
 
     var callJson = function () {
         $.ajax({
@@ -12,7 +9,7 @@ $(document).ready(function () {
 
         }).done(function (res) {
             console.log(res);
-            var qoutesTable = $('#table_quotes').DataTable({
+            qoutesTable = $('#table_quotes').DataTable({
                 data: res,
                 colReorder: true,
                 order: [],
@@ -134,14 +131,33 @@ $(document).ready(function () {
                 
             })
 
-            $('#remove').on('click', function (e) {
+            $('#removeFilters').on('click', function (e) {
                 e.preventDefault();
-                qoutesTable.rows('.selected').deselect();
+                //qoutesTable.rows('.selected').deselect();
                 //console.log(qoutesTable.colReorder.reset())
-                qoutesTable.colReorder.reset();
+                //qoutesTable.colReorder.reset();
+                //qoutesTable.columns([2])
+                //    .search('Ritchie Group')
+                //.draw();
                 
+
+                qoutesTable.search('')
+                .columns().search('')
+                .draw();
                 //callJson();
+            });
+
+            $('#createQuote').on('click', function (e) {
+                e.preventDefault();
+                
+                var arr = ['Volvo', 'Mazda', 'Saturn', 'quoted'];
+                var mergedArr = arr.join('|');
+                qoutesTable.columns([6,8])
+                    .search(mergedArr, true)
+                    .draw();
             })
+
+
 
         });
     }
@@ -240,21 +256,126 @@ $(document).ready(function () {
     callJson();
     callJson2();
 
-    jQuery.fn.dataTableExt.oApi.fnSortNeutral = function (oSettings) {
-        /* Remove any current sorting */
-        oSettings.aaSorting = [];
+    var filter = {
+        date: {
+            dcFrom: '',
+            dcTo: ''
+        },
+        prodType: null,
+        status: [],
+        brokerName: []        
+    }
 
-        /* Sort display arrays so we get them in numerical order */
-        oSettings.aiDisplay.sort(function (x, y) {
-            return x - y;
-        });
-        oSettings.aiDisplayMaster.sort(function (x, y) {
-            return x - y;
-        });
+    //var app = new Vue({
+    //    el: '#appDashboard',
+    //    data: {
+            
+    //    },
+    //    methods: {
+    //        appliedFilters: function (e) {
+    //            console.log(this.$data.filter);
+    //        }
+    //    }
+    //});
 
-        /* Redraw */
-        oSettings.oApi._fnReDraw(oSettings);
-    };
+    $('.btn-filter').on('click', function (e) {
+        console.log('Modal')
+        $('#filterModal2').modal();
+    });
+
+    $(document).on('click', '#applyFilters', function (e) {
+        filter.status = [];
+        filter.brokerName = [];
+        $.each($("input[name='status']:checked"), function () {
+            filter.status.push($(this).val());
+        });
+        $.each($("input[name='bname']:checked"), function () {
+            filter.brokerName.push($(this).val());
+        });
+        
+        if (filter.status.length != 0 && filter.brokerName.length != 0) {
+            console.log(filter)
+            $('#filterApp').removeClass('d-none');
+            $('#filterApp').find('#status').html('');
+            $('#filterApp').find('#brokerName').html('');
+            $('#filterApp').find('#status').append('Status')
+            $('#filterApp').find('#brokerName').append('Broker Name')
+            $.each(filter.status, function (k, v) {
+                var $span = '<span class="badge badge-primary" data-group="status" data-value="'+v+'">' + v + '<span class="times del-filter"> &times;</span></span>';                
+                $('#filterApp').find('#status').append($span)
+            });
+
+            
+            $.each(filter.brokerName, function (k, v) {
+                var $span = '<span class="badge badge-primary" data-group="brokerName" data-value="' + v + '">' + v + '<span class="times del-filter"> &times;</span></span>';                
+                $('#filterApp').find('#brokerName').append($span)
+            });
+            var mergedArr = $.merge(filter.brokerName, filter.status)
+            mergedArr = mergedArr.join('|');
+            console.log(mergedArr);
+            qoutesTable.columns([5, 8])
+                .search(mergedArr, true)
+                .draw();
+
+        } else {
+            $('#filterApp').addClass('d-none');
+            qoutesTable.search('')
+                .columns().search('')
+                .draw();
+        }
+    })
+
+    $('#removeFilters').on('click', function (e) {
+        e.preventDefault();
+        filter.status = [];
+        filter.brokerName = [];
+        $('#filterApp').addClass('d-none');
+    });
+
+    $(document).on('click', 'span.del-filter',  function (e) {
+        var $this = $(this);
+        
+        var val = $this.closest('.badge').attr('data-value');
+        var group = $this.closest('.badge').attr('data-group');
+        if (group == 'status') {
+            //_.remove(filter.status, val);
+            var merged = null;
+            
+            filter.status = $.grep(filter.status, function (v) {
+                return v != val;
+            })
+            merged = filter.status.join('|');
+            qoutesTable.columns([8])
+                .search(merged, true)
+                .draw();
+            console.log(filter, merged)
+        }
+
+        if (group == 'brokerName') {
+            //_.remove(filter.brokerName, val);
+            var merged = null;
+            filter.brokerName = $.grep(filter.brokerName, function (v) {
+                return v != val;
+            })
+            merged = filter.brokerName.join('|');
+            qoutesTable.columns([5])
+                .search(merged, true)
+                .draw();
+            console.log(filter, merged);
+        }
+        
+        $this.closest('.badge').remove();
+        console.log($(document).find('.badge').length);
+        if ($(document).find('.badge').length == 0) {
+            qoutesTable.columns()
+                .search('')
+                .draw();
+            $this.closest('.badge').remove();
+            $(document).find('.filter-group').html('');
+            $('#filterApp').addClass('d-none');
+            return;
+        }
+    })
 })
 
 

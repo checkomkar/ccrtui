@@ -2531,7 +2531,7 @@ a {
 .checkbox-container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 13px;
@@ -2558,7 +2558,8 @@ a {
 }
 /* On mouse-over, add a grey background color */
 .checkbox-container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: white;
+  border: 2px solid #00b4dc;
 }
 /* When the checkbox is checked, add a blue background */
 .checkbox-container input:checked ~ .checkmark {
@@ -2703,6 +2704,9 @@ a {
                 //content: url('../../images/sort-ascending.svg');
             }*/
 }
+.dataTable thead th.no-sort::after {
+  display: none !important;
+}
 .dataTable thead th.sorting,
 .dataTable thead th.sorting_asc,
 .dataTable thead th.sorting_desc {
@@ -2731,6 +2735,7 @@ a {
 }
 .dataTable tbody tr {
   color: #272b2e;
+  cursor: pointer;
 }
 .dataTable tbody td {
   border-color: #dee2e6;
@@ -2951,14 +2956,46 @@ a {
   background: none;
   color: black;
 }
-#filterModal .checkbox-container {
-  display: inline-block;
-  width: 25%;
+#filterModal .modal-dialog,
+#filterModal2 .modal-dialog {
+  max-width: 1000px;
+  padding: 30px;
 }
-#filterModal select.form-control {
+#filterModal .filter-modal-body,
+#filterModal2 .filter-modal-body {
+  padding: 30px;
+}
+#filterModal .checkbox-container,
+#filterModal2 .checkbox-container {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+#filterModal .filter-holder,
+#filterModal2 .filter-holder {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+#filterModal .filter-holder p,
+#filterModal2 .filter-holder p {
+  color: #272b2e;
+  font-size: 16px;
+}
+#filterModal .filter-holder .filters-check,
+#filterModal2 .filter-holder .filters-check {
+  min-height: 255px;
+  min-width: 178px;
+  padding: 20px 0px 0 20px;
+  background: #f9f9f9;
+  overflow-y: scroll;
+  border: 1px solid #e6e6e6;
+}
+#filterModal select.form-control,
+#filterModal2 select.form-control {
   height: inherit;
   padding: 7px;
 }
-#filterModal .buttons-container button {
+#filterModal .buttons-container button,
+#filterModal2 .buttons-container button {
   margin-right: 10px;
 }
