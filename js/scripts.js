@@ -103,14 +103,15 @@ $(document).ready(function(){
         $(this).val(newval);
     });
 
-    $('#policy-limit').on('keyup', function () {
-        var $this = $(this);
-        var val = $this.val();
-        if (val.indexOf('$') != 0) {
-            val = "$" + val;
-        }
-        $this.val(val)
-    })
+    $('#policy-limit').autoNumeric('init', { aSign: '$ ', pSign: 'p' });
+    //$('#policy-limit').on('keyup', function () {
+    //    var $this = $(this);
+    //    var val = $this.val();
+    //    if (val.indexOf('$') != 0) {
+    //        val = "$" + val;
+    //    }
+    //    $this.val(val)
+    //})
 
     $('#smartwizard').smartWizard("theme", "arrows");
 

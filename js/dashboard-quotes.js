@@ -293,7 +293,7 @@ $(document).ready(function () {
             filter.brokerName.push($(this).val());
         });
         
-        if (filter.status.length != 0 && filter.brokerName.length != 0) {
+        if (filter.status.length != 0 || filter.brokerName.length != 0) {
             console.log(filter)
             $('#filterApp').removeClass('d-none');
             $('#filterApp').find('#status').html('');
