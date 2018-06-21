@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial;
-  background: #666;
+  background: white;
 }
 .main-section {
   width: 998px;
@@ -42,45 +42,65 @@ div {
   width: 100%;
   margin-bottom: 15px;
 }
-.row div[class*="col-"] {
+.row .col-1 {
+  width: calc(100%/12);
   float: left;
   margin-bottom: 15px;
 }
-.row .col-1 {
-  width: calc(100%/12);
-}
 .row .col-2 {
   width: calc((100%/12)*2);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-3 {
   width: calc((100%/12)*3);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-4 {
   width: calc((100%/12)*4);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-5 {
   width: calc((100%/12)*5);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-8 {
   width: calc((100%/12)*8);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-6 {
   width: calc((100%/12)*6);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-7 {
   width: calc((100%/12)*7);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-9 {
   width: calc((100%/12)*9);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-10 {
   width: calc((100%/12)*10);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-11 {
   width: calc((100%/12)*11);
+  float: left;
+  margin-bottom: 15px;
 }
 .row .col-12 {
   width: calc((100%/12)*12);
+  float: left;
+  margin-bottom: 15px;
 }
 .title-main {
   font-size: 18px;
