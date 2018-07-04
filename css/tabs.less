@@ -136,19 +136,24 @@
 
                 table.table-locations {
                     font-size: 13px;
-
-                    tr {
-                        &:first-of-type {
+                    thead{
+                        tr{
                             color: #8c9094;
-
-                            td {
-                                border-top: 0px;
-                            }
+                            border-top: 0px;
                         }
-                    }
+                    }                    
 
                     td {
                         padding: 20px;
+                        
+                    }
+                    tr{
+                        td{
+                            &:nth-of-type(2){
+                                //width: 20%;
+                                word-break: break-all;
+                            }
+                        }
                     }
                 }
             }

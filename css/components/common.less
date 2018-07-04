@@ -30,7 +30,7 @@ div {
 
 .form-group label.error {
     color: red;
-    text-align: right;
+    text-align: left;
     display: inline-block;
     width: 100%;
     font-size: 12px;
@@ -49,6 +49,37 @@ select.error, input.error {
     &:focus {
         box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
         //box-shadow: 0 0 0 2px @munich-re-petrol;
+    }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../../images/select-date.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+    transform: translateX(-2%);
+}
+
+.currency{
+    background: url('dropdown-arrow-down.svg') no-repeat right;
+    background-position-x: 96%;
+    background-color: white;
+    
+    &:read-only{
+        background-color: white !important;
+    }
+}
+
+.dropdown-menu {
+    width: 100%;
+    a{
+        &:hover{
+            background: @a-link;
+            color: white;
+        }
     }
 }
 
@@ -95,37 +126,39 @@ select.error, input.error {
 }
 
 select {
+    padding-right: 25px !important;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background: url('dropdown-arrow-down.svg') no-repeat right #ddd;
-    //background-position-x: 98%;
-    background-origin: content-box;
+    background-position-x: 95%;
+    //background-origin: content-box;
     option{
         padding: 10px;
     }
 }
 select:active, select:hover {
     //background: none;
-    color: @a-link;
+    //color: @a-link;
 }
 
-select option:hover {
-    color: #000;
-    box-shadow: inset 20px 20px #00f;
-}
-select::after {
-    content: '>';
-    font: normal normal normal 17px/1 FontAwesome;
-    color: #0ebeff;
+/*select option:hover {
+    //color: #000;
+    //box-shadow: inset 20px 20px #00f;
+}*/
+/*select::after {
+    //content: '>';
+    //font: normal normal normal 17px/1 FontAwesome;
+    //color: #0ebeff;
     right: 11px;
     top: 6px;
     height: 34px;
     padding: 15px 0px 0px 8px;
-    border-left: 1px solid #0ebeff;
+    //border-left: 1px solid #0ebeff;
     position: absolute;
     pointer-events: none;
-}
+}*/
+
 
 /* IE11 hide native button (thanks Matt!) */
 select::-ms-expand {

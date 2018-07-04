@@ -40,7 +40,7 @@ $(document).ready(function(){
     // Smart Wizard
     $('#smartwizard').smartWizard({
             selected: 0,
-            theme: 'default',
+            theme: 'arrows',
             transitionEffect:'fade',
             showStepURLhash: true,
             keyNavigation: false,
@@ -51,8 +51,9 @@ $(document).ready(function(){
                                 toolbarExtraButtons: [btnCancel]
                             },
             anchorSettings:{
-                removeDoneStepOnNavigateBack: true,
-                markAllPreviousStepsAsDone: true
+                //removeDoneStepOnNavigateBack: true,
+                markAllPreviousStepsAsDone: true,
+                enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
             },
             lang: {  // Language variables
                 next: 'Next', 
@@ -66,6 +67,31 @@ $(document).ready(function(){
 
     $('#triggerFile').on('click', function () {
         $('#validatedCustomFile1').click();
+    });
+
+    window.addEventListener("hashchange", function(e){ 
+        
+        if(location.pathname == '/'){}
+            
+        
+    }, false);
+
+    //$('#smartwizard').smartWizard("theme", "arrows");
+
+    //$(document).find('.currency').autoNumeric('init', { aSign: '$ ', pSign: 'p' });
+    var curr = new AutoNumeric('.currency', {
+        currencySymbol: "$ ",
+        decimalPlaces: 0,
+        decimalPlacesShownOnBlur: 0
+    });
+    $(document).on('click', '.dropdown-menu a', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        var $val = $this.text();
+        console.log($this.closest('.dropdown').find('input'))
+        //$this.closest('.dropdown').find('input.currency').val($val)
+        //AutoNumeric.getAutoNumericElement('.currency').set($val);
+        curr.set($val);
     })
 
     $('.sw-toolbar-bottom').addClass('row');
@@ -113,7 +139,7 @@ $(document).ready(function(){
     //    $this.val(val)
     //})
 
-    $('#smartwizard').smartWizard("theme", "arrows");
+    
 
     var $selectProduct = $('.select-product');
             

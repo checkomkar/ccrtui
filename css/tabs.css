@@ -265,14 +265,15 @@
 #smartwizard .tab-content #step-3 .step-3-container table.table-locations {
   font-size: 13px;
 }
-#smartwizard .tab-content #step-3 .step-3-container table.table-locations tr:first-of-type {
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations thead tr {
   color: #8c9094;
-}
-#smartwizard .tab-content #step-3 .step-3-container table.table-locations tr:first-of-type td {
   border-top: 0px;
 }
 #smartwizard .tab-content #step-3 .step-3-container table.table-locations td {
   padding: 20px;
+}
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations tr td:nth-of-type(2) {
+  word-break: break-all;
 }
 #smartwizard .tab-content .policy-details-header {
   margin: 0;

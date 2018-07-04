@@ -54,7 +54,21 @@
 												<option value="3">Course of Construction</option>
 											</select>
 										</div>
-			                    	</div>			                    	
+                                    </div>	
+                                    <div class="col-md-5">
+                                        <div class="dropdown form-group">
+                                            <label for="select-product">Select Price</label>
+                                            <input class="form-control currency" readonly
+                                             placeholder="$" id="selectPrice" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                
+                                            <div class="dropdown-menu" aria-labelledby="selectPrice">
+                                                <a class="dropdown-item" href="#">10000000</a>
+                                                <a class="dropdown-item" href="#">2000</a>
+                                                <a class="dropdown-item" href="#">3000</a>
+                                            </div>
+                                        </div>
+                                    </div>		                    	
 			                    </div>
 								<div class="row on-select-product">
 									<div class="col-md-5">
@@ -487,7 +501,7 @@
                                                         </div>
                                                         <div class="col-md-12">
                                                             <select class="form-control quote-input required valid" required="required" id="including" aria-invalid="false">
-                                                                <option value="10000">10,000</option>
+                                                                <option value="10000">10,000,000,000,000,000,000</option>
                                                                 <option value="5000">5000</option>
                                                                 <option value="1000">1000</option>
                                                             </select>
@@ -725,94 +739,91 @@
                                         </div>
                                         <div class="accordian-content d-none">
                                             <table class="table table-locations">
-                                                <tr class="head">
-                                                    <td>
-                                                        Province /
-                                                        State
-                                                    </td>
-                                                    <td>
-                                                        Address
-                                                    </td>
-                                                    <td>
-                                                        Occupancy
-                                                        Code
-                                                    </td>
-                                                    <td>
-                                                        Building
-                                                        Value
-                                                    </td>
-                                                    <td>
-                                                        Content
-                                                        Value
-                                                    </td>
-                                                    <td>
-                                                        Perishable
-                                                        Goods Value
-                                                    </td>
-                                                </tr>
-                                                <tr class="head">
-                                                    <td>
-                                                        NB
-                                                    </td>
-                                                    <td>
-                                                        452 Holly Lane Hopewell,
-                                                        VA 23860
-                                                    </td>
-                                                    <td>
-                                                        8203
-                                                    </td>
-                                                    <td>
-                                                        $ 250
-                                                    </td>
-                                                    <td>
-                                                        $ 223
-                                                    </td>
-                                                    <td>
-                                                        $ 250
-                                                    </td>
-                                                </tr>
-                                                <tr class="head">
-                                                    <td>
-                                                        NB
-                                                    </td>
-                                                    <td>
-                                                        452 Holly Lane Hopewell,
-                                                        VA 23860
-                                                    </td>
-                                                    <td>
-                                                        8203
-                                                    </td>
-                                                    <td>
-                                                        $ 250
-                                                    </td>
-                                                    <td>
-                                                        $ 223
-                                                    </td>
-                                                    <td>
-                                                        $ 250
-                                                    </td>
-                                                </tr>
-                                                <tr class="head">
-                                                    <td>
-                                                        NB
-                                                    </td>
-                                                    <td>
-                                                        86 Chapel St. Mason City,
-                                                        IA 50401
-                                                    </td>
-                                                    <td>
-                                                        8203
-                                                    </td>
-                                                    <td>
-                                                        $ 400
-                                                    </td>
-                                                    <td>
-                                                        $ 400
-                                                    </td>
-                                                    <td>
-                                                        $ 250
-                                                    </td>
-                                                </tr>
+                                                <thead>
+                                                    <tr class="head">
+                                                        <td>
+                                                            Province / State
+                                                        </td>
+                                                        <td>
+                                                            Address
+                                                        </td>
+                                                        <td>
+                                                            Occupancy Code
+                                                        </td>
+                                                        <td>
+                                                            Building Value
+                                                        </td>
+                                                        <td>
+                                                            Content Value
+                                                        </td>
+                                                        <td>
+                                                            Perishable Goods Value
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="head">
+                                                        <td>
+                                                            NB
+                                                        </td>
+                                                        <td>
+                                                            452 Holly Lane Hopewell, VA 23860
+                                                        </td>
+                                                        <td>
+                                                            8203
+                                                        </td>
+                                                        <td>
+                                                            $ 250
+                                                        </td>
+                                                        <td>
+                                                            $ 223
+                                                        </td>
+                                                        <td>
+                                                            $ 250
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="head">
+                                                        <td>
+                                                            NB
+                                                        </td>
+                                                        <td>
+                                                            452 Holly Lane Hopewell, VA 23860
+                                                        </td>
+                                                        <td>
+                                                            8203
+                                                        </td>
+                                                        <td>
+                                                            $ 250
+                                                        </td>
+                                                        <td>
+                                                            $ 223
+                                                        </td>
+                                                        <td>
+                                                            $ 250
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="head">
+                                                        <td>
+                                                            NB
+                                                        </td>
+                                                        <td>
+                                                            86 Chapel St. Mason City, IA 50401
+                                                        </td>
+                                                        <td>
+                                                            8203
+                                                        </td>
+                                                        <td>
+                                                            $ 400
+                                                        </td>
+                                                        <td>
+                                                            $ 400
+                                                        </td>
+                                                        <td>
+                                                            $ 250
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                
                                             </table>
                                         </div>
                                     </div>
@@ -1305,6 +1316,7 @@
 	<script type="text/javascript" src="js/plugins/jquery.validate.js"></script>
 	<script type="text/javascript" src="js/plugins/additional-methods.js"></script>
     <script src="js/plugins/autoNumeric.js"></script>
+    <script src="js/plugins/autoNumeric.min.js"></script>
 	<script src="js/scripts.js"></script>
     <script src="js/policy-details.js"></script>
     <script src="js/get-quotes.js"></script>

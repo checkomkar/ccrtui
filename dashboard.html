@@ -10,7 +10,7 @@
         <section class="breadcrumb-section">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a><i class="fa fa-chevron-right" aria-hidden="true"></i> </li>
+                    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a><i class="fa fa-chevron-right" aria-hidden="true"></i> </li>
                     <li><a href="#">CCRT</a> <i class="fa fa-chevron-right" aria-hidden="true"></i> </li>
                     <li><a>Dashboard</a></li>
 
@@ -37,6 +37,14 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="input-group mb-3">
+                                    <div class="form-group">
+                                        <label for="select-product">Select Product</label>
+                                        <select class="form-control select-product required" required="required" id="select-product">
+                                            <option value=""></option>
+                                            <option value="2">Equipment Break Down</option>
+                                            <option value="3">Course of Construction</option>
+                                        </select>
+                                    </div>
                                     <div class="input-group search">
                                         <input type="text" class="form-control" id="searchTable" placeholder="Search by Quote No./ Insured Name/Broker Name/Created By">
                                         <span class="input-group-btn">
