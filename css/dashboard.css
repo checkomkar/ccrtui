@@ -1,6 +1,6 @@
 .dashboard-container ul#pills-tab-dashboard {
   border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 30px !important;
+  margin-bottom: 10px !important;
 }
 .dashboard-container ul#pills-tab-dashboard li {
   margin-right: 30px;
@@ -35,6 +35,23 @@
 }
 .dashboard-container .tab-content #pills-quotes .btn-filter i {
   font-size: 24px;
+}
+.dashboard-container .tab-content .search-label .label {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #8c9094;
+}
+.dashboard-container .tab-content .select-search-opt {
+  width: 30%;
+  margin-bottom: 0;
+}
+.dashboard-container .tab-content .select-search-opt select {
+  padding-bottom: 11px;
+  height: inherit;
+  border-right: 0;
+}
+.dashboard-container .tab-content .search-box-quote {
+  width: 70%;
 }
 .dashboard-container .tab-content .filter-row {
   background: #f2f2f2;
@@ -122,6 +139,12 @@
 .dashboard-container .table-container table#table_due_soon tbody td span.red {
   color: red;
 }
+.dashboard-container .table-container .dataTable {
+  border: 1px solid #ddd !important;
+}
+.dashboard-container .table-container .dataTables_wrapper {
+  padding: 0;
+}
 .dashboard-container .table-container .dataTables_info {
   font-size: 13px;
   text-align: right;
@@ -168,10 +191,71 @@
   background: none;
   color: black;
 }
+.dataTable {
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+  /* The container */
+}
+.dataTable .check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.dataTable .check-container .checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: solid 2px #babcbf;
+}
+.dataTable .check-container:hover input ~ .checkmark {
+  border: 2px solid #00b4dc;
+}
+.dataTable .check-container input:checked ~ .checkmark {
+  background-color: white;
+  border: 2px solid #00b4dc;
+}
+.dataTable .check-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.dataTable .check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.dataTable .check-container .checkmark:after {
+  top: 2px;
+  left: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00b4dc;
+}
+.dataTable .checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 #filterModal .modal-dialog,
 #filterModal2 .modal-dialog {
   max-width: 1000px;
   padding: 30px;
+  padding-top: 15px;
 }
 #filterModal .filter-modal-body,
 #filterModal2 .filter-modal-body {
@@ -181,11 +265,11 @@
 #filterModal2 .checkbox-container {
   display: inline-block;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 #filterModal .filter-holder,
 #filterModal2 .filter-holder {
-  margin-top: 30px;
+  margin-top: 5px;
   margin-bottom: 20px;
 }
 #filterModal .filter-holder p,
@@ -195,7 +279,7 @@
 }
 #filterModal .filter-holder .filters-check,
 #filterModal2 .filter-holder .filters-check {
-  min-height: 255px;
+  min-height: 170px;
   min-width: 178px;
   padding: 20px 0px 0 20px;
   background: #f9f9f9;

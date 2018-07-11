@@ -164,6 +164,17 @@
     width: 100%;
   }
 }
+.dollar-set-container {
+  position: relative;
+}
+.dollar-set-container span.dollar-set {
+  position: absolute;
+  left: 22px;
+  top: 10px;
+}
+.dollar-set-container select {
+  padding-left: 15px;
+}
 #smartwizard .tab-content {
   position: relative;
 }
@@ -268,6 +279,9 @@
 #smartwizard .tab-content #step-3 .step-3-container table.table-locations thead tr {
   color: #8c9094;
   border-top: 0px;
+}
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations thead tr td:nth-of-type(2) {
+  word-break: keep-all;
 }
 #smartwizard .tab-content #step-3 .step-3-container table.table-locations td {
   padding: 20px;
@@ -529,6 +543,9 @@
 }
 #smartwizard .tab-content .questionaire-container .table-add-cost td {
   border: none;
+}
+#smartwizard .location-tables-section textarea {
+  resize: none;
 }
 #selectOccupancyModal #selectOccupancyModalTitle {
   text-transform: uppercase;

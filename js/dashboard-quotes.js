@@ -2,13 +2,14 @@ $(document).ready(function () {
     
     
     var qoutesTable = null;
+    var groupTable = null;
 
     var callJson = function () {
         $.ajax({
             url: "./js/quotesData1.json",
 
         }).done(function (res) {
-            console.log(res);
+            //console.log(res);
             qoutesTable = $('#table_quotes').DataTable({
                 data: res,
                 colReorder: true,
@@ -167,7 +168,7 @@ $(document).ready(function () {
             url: "./js/due_soon.json",
 
         }).done(function (res) {
-            console.log(res);
+            //console.log(res);
             var duesTable = $('#table_due_soon').DataTable({
                 data: res,
                 "oLanguage": {
@@ -253,8 +254,94 @@ $(document).ready(function () {
         });
     }
 
+    var callJson3 = function () {
+        console.log("Hellooooo")
+        $.ajax({
+            url: "./js/group.json"
+
+        }).done(function (res) {
+            console.log(res);
+            groupTable = $('#tableGroups').DataTable({
+                data: res,
+                colReorder: true,
+                order: [],
+                //"stateSave": true,
+                //"stateDuration": 1800, 
+                "oLanguage": {
+                    "oPaginate": {
+                        "sFirst": "<<",
+                        "sPrevious": '<i class="fa fa-arrow-left" aria-hidden="true"></i> Prev', // This is the link to the previous page
+                        "sNext": 'Next<i class="fa fa-arrow-right" aria-hidden="true"></i>', // This is the link to the next page
+                        "sLast": ">>"
+                    }
+                },
+                "autoWidth": false,
+                "dom": '<"top row"<"col-md-3"><"col-md-5"i><"col-md-4"p>>rt<"bottom row"<"col-md-5"l><"col-md-3"i><"col-md-4"p>><"clear">',
+                columns: [
+                    {
+                        data: null,
+                        render: function (data, type, row) {
+                            var $inputRadio = '<div class="form-check form-check-inline">' +
+                                '<label class="check-container">' +
+                                '<input id="selectGroup" type="radio" name="radio">' +
+                                '<span class="checkmark"></span>' +
+                                '</label>' +
+                                '</div>';
+                            return $inputRadio;
+                        },
+                        orderable: false,
+                        width: '1%',
+
+                    },
+                    {
+                        data: 'programName',   
+                        width: '24%'                    
+                    },
+                    {
+                        data: 'productType',
+                        width: '25%'
+                    },
+                    {
+                        data: 'status',
+                        width: '25%'
+                    },
+                    
+                    { 
+                        data: 'createdOn',
+                        width: '25%'
+                    }
+                ]
+            });
+
+            $('#searchTableGroup').keyup(function () {
+                groupTable.search($(this).val()).draw();
+            })
+            var selectedRow = null;
+            var $copyBtn = $('.copy');
+            var selected = [];
+            $('#tableGroups tbody').on('click', 'tr', function () {
+                //console.log(qoutesTable.row(this).data());
+                selectedRow = groupTable.row(this).data();
+                var $this = $(this);                
+                var $radioBtn = $this.find('input[type="radio"]');
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                    $radioBtn.prop('checked', false);
+                    $copyBtn.addClass('d-none');
+                }
+                else {
+                    groupTable.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                    $radioBtn.prop('checked', true);
+                    $copyBtn.removeClass('d-none');
+                }
+            });
+        });
+    }
+
     callJson();
     callJson2();
+    callJson3();
 
     var filter = {
         date: {
@@ -375,6 +462,11 @@ $(document).ready(function () {
             $('#filterApp').addClass('d-none');
             return;
         }
+    });
+
+    $(document).on('click', '#assign-group-btn', function(e){
+        $(document).find('.admin-part-1').addClass('d-none');
+        $(document).find('.admin-part-2').removeClass('d-none');
     })
 })
 

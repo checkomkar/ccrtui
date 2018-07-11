@@ -5,7 +5,7 @@
 .dashboard-container {
     ul#pills-tab-dashboard {
         border-bottom: 1px solid @border-color;
-        margin-bottom: 30px !important;
+        margin-bottom: 10px !important;
 
         li {
             margin-right: 30px;
@@ -49,6 +49,26 @@
                     font-size: 24px;
                 }
             }
+        }
+        .search-label{
+            .label{
+                font-size: 13px;
+                margin-bottom: 10px;
+                color: #8c9094;
+            }
+        }
+        .select-search-opt{
+            width: 30%;
+            margin-bottom: 0;
+            select{
+                padding-bottom: 11px;
+                height: inherit;
+                border-right: 0;
+            }
+        }
+
+        .search-box-quote{
+            width: 70%;
         }
 
         .filter-row {
@@ -151,6 +171,14 @@
             }
         }
 
+        .dataTable{
+            border: 1px solid #ddd !important;
+        }
+
+        .dataTables_wrapper{
+            padding: 0;
+        }
+
         .dataTables_info {
             font-size: 13px;
             text-align: right;
@@ -241,10 +269,81 @@
     }
 }
 
+.dataTable{
+    /* Hide the browser's default radio button */
+    .check-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        
+    }
+
+    /* Create a custom radio button */
+    .check-container .checkmark {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 15px;
+        width: 15px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: solid 2px #babcbf;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .check-container:hover input ~ .checkmark {
+        //background-color: #ccc;
+        border: 2px solid @a-link;
+    }
+
+    /* When the radio button is checked, add a blue background */
+    .check-container input:checked ~ .checkmark {
+        background-color: white;
+        border: 2px solid @radio-selected;
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .check-container .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    .check-container input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .check-container .checkmark:after {
+        top: 2px;
+        left: 2px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: @radio-selected;
+    }
+
+    /* The container */
+    .checkbox-container {
+        display: block;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 13px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;    
+    }
+}
+
 #filterModal, #filterModal2 {
     .modal-dialog {
         max-width: 1000px;
         padding: 30px;
+        padding-top: 15px;
     }
 
     .filter-modal-body {
@@ -254,11 +353,11 @@
     .checkbox-container {
         display: inline-block;
         width: 100%;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
 
     .filter-holder {
-        margin-top: 30px;
+        margin-top: 5px;
         margin-bottom: 20px;
 
         p {
@@ -267,7 +366,7 @@
         }
 
         .filters-check {
-            min-height: 255px;
+            min-height: 170px;
             min-width: 178px;
             padding: 20px 0px 0 20px;
             background: #f9f9f9;

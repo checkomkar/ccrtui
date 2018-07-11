@@ -3,7 +3,7 @@
 <head>
 	<title>Tabs</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 	<!-- <link rel="stylesheet/less" type="text/css" href="css/master.less" > -->
 	<link rel="stylesheet" href="css/master.css" >
 	<!-- <script type="text/javascript" src="js/plugins/less.js" ></script> -->
@@ -162,7 +162,18 @@
 														<option value="3">Course of Construction</option>
 													</select>
 												</div>
-											</div>											
+                                            </div>		
+                                            <div class="row">
+                                                <div class="form-group col-md-3 dollar-set-container">
+                                                    <span class="dollar-set">$</span>
+                                                    <select class="form-control select-product required" required="required" id="select-insured-type">
+                                                        
+                                                        <option value=""></option>
+                                                        <option value="2">1000</option>
+                                                        <option value="3">200000000000</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 										</div>										
 									</li>
 									<li>
@@ -177,13 +188,30 @@
                                                             <input type="text" data-msg="Policy limit is required"
                                                                    data-thousands="," data-prefix="$ "
                                                             required="required"
-															class="form-control"
+															class="form-control currency"
                                                             placeholder="$"
 															id="policy-limit" >
 														</div>
 			
 													</div>
-												</div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-12">
+                                                            <input type="text" data-msg="Policy limit is required" required="required" class="form-control currency"
+                                                                placeholder="$" id="currency">
+                                                        </div>
+                                                
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-12">
+                                                            <button id="xya"></button>
+                                                        </div>
+                                                
+                                                    </div>
+                                                </div>
 												
 											</div>
 											
@@ -966,7 +994,7 @@
                                     <div class="col-sm-12">
                                         <input type="text"
                                                placeholder="$"
-                                               class="form-control"
+                                               class="form-control currency"
                                                value=""
                                                id="project-duration">
                                     </div>
@@ -982,7 +1010,7 @@
                                     <div class="col-sm-12">
                                         <input type="text"
                                                placeholder="$"
-                                               class="form-control"
+                                               class="form-control currency"
                                                id="project-duration">
                                     </div>
 
@@ -997,7 +1025,7 @@
                                     <div class="col-sm-12">
                                         <input type="text"
                                                placeholder="$"
-                                               class="form-control"
+                                               class="form-control currency"
                                                id="project-duration">
                                     </div>
 
@@ -1311,6 +1339,7 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 	<script type="text/javascript" src="js/plugins/jquery.smartWizard.js"></script>
 	<script type="text/javascript" src="js/plugins/mustache.js"></script>
 	<script type="text/javascript" src="js/plugins/jquery.validate.js"></script>

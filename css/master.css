@@ -5,6 +5,7 @@
 @import "components/common.css";
 @import "tabs.css";
 @import "dashboard.css";
+@import "admin.css";
 
 .sw-main .sw-container{
 	padding: 20px 0;

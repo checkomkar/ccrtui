@@ -3,10 +3,22 @@
 //@import "./components/common";
 @import "./components/pages/sw-custom";
 
+.dollar-set-container{
+    position: relative;
+    span.dollar-set{
+        position: absolute;
+        left: 22px;
+        top: 10px;
+    }
+    select{
+        padding-left: 15px;
+    }
+}
+
 #smartwizard {
     .tab-content {
         position: relative;
-
+        
         #step-3 {
             padding: 0;
 
@@ -140,6 +152,11 @@
                         tr{
                             color: #8c9094;
                             border-top: 0px;
+                            td{
+                                &:nth-of-type(2){                                    
+                                    word-break: keep-all;
+                                }
+                            }
                         }
                     }                    
 
@@ -486,6 +503,12 @@
                     border: none;
                 }
             }
+        }
+    }
+
+    .location-tables-section{
+        textarea{
+            resize: none;
         }
     }
 }

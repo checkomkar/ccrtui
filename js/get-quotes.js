@@ -8,6 +8,7 @@ $(document).ready(function () {
         $.each($('.quote-radio-section'), function (k, v) {
             $(v).removeClass('blue-border');            
         })
+        
     }
 
     $(".accordian-header").click(function () {
@@ -46,6 +47,10 @@ $(document).ready(function () {
     $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection) {
         console.log(stepNumber);
         if (stepNumber == 2) {
+            $.each($('.quote-radio'), function (k, v) {
+                $(v).prop('checked', false);
+            })
+            disableInputs();
             console.log('is reset form: ', resetStep3)
             if(resetStep3){
                 $(document).find('input[type="radio"]').prop('checked', false);

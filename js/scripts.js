@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     // Smart Wizard
     $('#smartwizard').smartWizard({
-            selected: 0,
+            selected: 1,
             theme: 'arrows',
             transitionEffect:'fade',
             showStepURLhash: true,
@@ -84,6 +84,30 @@ $(document).ready(function(){
         decimalPlaces: 0,
         decimalPlacesShownOnBlur: 0
     });
+
+    new AutoNumeric('#currency', {
+        currencySymbol: "$ ",
+        decimalPlaces: 0,
+        decimalPlacesShownOnBlur: 0
+    });
+
+    $('#xya').on('click', function(){
+        
+        AutoNumeric.getAutoNumericElement("#currency").set(60100);
+        
+    });
+
+    // function textAreaAdjust(o) {
+    //     o.style.height = "1px";
+    //     o.style.height = (5 + o.scrollHeight) + "px";
+    // };
+
+    // $(document).on('keyup', 'textarea', function(e){
+    //     console.log(e.target)
+    //     textAreaAdjust(this);
+    // })
+
+    
     $(document).on('click', '.dropdown-menu a', function(e){
         e.preventDefault();
         var $this = $(this);
@@ -129,7 +153,7 @@ $(document).ready(function(){
         $(this).val(newval);
     });
 
-    $('#policy-limit').autoNumeric('init', { aSign: '$ ', pSign: 'p' });
+    $(document).find('.currency').autoNumeric('init', { aSign: '$ ', pSign: 'p', mDec: '0' });
     //$('#policy-limit').on('keyup', function () {
     //    var $this = $(this);
     //    var val = $this.val();

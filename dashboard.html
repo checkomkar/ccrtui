@@ -27,25 +27,37 @@
                         <a class="nav-link" id="pills-due-tab" data-toggle="pill"
                            href="#pills-due" role="tab" aria-controls="pills-due"
                            aria-selected="false">
-                            Due Soon <span class="notification">5</span>
+                            Due Soon 
+                            <!-- <span class="notification">5</span> -->
                         </a>
 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-admin-tab" data-toggle="pill" href="#pills-admin" role="tab" aria-controls="pills-admin" aria-selected="false">
+                            Admin                            
+                        </a>                    
                     </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-quotes" role="tabpanel" aria-labelledby="pills-quotes-tab">
+
                         <div class="row">
+                            <div class="col-md-12 search-label">
+                                <p class="label">
+                                    Search By
+                                </p>
+                            </div>
                             <div class="col-md-5">
                                 <div class="input-group mb-3">
-                                    <div class="form-group">
-                                        <label for="select-product">Select Product</label>
-                                        <select class="form-control select-product required" required="required" id="select-product">
+                                    <div class="form-group select-search-opt">
+                                        
+                                        <select class="form-control select-product required" required="required" id="select-search-opt">
                                             <option value=""></option>
                                             <option value="2">Equipment Break Down</option>
                                             <option value="3">Course of Construction</option>
                                         </select>
                                     </div>
-                                    <div class="input-group search">
+                                    <div class="input-group search search-box-quote">
                                         <input type="text" class="form-control" id="searchTable" placeholder="Search by Quote No./ Insured Name/Broker Name/Created By">
                                         <span class="input-group-btn">
                                             <button class="btn btn-secondary" type="button">
@@ -184,6 +196,211 @@
                                 </thead>
                             </table>
                         </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-admin" role="tabpanel" aria-labelledby="pills-admin-tab">
+                        <div class="admin-part-1">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group search">
+                                            <input type="text" class="form-control" id="searchTableGroup" placeholder="Search">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-secondary" type="button">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-5 text-right">
+                                    <button class="btn btn-primary">
+                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                        Live Chat
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button class="btn btn-primary" id="assign-group-btn">Assign Group</button>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <table id="tableGroups" class="table table-bordered table-dark display">
+                                    <thead>
+                                        <tr>
+                                            <th class="radio"></th>
+                                            <th>Program Name</th>
+                                            <th>Product Type</th>
+                                            <th>Status</th>
+                                            <th>Created On</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="admin-part-2 d-none">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <button type="button" class="btn btn-light btn-assign">Cancel</button>
+                                    <button type="button" class="btn btn-primary btn-assign">Assign</button>
+                                </div>
+                                
+                                <div class="col-md-5 text-right">
+                                    <button class="btn btn-primary">
+                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                        Live Chat
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="admin-details">
+                                <div class="col-md-12 hr"></div>
+                                <div class="row admin-details-content">
+                                    <!-- <div class="col-md-12 hr"></div> -->
+                                    <!-- <hr> -->
+                                    <div class="col-md-2">
+                                        <div class="title">Hello</div>
+                                        <div class="sub-title">World</div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="title">Hello</div>
+                                        <div class="sub-title">World</div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="title">Hello</div>
+                                        <div class="sub-title">World</div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="title">Hello</div>
+                                        <div class="sub-title">World</div>
+                                    </div>
+                                    <!-- <hr> -->
+                                    <!-- <div class="col-md-12 hr"></div> -->
+                                
+                                </div>
+                                <div class="col-md-12 hr"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 label">
+                                    Assign Groups to Program
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group search">
+                                            
+                                            <input type="text" class="form-control" id="searchGroup" placeholder="Search">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-secondary" type="button">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-checks">
+                                <div class="row">
+                                    <div class="col-md-3 input-checks">
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3 input-checks">
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3 input-checks">
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3 input-checks">
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">
+                                            Group Name
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>                               
+                                
+                            </div>
+                            <div class="hr"></div>
+                            <div class="row btn-group-assign">
+                                <div class="col-md-7">
+                                    <button type="button" class="btn btn-light btn-assign">Cancel</button>
+                                    <button type="button" class="btn btn-primary btn-assign">Assign</button>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
