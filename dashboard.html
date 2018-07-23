@@ -223,7 +223,7 @@
                             
                             <div class="row">
                                 <div class="col-md-2">
-                                    <button class="btn btn-primary" id="assign-group-btn">Assign Group</button>
+                                    <button class="btn btn-primary" disabled id="assign-group-btn">Assign Group</button>
                                 </div>
                             </div>
                             <div class="table-container">
@@ -243,7 +243,7 @@
                         <div class="admin-part-2 d-none">
                             <div class="row">
                                 <div class="col-md-7">
-                                    <button type="button" class="btn btn-light btn-assign">Cancel</button>
+                                    <button type="button" class="btn btn-light btn-assign btn-cancel">Cancel</button>
                                     <button type="button" class="btn btn-primary btn-assign">Assign</button>
                                 </div>
                                 
@@ -395,7 +395,7 @@
                             <div class="hr"></div>
                             <div class="row btn-group-assign">
                                 <div class="col-md-7">
-                                    <button type="button" class="btn btn-light btn-assign">Cancel</button>
+                                    <button type="button" class="btn btn-light btn-assign btn-cancel">Cancel</button>
                                     <button type="button" class="btn btn-primary btn-assign">Assign</button>
                                 </div>
                             </div>
@@ -680,8 +680,8 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                 crossorigin="anonymous"></script>
-
-
+        <script src="js/plugins/modernizr-custom.js"></script>
+        <script src="js/plugins/jquery-ui.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/plugins/jquery.smartWizard.js"></script>
         <script type="text/javascript" src="js/plugins/mustache.js"></script>
@@ -693,6 +693,14 @@
         <script src="https://cdn.datatables.net/colreorder/1.5.0/js/dataTables.colReorder.min.js"></script>
         <script type="text/javascript" src="js/plugins/dataTables.bootstrap4.min.js"></script>    
         <script type="text/javascript" src="js/dashboard-quotes.js"></script>
-        
+        <script>
+            Modernizr.load({
+                    test: Modernizr.inputtypes.date,
+                    nope: "js/plugins/jquery-ui.min.js",
+                    callback: function () {
+                        $("input[type=date]").datepicker();
+                    }
+                });
+        </script>
     </body>
 </html>

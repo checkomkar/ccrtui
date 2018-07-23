@@ -9,7 +9,17 @@ $(document).ready(function(){
         $(document).find('[data-toggle="tooltip"]').tooltip()
     })
 
-        
+    $("#select-insured-type").selectric({
+        arrowButtonMarkup: '<span class="button"></span>', 
+        customClass: {
+            prefix: 'selectric', // Type: String.  Description: Prefixed string of every class name.
+            camelCase: false     // Type: Boolean. Description: Switch classes style between camelCase or dash-case.
+        },
+        labelBuilder: function(val){
+            console.log(val);
+            return "$ "+val.text;
+        }});
+
     // Step show event
     $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
         //alert("You are on step "+stepNumber+" now");
@@ -68,6 +78,10 @@ $(document).ready(function(){
     $('#triggerFile').on('click', function () {
         $('#validatedCustomFile1').click();
     });
+    
+    $(document).find('.remove-loc-grid ').on('click', function(e){
+        $('.sw-container').css({ 'min-height': $('#step-2').height() })
+    })
 
     window.addEventListener("hashchange", function(e){ 
         

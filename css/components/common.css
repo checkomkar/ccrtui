@@ -2372,6 +2372,12 @@ span.dollar {
 .dis-block {
   display: block;
 }
+.container {
+  font-family: "Munich Re Sans 2017 Web";
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
 .form-group label.error {
   color: red;
   text-align: left;
@@ -2424,14 +2430,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .bg-white {
   background: #fff;
-}
-.container {
-  max-width: 1200px;
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 1200px;
-  }
 }
 .search input {
   border-right: 0px;
@@ -2691,8 +2689,19 @@ a {
   background-color: #272b2e;
   opacity: 1;
 }
-.btn:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 127, 146, 0.9);
+.btn.btn-primary:disabled:hover {
+  color: #808080;
+  background-color: #272b2e !important;
+  border: 2px solid #272b2e !important;
+  opacity: 1;
+  cursor: default;
+}
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0 0 0.2rem rgba(0, 127, 146, 0);
+  background-color: #007f92 !important;
+  border: 2px solid #007f92 !important;
+  color: white;
 }
 .breadcrumb-section {
   background-color: #f2f2f2;

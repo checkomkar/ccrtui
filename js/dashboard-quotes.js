@@ -48,6 +48,7 @@ $(document).ready(function () {
                             var $quote = '<a href="">' + data + '</a>';
                             return $quote;
                         },
+                        width: "10%"
                     },
                     {
                         data: 'insuredName'
@@ -99,6 +100,7 @@ $(document).ready(function () {
             var selected = [];
             $('#table_quotes tbody').on('click', 'tr', function () {
                 //console.log(qoutesTable.row(this).data());
+                $('input', qoutesTable.cells().nodes()).prop('checked', false);
                 selectedRow = qoutesTable.row(this).data();
                 var $this = $(this);
                 //if ($this.find(':checkbox').is(':checked')) {
@@ -106,7 +108,8 @@ $(document).ready(function () {
                 //} else {
                 //    $this.find(':checkbox').prop('checked', true);
                 //}
-                var $radioBtn = $this.find('input[type="radio"]');
+                var $radioBtn = $this.find('input[type="radio"]');                
+                
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
                     $radioBtn.prop('checked', false);
@@ -317,23 +320,24 @@ $(document).ready(function () {
                 groupTable.search($(this).val()).draw();
             })
             var selectedRow = null;
-            var $copyBtn = $('.copy');
+            var $assignBtn = $('#assign-group-btn');
             var selected = [];
             $('#tableGroups tbody').on('click', 'tr', function () {
-                //console.log(qoutesTable.row(this).data());
+                console.log(qoutesTable.row(this).data());
                 selectedRow = groupTable.row(this).data();
                 var $this = $(this);                
                 var $radioBtn = $this.find('input[type="radio"]');
+                //$assignBtn.prop('disabled', false);
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
-                    $radioBtn.prop('checked', false);
-                    $copyBtn.addClass('d-none');
+                    $radioBtn.prop('checked', false); 
+                    $assignBtn.prop('disabled', true);                   
                 }
                 else {
                     groupTable.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
-                    $radioBtn.prop('checked', true);
-                    $copyBtn.removeClass('d-none');
+                    $radioBtn.prop('checked', true);    
+                    $assignBtn.prop('disabled', false);               
                 }
             });
         });
@@ -467,7 +471,13 @@ $(document).ready(function () {
     $(document).on('click', '#assign-group-btn', function(e){
         $(document).find('.admin-part-1').addClass('d-none');
         $(document).find('.admin-part-2').removeClass('d-none');
+    });
+
+    $(document).on('click', '.btn-cancel', function(e){
+        $(document).find('.admin-part-2').addClass('d-none');
+        $(document).find('.admin-part-1').removeClass('d-none');
     })
+
 })
 
 
