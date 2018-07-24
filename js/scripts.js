@@ -61,7 +61,7 @@ $(document).ready(function(){
 
     // Smart Wizard
     $('#smartwizard').smartWizard({
-            selected: 1,
+            selected: 2,
             theme: 'arrows',
             transitionEffect:'fade',
             showStepURLhash: true,

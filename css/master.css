@@ -7,6 +7,7 @@
 @import "tabs.css";
 @import "dashboard.css";
 @import "admin.css";
+@import "binder.css";
 
 .sw-main .sw-container{
 	padding: 20px 0;
