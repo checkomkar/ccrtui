@@ -9,6 +9,12 @@
 .binder-container button.btn-dl-binder i {
   margin-right: 10px;
 }
+.save-close-container .btn {
+  width: 183px;
+}
+.save-close-container .btn-previous {
+  margin-right: 20px;
+}
 .table-container {
   clear: both;
   margin-bottom: 20px;

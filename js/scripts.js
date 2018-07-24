@@ -27,7 +27,7 @@ $(document).ready(function(){
         $("#binderContainer").removeClass('d-none');
     });
 
-    $(document).on('click', '#closeBinder', function(e){
+    $(document).on('click', '#closeBinder, .btn-previous', function(e){
         $("#binderContainer").addClass('d-none');
         $("#smartwizard").removeClass('d-none');
     })
