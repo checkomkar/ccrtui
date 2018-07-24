@@ -18,7 +18,19 @@ $(document).ready(function(){
         labelBuilder: function(val){
             console.log(val);
             return "$ "+val.text;
-        }});
+        }
+    });
+
+    $(document).on('click', '#binder', function(e){
+        console.log('Binder clicked')
+        $("#smartwizard").addClass('d-none');
+        $("#binderContainer").removeClass('d-none');
+    });
+
+    $(document).on('click', '#closeBinder', function(e){
+        $("#binderContainer").addClass('d-none');
+        $("#smartwizard").removeClass('d-none');
+    })
 
     // Step show event
     $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
