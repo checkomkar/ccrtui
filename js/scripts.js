@@ -36,6 +36,20 @@ $(document).ready(function(){
     $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
         //alert("You are on step "+stepNumber+" now");
         var $prevBtn = $('.sw-btn-prev');
+        var $btnCancel = $('.btn-cancel');
+        if (stepNumber == 1) {
+            $btnCancel.text('Save & Close');
+            $btnCancel.on('click', function (e) {
+                e.preventDefault();
+                $('#save-close-dialog').modal();
+                $('#save-close-dialog .modal-body').text("Are you sure you want to save and close this quote?")
+            });
+        } else {
+            $btnCancel.text('Cancel');
+            $btnCancel.on('click', function (e) {
+                $('#save-close-dialog .modal-body').text("Are you sure you want to cancel this quote?");
+            });
+        }
         if(stepPosition === 'first'){
             $("#prev-btn").addClass('hide');
             $prevBtn.hide();
@@ -55,8 +69,8 @@ $(document).ready(function(){
                                         .addClass('btn btn-info')
                                         .on('click', function(){ alert('Finish Clicked'); });
     var btnCancel = $('<button></button>').text('Cancel')
-                                        .addClass('btn btn-light')
-                                        .on('click', function(){ $('#smartwizard').smartWizard("reset"); });
+                                        .addClass('btn btn-light btn-cancel')
+                                        .on('click', function () {  });
 
 
     // Smart Wizard
