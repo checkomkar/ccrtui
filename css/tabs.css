@@ -600,22 +600,31 @@
 #selectOccupancyModal .occupancy-selection .box ul li a:hover {
   color: #00b4dc;
 }
-#refer-quote .modal-dialog {
-  max-width: 350px;
+#refer-quote .modal-dialog,
+#save-close-dialog .modal-dialog {
+  max-width: 380px;
 }
-#refer-quote .modal-dialog .modal-header .modal-title {
+#refer-quote .modal-dialog .modal-content,
+#save-close-dialog .modal-dialog .modal-content {
+  padding: 25px;
+}
+#refer-quote .modal-dialog .modal-header .modal-title,
+#save-close-dialog .modal-dialog .modal-header .modal-title {
   font-size: 18px;
   text-transform: uppercase;
 }
-#refer-quote .modal-footer {
+#refer-quote .modal-footer,
+#save-close-dialog .modal-footer {
   border-top: 0;
 }
-#refer-quote .modal-footer p.text-center {
+#refer-quote .modal-footer p.text-center,
+#save-close-dialog .modal-footer p.text-center {
   text-align: center;
   display: block;
   width: 100%;
 }
-#refer-quote .modal-footer p.text-center .btn {
+#refer-quote .modal-footer p.text-center .btn,
+#save-close-dialog .modal-footer p.text-center .btn {
   margin-right: 20px;
 }
 .columncontainer .referthisquote .btn,

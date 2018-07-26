@@ -21,24 +21,24 @@
             </ul>
         </div>
     </section>
-	<div class="container create-quote-tabs">
+    <div class="container create-quote-tabs">
         <!-- SmartWizard html -->
         <div class="row header-row">
-        	<div class="col-sm-12 col-md-12 pad-lr-10">
-        		<h4>CREATE QUOTE</h4>
-        	</div>
-        	
+            <div class="col-sm-12 col-md-12 pad-lr-10">
+                <h4>CREATE QUOTE</h4>
+            </div>
+
         </div>
         <hr class="seperator-quote">
         <div class="row create-quote-main">
-            
-        	<div class="col-sm-12 col-md-8 pad-lr-10">
+
+            <div class="col-sm-12 col-md-8 pad-lr-10">
                 <div id="binderContainer" class="d-none">
 
                     <div class="binder-container">
                         <div class="dl-binder-container text-right">
                             <button class="btn btn-primary btn-dl-binder" disabled=""><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Download Binder</button>
-                        </div>                        
+                        </div>
                         <hr />
                         <div class="row">
                             <div class="col-md-3">
@@ -383,84 +383,84 @@
                         </div>
                     </div>
                 </div>
-        		<div id="smartwizard">
-		            <ul>
-		                <li><a href="#step-1">1. Getting Started</a></li>
-		                <li><a href="#step-2">2. Policy Details</a></li>
-		                <li><a href="#step-3">3. Get a Quote</a></li>
-		                
-		            </ul>
+                <div id="smartwizard">
+                    <ul>
+                        <li><a href="#step-1">1. Getting Started</a></li>
+                        <li><a href="#step-2">2. Policy Details</a></li>
+                        <li><a href="#step-3">3. Get a Quote</a></li>
 
-		            <div>
-		                <div id="step-1" class="">
-		                    <h5 class="border-bottom border-gray pb-2 tab-headers">A few details to get started</h5>
-		                    <form class="first-step">
-		                    	<div class="row">
-			                    	<div class="col-md-5">
-			                    		<div class="form-group">
-			                    			<label for="select-product">Select Product</label>
-											<select class="form-control select-product required" required="required" id="select-product">
-												<option value=""></option>
-												<option value="2">Equipment Break Down</option>
-												<option value="3">Course of Construction</option>
-											</select>
-										</div>
-                                    </div>	
+                    </ul>
+
+                    <div>
+                        <div id="step-1" class="">
+                            <h5 class="border-bottom border-gray pb-2 tab-headers">A few details to get started</h5>
+                            <form class="first-step">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="select-product">Select Product</label>
+                                            <select class="form-control select-product required" required="required" id="select-product">
+                                                <option value=""></option>
+                                                <option value="2">Equipment Break Down</option>
+                                                <option value="3">Course of Construction</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="col-md-5">
                                         <div class="dropdown form-group">
                                             <label for="select-product">Select Price</label>
                                             <input class="form-control currency" readonly
-                                             placeholder="$" id="selectPrice" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">
-                                                
+                                                   placeholder="$" id="selectPrice" data-toggle="dropdown" aria-haspopup="true"
+                                                   aria-expanded="false">
+
                                             <div class="dropdown-menu" aria-labelledby="selectPrice">
                                                 <a class="dropdown-item" href="#">10000000</a>
                                                 <a class="dropdown-item" href="#">2000</a>
                                                 <a class="dropdown-item" href="#">3000</a>
                                             </div>
                                         </div>
-                                    </div>		                    	
-			                    </div>
-								<div class="row on-select-product">
-									<div class="col-md-5">
-										<div class="form-group row">
-								    		<label for="insuredName" class="col-sm-12 col-form-label">Insured Name</label>
-										    <div class="col-sm-12">
-										      	<input type="text" data-msg="Insurer name is required" placeholder="Insured Name" required class="form-control " id="insuredName" >
-										    </div>
+                                    </div>
+                                </div>
+                                <div class="row on-select-product">
+                                    <div class="col-md-5">
+                                        <div class="form-group row">
+                                            <label for="insuredName" class="col-sm-12 col-form-label">Insured Name</label>
+                                            <div class="col-sm-12">
+                                                <input type="text" data-msg="Insurer name is required" placeholder="Insured Name" required class="form-control " id="insuredName">
+                                            </div>
 
-								  		</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group row">
-								    		<label for="insuredPostalCode" class="col-sm-12 col-form-label">Insured Postal Code</label>
-										    <div class="col-sm-12">
-										      	<input type="text" maxlength="7" required placeholder="Insured Postal Code" class="form-control postalcode" id="insuredPostalCode">
-										    </div>
-								  		</div>
-									</div>
-									<div class="col-md-5">
-										<div class="form-group row">
-								    		<label for="brokerName" class="col-sm-12 col-form-label">Broker's Name</label>
-										    <div class="col-sm-12">
-										      	<input type="text" required placeholder="Broker's Name" class="form-control" id="brokerName" >
-										    </div>
-								  		</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group row">
-								    		<label for="brokerPostalCode" class="col-sm-12 col-form-label">Broker Postal Code(Optional)</label>
-										    <div class="col-sm-12">
-										      	<input type="text" placeholder="Insured Postal Code" class="form-control" id="brokerPostalCode">
-										    </div>
-								  		</div>
-									</div>
-								</div>	
-		                    </form>
-		                    				
-		                </div>
-		                <div id="step-2" class="">
-		                    <div class="policy-details-header">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label for="insuredPostalCode" class="col-sm-12 col-form-label">Insured Postal Code</label>
+                                            <div class="col-sm-12">
+                                                <input type="text" maxlength="7" required placeholder="Insured Postal Code" class="form-control postalcode" id="insuredPostalCode">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group row">
+                                            <label for="brokerName" class="col-sm-12 col-form-label">Broker's Name</label>
+                                            <div class="col-sm-12">
+                                                <input type="text" required placeholder="Broker's Name" class="form-control" id="brokerName">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label for="brokerPostalCode" class="col-sm-12 col-form-label">Broker Postal Code(Optional)</label>
+                                            <div class="col-sm-12">
+                                                <input type="text" placeholder="Insured Postal Code" class="form-control" id="brokerPostalCode">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div id="step-2" class="">
+                            <div class="policy-details-header">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="title">Quote</div>
@@ -475,50 +475,52 @@
                                         <div class="sub-title">Murphy Brothers Inc.</div>
                                     </div>
                                 </div>
-		                    	
-		                    </div>
-		                    <form class="questionaire-container step-2">
-		                    	<ol>
-		                    		<li>
-										<div class="q-content">
-											<p>
-												Has this risk had more than 1 Equipment Breakdown loss in the past 3 years?
-											</p>
-											<div class="form-check form-check-inline">
-												<label class="check-container">Yes
-													<input type="radio" required value="1" name="equipment-break">
-													<span class="checkmark"></span>
-												</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<label class="check-container">No
-													<input type="radio" required value="0" name="equipment-break">
-													<span class="checkmark"></span>
-												</label>
+
+                            </div>
+                            <form class="questionaire-container step-2">
+                                <ol>
+                                    <li>
+                                        <div class="q-content">
+                                            <p>
+                                                Has this risk had more than 1 Equipment Breakdown loss in the past 3 years?
+                                            </p>
+                                            <div class="form-check form-check-inline">
+                                                <label class="check-container">
+                                                    Yes
+                                                    <input type="radio" required value="1" name="equipment-break">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <label class="check-container">
+                                                    No
+                                                    <input type="radio" required value="0" name="equipment-break">
+                                                    <span class="checkmark"></span>
+                                                </label>
                                             </div>
                                             <label class="error dis-block d-none">This field is required.</label>
-										</div>
-		                    					                    			
-									</li>
-									<li>
-										<div class="q-content">
-											<p>
-												Please select the Insured Type
-											</p>
-											<div class="row">
-												<div class="form-group col-md-3">
-													<select class="form-control select-product required" required="required" id="select-insured-1">
-														<option value=""></option>
-														<option value="2">Owner</option>
-														<option value="3">Course of Construction</option>
-													</select>
-												</div>
-                                            </div>		
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="q-content">
+                                            <p>
+                                                Please select the Insured Type
+                                            </p>
+                                            <div class="row">
+                                                <div class="form-group col-md-3">
+                                                    <select class="form-control select-product required" required="required" id="select-insured-1">
+                                                        <option value=""></option>
+                                                        <option value="2">Owner</option>
+                                                        <option value="3">Course of Construction</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                             <div class="row">
                                                 <div class="form-group col-md-3 dollar-set-container">
                                                     <span class="dollar-set">$</span>
                                                     <select class="form-control select-product required" required="required" id="select-insured-type">
-                                                        
+
                                                         <option value=""></option>
                                                         <option value="2">500</option>
                                                         <option value="2">1,000</option>
@@ -529,37 +531,37 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <input type="radio" name="hello">
-                                                    <input type="radio" name="hello">                                                    
+                                                    <input type="radio" name="hello">
                                                 </div>
                                             </div>
-										</div>										
-									</li>
-									<li>
-										<div class="q-content">
-											<p>
-												What is the Policy Limit?
-											</p>
-											<div class="row">
-												<div class="col-md-3">
-													<div class="form-group row">																											
-														<div class="col-sm-12">															
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="q-content">
+                                            <p>
+                                                What is the Policy Limit?
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-12">
                                                             <input type="text" data-msg="Policy limit is required"
                                                                    data-thousands="," data-prefix="$ "
-                                                            required="required"
-															class="form-control currency"
-                                                            placeholder="$"
-															id="policy-limit" >
-														</div>
-			
-													</div>
+                                                                   required="required"
+                                                                   class="form-control currency"
+                                                                   placeholder="$"
+                                                                   id="policy-limit">
+                                                        </div>
+
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group row">
                                                         <div class="col-sm-12">
                                                             <input type="text" data-msg="Policy limit is required" required="required" class="form-control currency"
-                                                                placeholder="$" id="currency">
+                                                                   placeholder="$" id="currency">
                                                         </div>
-                                                
+
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
@@ -567,14 +569,14 @@
                                                         <div class="col-sm-12">
                                                             <button id="xya"></button>
                                                         </div>
-                                                
+
                                                     </div>
                                                 </div>
-												
-											</div>
-											
-										</div>
-									</li>
+
+                                            </div>
+
+                                        </div>
+                                    </li>
                                     <li>
                                         <div class="q-content">
                                             <p>
@@ -621,12 +623,12 @@
                                         </div>
 
                                     </li>
-									
-									<li>
-										<div class="q-content">
-											<p>
+
+                                    <li>
+                                        <div class="q-content">
+                                            <p>
                                                 Best description of the project.
-											</p>
+                                            </p>
                                             <div class="row">
                                                 <div class="form-group col-md-3">
                                                     <select class="form-control select-product required" required="required" id="best-description">
@@ -635,10 +637,10 @@
                                                         <option value="3">Addition</option>
                                                     </select>
                                                 </div>
-                                            </div>	
-										</div>																				
-									</li>
-		                    		<li>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
                                         <div class="q-content">
                                             <p>
                                                 Has this project already begun?
@@ -659,17 +661,17 @@
                                             </div>
                                             <label class="error dis-block d-none">This field is required.</label>
                                         </div>
-		                    			
-		                    		</li>
-		                    		<li>
+
+                                    </li>
+                                    <li>
                                         <div class="q-content">
                                             <p>
                                                 Additional Costs/Coverages
                                             </p>
-                                            
+
                                         </div>
-		                    			
-		                    		</li>
+
+                                    </li>
                                     <div>
                                         <table class="table table-responsive table-add-cost">
                                             <thead>
@@ -742,7 +744,7 @@
                                             </li>
                                         </ol>
                                     </div>
-		                    		<li>
+                                    <li>
                                         <div class="q-content">
                                             <p>
                                                 Project Duration (enter number of months)
@@ -751,15 +753,15 @@
 
                                                 <div class="col-sm-2">
                                                     <input type="text"
-                                                    required data-msg="Project duration is required."
+                                                           required data-msg="Project duration is required."
                                                            class="form-control"
                                                            id="project-duration">
                                                 </div>
 
                                             </div>
                                         </div>
-		                    			
-		                    		</li>
+
+                                    </li>
                                     <li>
                                         <div class="q-content">
                                             <p>
@@ -784,7 +786,7 @@
 
                                         </div>
                                     </li>
-		                    		<li>
+                                    <li>
                                         <div class="q-content">
                                             <p>
                                                 Please add your locations <br />
@@ -795,16 +797,16 @@
 
 
                                         </div>
-		                    		</li>
-		                    	</ol>
-                                
+                                    </li>
+                                </ol>
+
                                 <div class="add-location-btn-holder text-right">
                                     <button id="add-loc-main" class="btn btn-primary" type="button">Add Location</button>
 
                                 </div>
                             </form>
-		                </div>
-		                <div id="step-3" class="">
+                        </div>
+                        <div id="step-3" class="">
                             <div class="policy-details-header">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -827,9 +829,9 @@
                                         <div class="title">Insured Type</div>
                                         <div class="sub-title">Owner</div>
                                     </div>
-                                </div>                            
+                                </div>
                             </div>
-		                    <div class="step-3-container">
+                            <div class="step-3-container">
                                 <div class="pdf-bind-section text-right">
                                     <span class="vertical-align-mid span-quote-number small-font d-none">EB18 - 123456 - 01</span>
                                     <button class="btn btn-primary" disabled><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Download Quote</button>
@@ -1209,7 +1211,7 @@
                                                         </td>
                                                     </tr>
                                                 </tbody>
-                                                
+
                                             </table>
                                         </div>
                                     </div>
@@ -1218,15 +1220,15 @@
                                     This quote is valid for 90 days from the date this quote was generated.
                                 </p>
                             </div>
-		                    
-		                </div>
-		                <hr class="no-margin">
-		            </div>
-	        	</div>
-	        	
-    		</div>
-        	<div class="col-sm-12 col-md-4 pad-lr-10">
-        		<div class="text-right side-field-btn">
+
+                        </div>
+                        <hr class="no-margin">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-4 pad-lr-10">
+                <div class="text-right side-field-btn">
                     <div class="row">
                         <div class="col-sm-12 col-md-6 text-left">
                             <button class="btn btn-primary" id="refer-quote-trigger">
@@ -1241,9 +1243,9 @@
                             </button>
                         </div>
                     </div>
-                    
-        			
-        		</div>   
+
+
+                </div>
                 <fieldset class="side-field-set d-none">
                     <legend>Attachments</legend>
                     <article class="attachment-container">
@@ -1267,33 +1269,33 @@
                     <legend>Attachments</legend>
                     <div class="form-group attachment">
                         <p class="file-up-title">Add a file</p>
-                        <div class="custom-file">                            
+                        <div class="custom-file">
                             <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                            <label class="custom-file-label" for="validatedCustomFile"></label>                            
+                            <label class="custom-file-label" for="validatedCustomFile"></label>
                         </div>
                     </div>
                     <div class="text-left">
                         <button class="btn btn-primary">Attach</button>
-                    </div>                    
+                    </div>
                 </fieldset>
-                
-        		<fieldset class="side-field-set">
-        			<legend>Comments</legend>
-					<div class="form-group">
-						<textarea class="input-group" rows="4" cols="50">
+
+                <fieldset class="side-field-set">
+                    <legend>Comments</legend>
+                    <div class="form-group">
+                        <textarea class="input-group" rows="4" cols="50">
 							
 						</textarea>
-						<span class="text-left">(140 characters remaining)</span>
-					</div>
-					<div class="text-right">
-						<button class="btn btn-primary">Add</button>
-					</div>
-					<div class="default-border bg-f2 show-comments-box">
-					
-					</div>
-				</fieldset>
-				
-        	</div>
+                        <span class="text-left">(140 characters remaining)</span>
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-primary">Add</button>
+                    </div>
+                    <div class="default-border bg-f2 show-comments-box">
+
+                    </div>
+                </fieldset>
+
+            </div>
         </div>
 
 
@@ -1301,7 +1303,7 @@
 
     <div id="location-grid-row" class="d-none">
         <div class="row no-margin">
-            <div class="col-md-12 no-pad">                
+            <div class="col-md-12 no-pad">
                 <table class="table table-bordered table-light-head table-risk-location no-border alt-table">
                     <thead>
                         <tr>
@@ -1339,7 +1341,7 @@
                                 </p>
                                 <div class="form-group row">
                                     <div class="col-sm-12">
-                                        <textarea class="form-control"></textarea>                                        
+                                        <textarea class="form-control"></textarea>
                                     </div>
 
                                 </div>
@@ -1348,7 +1350,7 @@
                                 <p>
                                     Building Value
                                 </p>
-                                <div class="form-group row">                                    
+                                <div class="form-group row">
                                     <div class="col-sm-12">
                                         <input type="text"
                                                placeholder="$"
@@ -1397,14 +1399,14 @@
 
 
                 </table>
-                
+
             </div>
             <!--<div class="col-md-2">
                 <div class=""><a href="#">Remove</a></div>
             </div>-->
-            
+
         </div>
-        
+
     </div>
 
     <div class="d-none">
@@ -1598,64 +1600,62 @@
     </div>
 
     <!-- Modal -->
-	<div class="modal fade" id="selectOccupancyModal" tabindex="-1" role="dialog" aria-labelledby="selectOccupancyModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-				<h5 class="modal-title" id="selectOccupancyModalTitle">Select Occupancy</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  		<span aria-hidden="true">&times;</span>
-				</button>
-				</div>
-				<div class="modal-body occupancy-selection">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="title">
-								Category
-							</div>
-							<div>								
-								<select class="box left-box" name="occupancy" id="catID" size="5">
-									<!--<option value="0">All</option>
-									<option value="1">Education</option>
-									<option value="2">Education</option>
-									<option value="3">Education</option>
-									<option value="4">Education</option>
-									<option value="5">Education</option>-->
-								</select>
-							</div>	
-						</div>
-						<div class="col-md-8">
-							<div class="title">
-								Occupancy
-							</div>
-							<div class="input-group mb-3">
-								<div class="input-group search-occupancy">
-									<input type="text" class="form-control" placeholder="Search by Occupancy Code or Name">
-									<span class="input-group-btn">
-										<button class="btn btn-secondary" type="button">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</button>
-									</span>
-								</div>
-							</div>
-							<div class="">								
-								<select class="box right-box" name="occupancy" id="occID" size="10">
-									
-								</select>
-							</div>
-							<div class="input-group">
-								<button class="btn btn-primary" id="select-occupancy">Select</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
+    <div class="modal fade" id="selectOccupancyModal" tabindex="-1" role="dialog" aria-labelledby="selectOccupancyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="selectOccupancyModalTitle">Select Occupancy</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body occupancy-selection">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="title">
+                                Category
+                            </div>
+                            <div>
+                                <select class="box left-box" name="occupancy" id="catID" size="5">
+                                    <!--<option value="0">All</option>
+                                    <option value="1">Education</option>
+                                    <option value="2">Education</option>
+                                    <option value="3">Education</option>
+                                    <option value="4">Education</option>
+                                    <option value="5">Education</option>-->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="title">
+                                Occupancy
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group search-occupancy">
+                                    <input type="text" class="form-control" placeholder="Search by Occupancy Code or Name">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-secondary" type="button">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <select class="box right-box" name="occupancy" id="occID" size="10"></select>
+                            </div>
+                            <div class="input-group">
+                                <button class="btn btn-primary" id="select-occupancy">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
-    <!-- First question dialog --> 
+    <!-- First question dialog -->
     <div class="modal fade" id="refer-quote" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1669,7 +1669,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     Your Quote will be referred to the
-                    Underwriter.                    
+                    Underwriter.
                 </div>
 
                 <!-- Modal footer -->
@@ -1678,45 +1678,73 @@
                         <button type="button" data-dismiss="modal" id="cancel-refer-quote" class="btn btn-light">Cancel</button>
                         <button class="btn btn-primary" data-dismiss="modal">Continue</button>
                     </p>
-                    
+
                 </div>
 
             </div>
         </div>
     </div>
-	
-    <!--<script src="js/plugins/popper.js"></script>-->
-	
-	<script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
 
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>--> 
+    <!-- Save close dialog -->
+    <div class="modal" id="save-close-dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Refer Quote</h5>
+                    <button type="button" class="close" id="close-refer-quote" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Are you sure you want to save and close this quote?
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <p class="text-center">
+                        <button type="button" data-dismiss="modal" id="cancel-refer-quote" class="btn btn-light">Cancel</button>
+                        <button class="btn btn-primary" data-dismiss="modal">Continue</button>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--<script src="js/plugins/popper.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-	<script type="text/javascript" src="js/plugins/jquery.smartWizard.js"></script>
-	<script type="text/javascript" src="js/plugins/mustache.js"></script>
-	<script type="text/javascript" src="js/plugins/jquery.validate.js"></script>
-	<script type="text/javascript" src="js/plugins/additional-methods.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.smartWizard.js"></script>
+    <script type="text/javascript" src="js/plugins/mustache.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/plugins/additional-methods.js"></script>
     <script src="js/plugins/autoNumeric.js"></script>
     <script src="js/plugins/autoNumeric.min.js"></script>
     <script src="js/plugins/jquery.selectric.js"></script>
-	<script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="js/policy-details.js"></script>
     <script src="js/get-quotes.js"></script>
 
-	<script id="comments" type="text/template">
-		{{#comments}}
-		<div class="comment">
-			{{comment}}
-			<span class="name">{{name}}</span>
-			
-		</div>
-		{{/comments}}
-	</script>
+    <script id="comments" type="text/template">
+        {{#comments}}
+        <div class="comment">
+            {{comment}}
+            <span class="name">{{name}}</span>
+
+        </div>
+        {{/comments}}
+    </script>
 </body>
 </html>
