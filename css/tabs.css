@@ -578,12 +578,14 @@
 #selectOccupancyModal .occupancy-selection .box.left-box {
   min-height: 250px;
   max-height: 250px;
+  background-image: none;
 }
 #selectOccupancyModal .occupancy-selection .box.right-box {
   min-height: 196px;
   max-height: 196px;
   overflow-y: scroll;
   margin-bottom: 30px;
+  background-image: none;
 }
 #selectOccupancyModal .occupancy-selection .box ul {
   list-style: none;
