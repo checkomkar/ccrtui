@@ -150,6 +150,10 @@
   text-align: right;
   width: 100%;
 }
+.dashboard-container .table-container .dataTables_info:after {
+  content: "|";
+  color: #ddd;
+}
 .dashboard-container .table-container .dataTables_length {
   font-size: 13px;
 }
