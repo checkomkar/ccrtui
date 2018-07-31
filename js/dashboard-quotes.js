@@ -25,7 +25,7 @@ $(document).ready(function () {
                     }
                 },
                 "autoWidth": false,
-                "dom": '<"top row"<"col-md-3"><"col-md-5"i<"show-count">><"col-md-4"p>>rt<"bottom row"<"col-md-5"l><"col-md-3"i<"show-count">><"col-md-4"p>><"clear">',
+                "dom": '<"top row"<"col-md-3"><"col-md-5"i<"show-count">><"col-md-4 dt-paging"p>>rt<"bottom row"<"col-md-5"l><"col-md-3"i<"show-count">><"col-md-4"p>><"clear">',
                 columns: [
                     {
                         data: null,

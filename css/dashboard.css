@@ -139,6 +139,14 @@
 .dashboard-container .table-container table#table_due_soon tbody td span.red {
   color: red;
 }
+.dashboard-container .table-container .dt-paging:before {
+  content: "|";
+  color: #ddd;
+  position: absolute;
+  top: 3px;
+  left: -1px;
+  font-size: 22px;
+}
 .dashboard-container .table-container .dataTable {
   border: 1px solid #ddd !important;
 }
@@ -151,7 +159,6 @@
   width: 100%;
 }
 .dashboard-container .table-container .dataTables_info:after {
-  content: "|";
   color: #ddd;
 }
 .dashboard-container .table-container .dataTables_length {

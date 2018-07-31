@@ -171,6 +171,17 @@
             }
         }
 
+        .dt-paging{
+            &:before{
+                content: "|";
+                color: #ddd;
+                position: absolute;
+                top: 3px;
+                left: -1px;
+                font-size: 22px;
+            }
+        }
+
         .dataTable{
             border: 1px solid #ddd !important;
         }
@@ -184,7 +195,7 @@
             text-align: right;
             width: 100%;
             &:after{
-                content: "|";
+                //content: "|";
                 color: #ddd;
             }
         }
