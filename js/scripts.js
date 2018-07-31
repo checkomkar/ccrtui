@@ -82,6 +82,7 @@ $(document).ready(function(){
             keyNavigation: false,
             backButtonSupport: false,
             //enableFinishButton: true,
+            hiddenSteps: [3],
             toolbarSettings: {toolbarPosition: 'bottom',
                                 toolbarButtonPosition: 'end',
                                 toolbarExtraButtons: [btnCancel]
@@ -96,6 +97,20 @@ $(document).ready(function(){
                 previous: 'Previous'
             },
     });
+    var setTabNavWidth = function () {
+        var length = $('.step-anchor li:not(.hidden)').length;
+        $('.step-anchor li').css({ 'width': 100 / length + "%" })
+    }
+    $('#smartwizard').smartWizard("stepState", [3], "hide");
+    setTabNavWidth();
+
+    
+
+    $('#refer-quote-trigger').on('click', function (e) {
+        $('#smartwizard').smartWizard("stepState", [3], "show");
+        setTabNavWidth();
+    })
+
     setTimeout(function () {
         $('.sw-btn-next').html('Next <i class="fa fa-angle-right"></i>');
         $('.sw-btn-prev').html('<i class="fa fa-angle-left"></i> Previous');

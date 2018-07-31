@@ -62,8 +62,14 @@
   margin-left: -10px;
 }
 .sw-theme-arrows > ul.step-anchor > li {
-  width: 33%;
+  width: 20%;
   text-align: center;
+}
+.sw-theme-arrows > ul.step-anchor > li .hidden {
+  display: none;
+}
+#smartwizard ul li.hidden {
+  display: none;
 }
 .sw-theme-arrows > ul.step-anchor > li.done > a {
   background-color: #009245 !important;

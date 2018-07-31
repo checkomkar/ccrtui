@@ -3,6 +3,11 @@
   padding: 30px;
   border: 1px solid #ddd;
 }
+.binder-container.in-step-5 {
+  margin-top: 0;
+  padding: 0;
+  border: none;
+}
 .binder-container button.btn-confirm-bind {
   margin-top: 30px;
 }
