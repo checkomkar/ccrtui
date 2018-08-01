@@ -109,12 +109,28 @@ $(document).ready(function(){
     $('#refer-quote-trigger').on('click', function (e) {
         $('#smartwizard').smartWizard("stepState", [3], "show");
         setTabNavWidth();
+    });
+
+    var checkDates = function () {
+        console.log($('#effcDate').val(), $('#expDate').val())
+        if ($('#effcDate').val() != '' && $('#expDate').val() != '') {
+            $('#closeBinder').prop('disabled', false);
+        }
+    }
+    
+
+    $('#effcDate, #expDate').on('change', function () {
+        //console.log($(this).val());
+        //$('#closeBinder').prop('disabled', false);
+        checkDates();
     })
 
     setTimeout(function () {
         $('.sw-btn-next').html('Next <i class="fa fa-angle-right"></i>');
         $('.sw-btn-prev').html('<i class="fa fa-angle-left"></i> Previous');
-    },0)
+    }, 0);
+
+
 
     $('#triggerFile').on('click', function () {
         $('#validatedCustomFile1').click();
