@@ -41,13 +41,13 @@ $(document).ready(function(){
             $btnCancel.text('Save & Close');
             $btnCancel.on('click', function (e) {
                 e.preventDefault();
-                $('#save-close-dialog').modal();
-                $('#save-close-dialog .modal-body').text("Are you sure you want to save and close this quote?")
+                //$('#save-close-dialog').modal();
+                //$('#save-close-dialog .modal-body').text("Are you sure you want to save and close this quote?")
             });
         } else {
             $btnCancel.text('Cancel');
             $btnCancel.on('click', function (e) {
-                $('#save-close-dialog .modal-body').text("Are you sure you want to cancel this quote?");
+                //$('#save-close-dialog .modal-body').text("Are you sure you want to cancel this quote?");
             });
         }
         if(stepPosition === 'first'){
