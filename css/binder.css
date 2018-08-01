@@ -8,7 +8,8 @@
   padding: 0;
   border: none;
 }
-.binder-container button.btn-confirm-bind {
+.binder-container button.btn-confirm-bind,
+.binder-container button.btn-dl-binder {
   margin-top: 30px;
 }
 .binder-container button.btn-dl-binder i {

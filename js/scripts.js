@@ -112,15 +112,20 @@ $(document).ready(function(){
     });
 
     var checkDates = function () {
-        console.log($('#effcDate').val(), $('#expDate').val())
-        if ($('#effcDate').val() != '' && $('#expDate').val() != '') {
-            $('#closeBinder').prop('disabled', false);
+        //console.log($('#effcDate').val(), $('#expDate').val())
+        if ($('#expDateInStep5').val() != '' && $('#effcDateInStep5').val() != '') {
+            $('#confirmBinderInStep5').prop('disabled', false);            
         }
     }
-    
 
-    $('#effcDate, #expDate').on('change', function () {
-        //console.log($(this).val());
+    $('#confirmBinderInStep5').on('click', function (e) {
+        $('#downloadBinderPdf').removeClass('d-none');
+        $(this).addClass('d-none');
+    })
+
+
+    $('#effcDateInStep5, #expDateInStep5').on('change', function (e) {
+        console.log(e.target.value);
         //$('#closeBinder').prop('disabled', false);
         checkDates();
     })
