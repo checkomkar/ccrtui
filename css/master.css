@@ -8,6 +8,7 @@
 @import "dashboard.css";
 @import "admin.css";
 @import "binder.css";
+@import "quote-refer.css";
 
 .sw-main .sw-container{
 	padding: 20px 0;

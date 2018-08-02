@@ -184,115 +184,185 @@
 #smartwizard .tab-content {
   position: relative;
 }
-#smartwizard .tab-content #step-3 {
+#smartwizard .tab-content #step-3,
+#smartwizard .tab-content #step-4,
+#smartwizard .tab-content #step-5 {
   padding: 0;
 }
-#smartwizard .tab-content #step-3 .step-3-container {
+#smartwizard .tab-content #step-3 .step-3-container,
+#smartwizard .tab-content #step-4 .step-3-container,
+#smartwizard .tab-content #step-5 .step-3-container {
   padding: 30px;
 }
-#smartwizard .tab-content #step-3 .step-3-container p {
+#smartwizard .tab-content #step-3 .step-3-container p,
+#smartwizard .tab-content #step-4 .step-3-container p,
+#smartwizard .tab-content #step-5 .step-3-container p {
   margin-bottom: 30px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section {
+#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section,
+#smartwizard .tab-content #step-4 .step-3-container .pdf-bind-section,
+#smartwizard .tab-content #step-5 .step-3-container .pdf-bind-section {
   padding-bottom: 20px;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 30px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section button {
+#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section button,
+#smartwizard .tab-content #step-4 .step-3-container .pdf-bind-section button,
+#smartwizard .tab-content #step-5 .step-3-container .pdf-bind-section button {
   margin-left: 20px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section button i {
+#smartwizard .tab-content #step-3 .step-3-container .pdf-bind-section button i,
+#smartwizard .tab-content #step-4 .step-3-container .pdf-bind-section button i,
+#smartwizard .tab-content #step-5 .step-3-container .pdf-bind-section button i {
   margin-right: 10px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container {
   margin-bottom: 50px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote {
   border-top: none;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td {
   border-top: 0px solid #ddd;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td .col-md-12,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td .col-md-12 {
   padding: 15px;
   min-height: 75px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .big-dollar {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .big-dollar,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td .col-md-12 .big-dollar,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td .col-md-12 .big-dollar {
   font-size: 20px;
   font-weight: bold;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .dollar-value {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .dollar-value,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td .col-md-12 .dollar-value,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td .col-md-12 .dollar-value {
   font-size: 30px;
   font-weight: bold;
   padding-left: 5px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .label {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td .col-md-12 .label,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td .col-md-12 .label,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td .col-md-12 .label {
   padding-top: 10px;
   display: inline-block;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-labels {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-labels,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td.quote-labels,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td.quote-labels {
   width: 20%;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-radio-section {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-radio-section,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td.quote-radio-section,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td.quote-radio-section {
   border: 1px solid #e6e6e6;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-radio-section .form-check-inline {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-radio-section .form-check-inline,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td.quote-radio-section .form-check-inline,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td.quote-radio-section .form-check-inline {
   margin-right: 0;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-radio-section .form-check-inline .check-container span.checkmark {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.quote-radio-section .form-check-inline .check-container span.checkmark,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td.quote-radio-section .form-check-inline .check-container span.checkmark,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td.quote-radio-section .form-check-inline .check-container span.checkmark {
   top: 2px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.blue-border {
+#smartwizard .tab-content #step-3 .step-3-container .quotes-table-container .table-quote td.blue-border,
+#smartwizard .tab-content #step-4 .step-3-container .quotes-table-container .table-quote td.blue-border,
+#smartwizard .tab-content #step-5 .step-3-container .quotes-table-container .table-quote td.blue-border {
   box-shadow: inset 0px 0px 0px 1px #00b4dc;
 }
-#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian {
+#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian,
+#smartwizard .tab-content #step-4 .step-3-container .accordian-container .accordian,
+#smartwizard .tab-content #step-5 .step-3-container .accordian-container .accordian {
   margin-bottom: 30px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-header {
+#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-header,
+#smartwizard .tab-content #step-4 .step-3-container .accordian-container .accordian .accordian-header,
+#smartwizard .tab-content #step-5 .step-3-container .accordian-container .accordian .accordian-header {
   cursor: pointer;
   border: 1px solid #ccc;
   background-color: #eee;
   padding: 12px 30px;
   font-size: 16px;
 }
-#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-header .fa-plus:before {
+#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-header .fa-plus:before,
+#smartwizard .tab-content #step-4 .step-3-container .accordian-container .accordian .accordian-header .fa-plus:before,
+#smartwizard .tab-content #step-5 .step-3-container .accordian-container .accordian .accordian-header .fa-plus:before {
   color: #212529 !important;
 }
-#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-content {
+#smartwizard .tab-content #step-3 .step-3-container .accordian-container .accordian .accordian-content,
+#smartwizard .tab-content #step-4 .step-3-container .accordian-container .accordian .accordian-content,
+#smartwizard .tab-content #step-5 .step-3-container .accordian-container .accordian .accordian-content {
   border: 1px solid #ddd;
   border-top: 0;
 }
 #smartwizard .tab-content #step-3 .step-3-container table.head-values,
-#smartwizard .tab-content #step-3 .step-3-container table.content-values {
+#smartwizard .tab-content #step-4 .step-3-container table.head-values,
+#smartwizard .tab-content #step-5 .step-3-container table.head-values,
+#smartwizard .tab-content #step-3 .step-3-container table.content-values,
+#smartwizard .tab-content #step-4 .step-3-container table.content-values,
+#smartwizard .tab-content #step-5 .step-3-container table.content-values {
   font-size: 13px;
 }
 #smartwizard .tab-content #step-3 .step-3-container table.head-values td,
-#smartwizard .tab-content #step-3 .step-3-container table.content-values td {
+#smartwizard .tab-content #step-4 .step-3-container table.head-values td,
+#smartwizard .tab-content #step-5 .step-3-container table.head-values td,
+#smartwizard .tab-content #step-3 .step-3-container table.content-values td,
+#smartwizard .tab-content #step-4 .step-3-container table.content-values td,
+#smartwizard .tab-content #step-5 .step-3-container table.content-values td {
   border-top: 0px;
   padding: 10px 15px 0;
 }
 #smartwizard .tab-content #step-3 .step-3-container table.head-values td:nth-of-type(2),
-#smartwizard .tab-content #step-3 .step-3-container table.content-values td:nth-of-type(2) {
+#smartwizard .tab-content #step-4 .step-3-container table.head-values td:nth-of-type(2),
+#smartwizard .tab-content #step-5 .step-3-container table.head-values td:nth-of-type(2),
+#smartwizard .tab-content #step-3 .step-3-container table.content-values td:nth-of-type(2),
+#smartwizard .tab-content #step-4 .step-3-container table.content-values td:nth-of-type(2),
+#smartwizard .tab-content #step-5 .step-3-container table.content-values td:nth-of-type(2) {
   text-align: right;
 }
 #smartwizard .tab-content #step-3 .step-3-container table.head-values tr:nth-of-type(1),
-#smartwizard .tab-content #step-3 .step-3-container table.head-values tr:nth-of-type(2) {
+#smartwizard .tab-content #step-4 .step-3-container table.head-values tr:nth-of-type(1),
+#smartwizard .tab-content #step-5 .step-3-container table.head-values tr:nth-of-type(1),
+#smartwizard .tab-content #step-3 .step-3-container table.head-values tr:nth-of-type(2),
+#smartwizard .tab-content #step-4 .step-3-container table.head-values tr:nth-of-type(2),
+#smartwizard .tab-content #step-5 .step-3-container table.head-values tr:nth-of-type(2) {
   font-weight: bold;
 }
-#smartwizard .tab-content #step-3 .step-3-container table.table-locations {
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations,
+#smartwizard .tab-content #step-4 .step-3-container table.table-locations,
+#smartwizard .tab-content #step-5 .step-3-container table.table-locations {
   font-size: 13px;
 }
-#smartwizard .tab-content #step-3 .step-3-container table.table-locations thead tr {
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations thead tr,
+#smartwizard .tab-content #step-4 .step-3-container table.table-locations thead tr,
+#smartwizard .tab-content #step-5 .step-3-container table.table-locations thead tr {
   color: #8c9094;
   border-top: 0px;
 }
-#smartwizard .tab-content #step-3 .step-3-container table.table-locations thead tr td:nth-of-type(2) {
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations thead tr td:nth-of-type(2),
+#smartwizard .tab-content #step-4 .step-3-container table.table-locations thead tr td:nth-of-type(2),
+#smartwizard .tab-content #step-5 .step-3-container table.table-locations thead tr td:nth-of-type(2) {
   word-break: keep-all;
 }
-#smartwizard .tab-content #step-3 .step-3-container table.table-locations td {
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations td,
+#smartwizard .tab-content #step-4 .step-3-container table.table-locations td,
+#smartwizard .tab-content #step-5 .step-3-container table.table-locations td {
   padding: 20px;
 }
-#smartwizard .tab-content #step-3 .step-3-container table.table-locations tr td:nth-of-type(2) {
+#smartwizard .tab-content #step-3 .step-3-container table.table-locations tr td:nth-of-type(2),
+#smartwizard .tab-content #step-4 .step-3-container table.table-locations tr td:nth-of-type(2),
+#smartwizard .tab-content #step-5 .step-3-container table.table-locations tr td:nth-of-type(2) {
   word-break: break-all;
 }
 #smartwizard .tab-content .policy-details-header {

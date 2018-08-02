@@ -37,7 +37,7 @@ $(document).ready(function(){
         //alert("You are on step "+stepNumber+" now");
         var $prevBtn = $('.sw-btn-prev');
         var $btnCancel = $('.btn-cancel');
-        if (stepNumber == 1) {
+        if (stepNumber == 1 || stepNumber == 2) {
             $btnCancel.text('Save & Close');
             $btnCancel.on('click', function (e) {
                 e.preventDefault();
@@ -75,14 +75,14 @@ $(document).ready(function(){
 
     // Smart Wizard
     $('#smartwizard').smartWizard({
-            selected: 2,
+            selected: 3,
             theme: 'arrows',
             transitionEffect:'fade',
             showStepURLhash: true,
             keyNavigation: false,
             backButtonSupport: false,
             //enableFinishButton: true,
-            hiddenSteps: [3],
+            //hiddenSteps: [3],
             toolbarSettings: {toolbarPosition: 'bottom',
                                 toolbarButtonPosition: 'end',
                                 toolbarExtraButtons: [btnCancel]
@@ -101,13 +101,13 @@ $(document).ready(function(){
         var length = $('.step-anchor li:not(.hidden)').length;
         $('.step-anchor li').css({ 'width': 100 / length + "%" })
     }
-    $('#smartwizard').smartWizard("stepState", [3], "hide");
+    //$('#smartwizard').smartWizard("stepState", [3], "hide");
     setTabNavWidth();
 
     
 
     $('#refer-quote-trigger').on('click', function (e) {
-        $('#smartwizard').smartWizard("stepState", [3], "show");
+        //$('#smartwizard').smartWizard("stepState", [3], "show");
         setTabNavWidth();
     });
 

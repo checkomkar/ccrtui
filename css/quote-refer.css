@@ -1,0 +1,70 @@
+#smartwizard .tab-content {
+  position: relative;
+}
+#smartwizard .tab-content #step-4 .check-points p {
+  margin-bottom: 5px;
+}
+#smartwizard .tab-content #step-4 .check-points .green-check-container {
+  margin-top: 30px;
+}
+#smartwizard .tab-content #step-4 .check-points .green-check-container .green-check {
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: white;
+  background-color: #57ab27;
+  font-size: 13px;
+  padding: 4px 5px;
+  line-height: 0;
+}
+#smartwizard .tab-content #step-4 .border-box-15 {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+#smartwizard .tab-content #step-4 .bi {
+  font-size: 13px;
+}
+#smartwizard .tab-content #step-4 .bi a {
+  font-size: 13px;
+}
+#smartwizard .tab-content #step-4 .bi span.pdf-ico {
+  margin-right: 20px;
+}
+#smartwizard .tab-content #step-4 .bi span.pdf-ico i {
+  color: #666;
+  font-size: 22px;
+}
+#smartwizard .tab-content #step-4 .btn-dl-pdf i {
+  margin-right: 10px;
+}
+#smartwizard .tab-content #step-4 .table-loss {
+  margin-bottom: 30px;
+}
+#smartwizard .tab-content #step-4 .table-loss thead tr td {
+  text-align: center;
+}
+#smartwizard .tab-content #step-4 .table-loss thead tr td:first-of-type {
+  width: 20%;
+}
+#smartwizard .tab-content #step-4 .table-loss thead tr td:nth-of-type(3) {
+  width: 20%;
+}
+#smartwizard .tab-content #step-4 .table-loss tr td {
+  padding: 10px;
+}
+#smartwizard .tab-content #step-4 .table-loss tr td input,
+#smartwizard .tab-content #step-4 .table-loss tr td select,
+#smartwizard .tab-content #step-4 .table-loss tr td textarea {
+  min-height: 40px;
+}
+#smartwizard .tab-content #step-4 .table-loss tr td textarea {
+  height: 40px;
+}
+.title {
+  color: #8c9094;
+  font-size: 13px;
+}
+.sub-title {
+  font-size: 16px;
+}
