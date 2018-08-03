@@ -9,6 +9,15 @@ $(document).ready(function(){
         $(document).find('[data-toggle="tooltip"]').tooltip()
     })
 
+    var dateM90 = moment().subtract(90, 'days');
+    var dateP15 = moment().add(15, 'days');
+
+    
+    $("#effcDateInStep5").attr('min', moment(dateM90).format("YYYY-MM-DD"));
+    $("#effcDateInStep5").attr('max', moment(dateP15).format("YYYY-MM-DD"))
+
+    console.log("moment", dateM90, "P15", dateP15);
+
     $("#select-insured-type").selectric({
         arrowButtonMarkup: '<span class="button"></span>', 
         customClass: {
