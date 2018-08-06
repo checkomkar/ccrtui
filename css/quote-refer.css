@@ -61,6 +61,24 @@
 #smartwizard .tab-content #step-4 .table-loss tr td textarea {
   height: 40px;
 }
+#smartwizard .tab-content #step-4 .referral-details .heading-container .title {
+  color: #8c9094;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+#smartwizard .tab-content #step-4 .referral-details .heading-container .sub-title {
+  font-size: 13px;
+  margin-bottom: 30px;
+  color: black;
+  font-weight: bold;
+}
+#smartwizard .tab-content #step-4 .reason-options-container .reason-radio {
+  margin-bottom: 22px;
+}
+#smartwizard .tab-content #step-4 .reason-text textarea {
+  width: 80%;
+  min-height: 120px;
+}
 .title {
   color: #8c9094;
   font-size: 13px;

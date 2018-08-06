@@ -2355,6 +2355,13 @@
   font-weight: normal;
   font-size: 13px;
 }
+@media only screen and (max-width: 1024px) {
+  /* styles */
+  .container {
+    width: 1200px;
+    overflow-x: scroll;
+  }
+}
 div {
   word-wrap: break-word;
 }
