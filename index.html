@@ -408,7 +408,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-5">
-                                        <div class="dropdown form-group">
+                                        <div class="dropdown form-group" >
                                             <label for="select-product">Select Price</label>
                                             <input class="form-control currency" readonly
                                                    placeholder="$" id="selectPrice" data-toggle="dropdown" aria-haspopup="true"
@@ -517,7 +517,8 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="row">
+                                            <div class="row" id="addCurrency">
+                                                <input type="text" name="name" class="form-control currency" value="" />
                                                 <div class="form-group col-md-3 dollar-set-container">
                                                     <span class="dollar-set">$</span>
                                                     <select class="form-control select-product required" required="required" id="select-insured-type">
@@ -2276,7 +2277,7 @@
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group search-occupancy">
-                                    <input type="text" class="form-control" placeholder="Search by Occupancy Code or Name">
+                                    <input type="text" id="searchocc" class="form-control" placeholder="Search by Occupancy Code or Name">
                                     <span class="input-group-btn">
                                         <button class="btn btn-secondary" type="button">
                                             <i class="fa fa-search" aria-hidden="true"></i>
